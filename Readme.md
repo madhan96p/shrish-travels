@@ -1,27 +1,34 @@
-# ShRish Travels
+# 🚖 ShRish Travels
 
-Welcome to the official website code of **ShRish Travels**, a professional travel agency based in Chennai.
+Welcome to the official website of **ShRish Travels** – your trusted travel partner based in Chennai.
 
-🌐 **Live Website**: [https://shrishtravels.netlify.app/](https://shrishtravels.netlify.app/)
-
----
-
-### 🧭 Pages Included:
-- Home
-- Services (Sedan, SUV, EV, etc.)
-- Booking Form (integrated with Google Sheets)
-- Contact Us (with WhatsApp follow-up option)
-
-This project is made with:
-- HTML, CSS
-- Responsive design
-- Google Sheets + Apps Script
-- Free hosting via Netlify & Neocities
+🌐 **Live Website**: [https://shrishtravels.netlify.app](https://shrishtravels.netlify.app)
 
 ---
 
-🚗 For bookings or queries, contact:
-- 📞 Phone: 8903558066  
-- 📧 Email: shrishtravels1@gmail.com  
-- 📱 WhatsApp: [Chat Now](https://wa.me/918903558066)
+### 📄 What's Included?
+- 🏠 Home Page with modern layout
+- 🚗 Services Page (Sedan, SUV, EVs like Tata Nexon, and more)
+- 📋 Booking Form (stores data in Google Sheets)
+- 📞 Contact Page (with WhatsApp integration)
+- 📱 Mobile-friendly and fully responsive design
 
+---
+
+### 💡 Built With
+- HTML5 & CSS3
+- Google Apps Script for backend
+- Google Sheets as a free database
+- Netlify & Neocities for free hosting
+
+---
+
+### 📬 Contact Us
+- 📞 Phone: [8903558066](tel:+918903558066)
+- 📧 Email: [shrishtravels1@gmail.com](mailto:shrishtravels1@gmail.com)
+- 💬 WhatsApp: [Chat Now](https://wa.me/918903558066)
+
+---
+
+### 📌 Note
+This project is built with the goal of providing seamless cab bookings and professional travel services. All feedback and suggestions are welcome!
