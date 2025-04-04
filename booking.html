@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - ShRish Travels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/SH1.jpg" alt="ShRish Travels Logo" class="logo"></a>
+        <div class="header-title">
+            <h1>Book Your Ride</h1>
+            <p class="slogan"><em>Fast, Safe & Comfortable Journeys</em></p>
+        </div>
+        <div class="nav-container">
+            <button id="menu-button" class="nav-button">Menu</button>
+            <nav id="dropdown-menu" class="nav-dropdown">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- Add backgroung-->
+ <section class="page-title" style="background-image: url('assets/backgrounds/TTB.webp');">
+    <!-- Booking Section -->
+    <section class="booking-container">
+        <div class="booking-message">
+            <h2>Plan Your Perfect Trip!</h2>
+            <p>Reliable, comfortable, and affordable travel solutions just for you.</p>
+        </div>
+
+        <div class="booking-form">
+            <h2>Fill in Your Travel Details</h2>
+            <form id="bookingForm" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
+                </div>
+
+                <div class="form-group">
+                    <label for="pickup">Pickup Location:</label>
+                    <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dropoff">Drop-off Location:</label>
+                    <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers:</label>
+                    <input type="number" id="travelers" name="travelers" placeholder="Enter number of travelers" min="1" required>
+                </div>
+
+                <button type="submit">Submit Booking</button>
+            </form>        
+        </div>
+    </section>
+    
+   
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ShRish Travels. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

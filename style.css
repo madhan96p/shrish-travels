@@ -1,0 +1,1002 @@
+/* General Styles */
+body {
+    background: linear-gradient(to bottom right, #f0f4ff, #e0f7fa); /* Soft blue + teal tint */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    padding-top: 80px; /* Prevent content from being hidden behind fixed header */
+}
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Header Title */
+.header-title {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.header-title h1 {
+    font-size: 26px;
+    
+    font-weight: bold;
+    color: #f0f2f9;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-title .slogan {
+    font-size: 14px;
+    color: #ff9900;
+    font-weight: 500;
+    margin-top: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation Button */
+.nav-container {
+    position: relative;
+}
+
+.nav-button {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: background 0.3s ease;
+    position: absolute;
+    right: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Dropdown Menu */
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgb(210, 210, 210);
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    z-index: 100;
+}
+
+.nav-dropdown.active {
+    display: block;
+}
+
+.nav-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-dropdown ul li {
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nav-dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.nav-dropdown ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+}
+
+.nav-dropdown ul li a:hover {
+    color: #ff9900;
+    border-radius: 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('/assets/background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 2px;
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+/* Booking Section */
+.booking-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    max-width: 1000px;
+    margin: auto;
+    flex-direction: column;
+}
+
+.booking-form {
+    background-color: #fff3c8;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+.booking-form:hover {
+    transform: translateY(-5px);
+}
+
+.booking-form h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.booking-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.booking-form input:focus {
+    border-color: #00aaff;
+    outline: none;
+}
+
+.booking-form button {
+    margin-top: 20px;
+    padding: 12px;
+    background: linear-gradient(135deg, #1e3a8a, #00aaff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.booking-form button:hover {
+    background: linear-gradient(135deg, #162b68, #0088cc);
+    transform: scale(1.05);
+}
+
+.booking-form input::placeholder {
+    font-style: italic;
+    color: #888;
+}
+
+/* Booking Message */
+.booking-message {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.booking-message h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.booking-message p {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+.bridge-container {
+    
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+}
+
+.bridge-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 5px;
+    background: linear-gradient(to bottom, #1e3a8a, #3b82f6);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Adds depth */
+    backdrop-filter: blur(8px);
+}
+
+.bridge-text h2 {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #ffffff; /* High contrast for readability */
+    margin-bottom: 20px;
+}
+
+.bridge-text p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cta-btn {
+    display: inline-block;
+    font-size: 1.2em;
+    padding: 14px 28px;
+    background: linear-gradient(to right, #ffcc00, #ff9900); /* Bright CTA */
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(255, 153, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.cta-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #ff9900, #ffcc00);
+}
+
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f8f8f8;
+}
+
+.services h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.service-box {
+    display: inline-block;
+    width: 280px;
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.service-box:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.service-box img {
+    width: 100%; /* Make image fill the box */
+    height: 200px; /* Fixed height for images */
+    object-fit: cover; /* Crop the image to fit the box */
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-bottom: 15px; /* Space between the image and the text */
+}
+
+.service-box h3 {
+    font-size: 22px;
+    color: #ff9900;
+    margin-bottom: 10px;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px; /* Space below the paragraph */
+}
+
+.service-box .btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    background: linear-gradient(145deg, #f2f2f2, #ffffff); /* Soft gradient background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+.testimonials h2 {
+    font-size: 2.5em; /* Larger heading */
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow for multiple testimonials */
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px; /* Fixed width for each testimonial */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin: 10px;
+}
+
+.testimonial:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+}
+
+.customer-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial blockquote {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial strong {
+    color: #333;
+    font-weight: bold;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Feedback Section */
+.feedback {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+    max-width: 800px;
+    font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+}
+
+.feedback h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.feedback p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.feedback .btn {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-weight: 500; /* Add font weight for the button text */
+}
+
+.feedback .btn:hover {
+    background-color: #0056b3;
+}
+
+.feedback .btn i {
+    margin-right: 10px;
+    font-size: 1.3em;
+}
+
+.cta-text {
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.cta-text a {
+    color: #25D366; /* WhatsApp color */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.cta-text a:hover {
+    text-decoration: underline;
+}
+
+
+blockquote {
+    font-style: italic;
+    margin: 20px auto;
+    width: 60%;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+    padding: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-dropdown {
+        width: 100%;
+        text-align: center;
+    }
+
+    .booking-form {
+        max-width: 90%;
+        padding: 30px;
+    }
+
+
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-title h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* Vehicle Types Section */
+.vehicle-types, .special-services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.vehicle-list, .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Vehicle Cards */
+.vehicle, .service {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 280px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.vehicle:hover, .service:hover {
+    transform: scale(1.05);
+}
+
+.vehicle img, .service img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.vehicle h3, .service h3 {
+    font-size: 22px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.vehicle p, .service p {
+    padding: 0 15px 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+/* Floating Button Style */
+.floating_btn {
+    position: fixed;
+    bottom: 20px; /* Adjust the bottom position */
+    right: 20px; /* Adjust the right position */
+    z-index: 1000; /* Ensure it's always on top */
+    animation: pulseEffect 3s infinite; /* Pulsing animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth transitions for popup */
+}
+
+/* Floating Button Style */
+.floating_btn {
+    position: fixed;
+    bottom: 20px; /* Adjust the bottom position */
+    right: 20px; /* Adjust the right position */
+    z-index: 1000; /* Ensure it's always on top */
+    animation: pulseEffect 3s infinite; /* Pulsing animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+}
+
+/* Contact Icon inside the floating button */
+.floating_btn .contact_icon {
+    background-color: #25D366; /* WhatsApp color */
+    padding: 15px;
+    border-radius: 50%; /* Circular shape */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Initial soft shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Floating link style */
+.floating_btn a {
+    display: block;
+}
+
+/* WhatsApp icon style inside the floating button */
+.floating_btn .contact_icon svg {
+    fill: #060404;
+    width: 36px;
+    height: 36px;
+}
+
+/* Pulse Animation */
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1); /* No scaling */
+        }
+    50% {
+        transform: scale(1.2); /* Expand the icon */
+        }
+    100% {
+        transform: scale(1); /* Return to normal size */
+        }
+}
+
+/* Hover Effect for Popup-like behavior */
+.floating_btn:hover .contact_icon {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+}
+
+/* Optional: If you want a more rounded shadow effect */
+.floating_btn:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    margin-top: 50px;
+}
+/* Navigation Bar */
+header {
+    background-color: #155e75;
+    padding: 15px;
+    text-align: center;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Contact Section */
+/*Add a background image to the contact section*/
+.contact-section {
+    background: rgb(180, 232, 237);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+}
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.contact-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+/* --- Modern Contact Page Enhancements --- */
+
+.contact-section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-heading {
+    font-size: 2rem;
+    text-align: center;
+    color: #1e40af;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.modern-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 25px 30px;
+    margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #1e40af;
+    outline: none;
+}
+
+.primary-btn,
+.action-button {
+    background-color: #1e40af;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn:hover,
+.action-button:hover {
+    background-color: #1c3fa0;
+    transform: translateY(-2px);
+}
+
+.success-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.success-icon {
+    color: #10b981;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.success-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Mobile responsive padding */
+@media (max-width: 600px) {
+    .modern-card {
+        padding: 20px;
+    }
+
+    .primary-btn,
+    .action-button {
+        width: 100%;
+    }
+
+    .success-buttons {
+        flex-direction: column;
+    }
+}
+.hidden {
+    display: none;
+}
+
+
+
+.page-title-description {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 10px auto;
+    padding: 0 20px;
+}
+
+.page-title-description strong {
+    color: #ff9900; /* Highlight strong text with a golden color */
+    font-weight: bold;
+}
+
+.page-title-description em {
+    color: #66ccff; /* Highlight emphasized text with a light blue color */
+}
+
+.highlight-text {
+    display: block;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #ffcc00; /* Highlight with a yellow tone */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/* Style the social media section */
+.social-media {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Make the icons bigger and more visually appealing */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Increase icon size */
+    height: 60px;
+    font-size: 30px; /* Make the icons larger */
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Individual icon colors */
+.social-icon:nth-child(1) { background-color: #1877F2; } /* Facebook */
+.social-icon:nth-child(2) { background-color: #E4405F; } /* Instagram */
+.social-icon:nth-child(3) { background-color: #000; } /* Threads (Black) */
+
+/* Hover effects */
+.social-icon:hover {
+    transform: scale(1.2); /* Make the icon bigger on hover */
+    opacity: 0.9;
+}
+.contact-details { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; font-size: 18px; font-weight: 500; color: #333; margin-top: 20px; } 
+.contact-details strong i { font-size: 22px; color: #1e40af; margin-right: 8px; } 
+.contact-details a { display: inline-block; font-weight: bold; color: #1e40af; text-decoration: none; padding: 5px 10px; border-radius: 6px; transition: all 0.3s ease; } 
+.contact-details a:hover { background: #405fc6; color: white; transform: scale(1.05); } 
+.contact-details p { line-height: 2; }
+
+
+/* Optional: Add a smooth fade-in animation */
+.contact-section {
+    padding: 60px 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Enhance headings for better visual hierarchy */
+.contact-section h2.contact-heading {
+    color: #1e40af;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-section .subheading {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+/* Trust Section */
+.trust-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.trust-section h2 {
+    font-size: 2.5em;
+    color: #1e40af;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.trust-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.trust {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    max-width: 350px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trust:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.trust img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.trust h3 {
+    font-size: 1.4em;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.trust p {font-size: 1em; color: #555; line-height: 1.6; font-family: 'Roboto', sans-serif;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .trust-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trust {
+        width: 90%;
+    }
+}

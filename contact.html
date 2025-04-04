@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ShRish Travels</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html"><img src="assets/SH1.jpg" alt="ShRish Travels Logo" class="logo"></a>
+        <div class="header-title">
+                <h1>We’d Love to Hear from You</h1>
+                <p class="slogan"><em>Because every journey is personal</em></p>
+        </div>
+        <div class="nav-container">
+            <button id="menu-button" class="nav-button">Menu</button>
+            <nav id="dropdown-menu" class="nav-dropdown">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <h2 class="contact-heading">We’d Love Your Feedback!</h2>
+        <p class="subheading">Share your thoughts or ask us anything — we’re here to help!</p>
+    
+        <div class="contact-details modern-card">
+            <p>
+                🚖 <span style="color:#1e40af; font-weight:bold;"><a href="booking.html">Need a Ride?</a></span> Reach us anytime! <br>
+                <strong><i class="fas fa-phone-alt"></i> Call:</strong> 
+                <a href="tel:+918883451668">8883451668</a>
+                <strong><i class="fas fa-envelope"></i> Email:</strong> 
+                <a href="mailto:shrishtravels1@gmail.com">shrishtravels1@gmail.com</a>
+                <strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> 
+                <a href="https://wa.me/918883451668" target="_blank">Chat Now</a>
+            </p>
+        </div>
+        
+        
+    
+        <div class="contact-form modern-card">
+            <h3>Send Your Feedback</h3>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                <textarea id="message" name="message" placeholder="Your Message or Feedback" rows="4" required></textarea>
+                <button type="submit" class="primary-btn">Send Feedback</button>
+            </form>
+    
+            <div id="successMessage" class="hidden">
+                <i class="fas fa-check-circle success-icon"></i>
+                <p class="success-text">Thank you! Your message has been sent successfully.</p>
+                <p class="success-subtext">Would you like to chat with us on WhatsApp?</p>
+                <div class="success-buttons">
+                    <button id="whatsappYes" class="action-button">Yes</button>
+                    <button id="whatsappNo" class="action-button">No</button>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="social-media modern-card">
+            <h3>Connect With Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ShRishTravels" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/shrish_travels" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.threads.net/ShRishTravels" target="_blank" class="social-icon"><i class="fab fa-threads"></i></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 ShRish Travels. All rights reserved.</p>
+      </footer>
+    <script src="script.js"></script>
+</body>
+</html>
