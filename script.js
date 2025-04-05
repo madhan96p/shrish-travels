@@ -134,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     submitButton.innerText = "Submit";
                     submitButton.disabled = false;
                 });
+                
         });
     }
 });

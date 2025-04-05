@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - ShRish Travels</title>
     <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="assets/SH1.jpg" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
@@ -47,18 +50,18 @@
         
     
         <div class="contact-form modern-card">
-            <h3>Send Your Feedback</h3>
+            <h3 style="color: black;">Send Your Feedback</h3>
             <form id="contactForm">
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
                 <textarea id="message" name="message" placeholder="Your Message or Feedback" rows="4" required></textarea>
                 <button type="submit" class="primary-btn">Send Feedback</button>
             </form>
     
             <div id="successMessage" class="hidden">
                 <i class="fas fa-check-circle success-icon"></i>
-                <p class="success-text">Thank you! Your message has been sent successfully.</p>
+                <p class="success-text" >Thank you! Your message has been sent successfully.</p>
                 <p class="success-subtext">Would you like to chat with us on WhatsApp?</p>
                 <div class="success-buttons">
                     <button id="whatsappYes" class="action-button">Yes</button>
@@ -69,16 +72,23 @@
         </div>
     
         <div class="social-media modern-card">
-            <h3>Connect With Us</h3>
+            <h3 style="color: black;">Connect With Us</h3>
             <div class="social-icons">
                 <a href="https://www.facebook.com/ShRishTravels" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/shrish_travels" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.threads.net/ShRishTravels" target="_blank" class="social-icon"><i class="fab fa-threads"></i></a>
+                <!-- <a href="https://wa.me/918883451668" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i> -->
             </div>
         </div>
     </section>
+    <div class="floating_btn">
+        <a target="_blank" href="https://wa.me/918883451668" rel="noreferrer">
+          <div class="contact_icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="36" height="36" />
+          </div>
+        </a>
+      </div>
     <footer>
-        <p>&copy; 2025 ShRish Travels. All rights reserved.</p>
+        <p>&copy; 2022 ShRish Travels. All rights reserved.</p>
       </footer>
     <script src="script.js"></script>
 </body>
