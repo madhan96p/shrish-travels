@@ -48,16 +48,46 @@ document.addEventListener("DOMContentLoaded", function () {
                 headers: { "Content-Type": "application/json" },
                 mode: "no-cors"
             })
-                .then(() => {
-                    clearInterval(interval);
-                    submitButton.innerText = "Redirecting to WhatsApp...";
-                    setTimeout(() => {
-                        sendWhatsAppMessage(bookingData);
-                        bookingForm.reset();
-                        submitButton.innerText = "Submit Booking";
-                        submitButton.disabled = false;
-                    }, 1000);
-                })
+            .then(() => {
+                clearInterval(interval);
+                
+                // Show success message and ask for WhatsApp confirmation
+                const successMessage = document.createElement("div");
+                successMessage.classList.add("booking-success-message");
+                successMessage.innerHTML = `
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <p class="success-text">Your booking application has been submitted.</p>
+                    <p class="success-subtext">Would you like to confirm your booking via WhatsApp?</p>
+                    <div class="success-buttons">
+                        <button id="confirmYes" class="action-button">Yes</button>
+                        <button id="confirmNo" class="action-button">No</button>
+                    </div>
+                `;
+                bookingForm.parentElement.appendChild(successMessage);
+                submitButton.style.display = "none";
+            
+                // Handle WhatsApp confirmation
+                document.getElementById("confirmYes").onclick = function () {
+                    sendWhatsAppMessage(bookingData);
+                    bookingForm.reset();
+                    successMessage.remove();
+                    submitButton.style.display = "block";
+                    submitButton.disabled = false;
+                    submitButton.innerText = "Submit Booking";
+                };
+            
+                document.getElementById("confirmNo").onclick = function () {
+                    successMessage.innerHTML = `
+                        <i class="fas fa-smile-beam success-icon"></i>
+                        <p class="success-text">Thank you! We will contact you shortly.</p>
+                    `;
+                    bookingForm.reset();
+                    submitButton.style.display = "block";
+                    submitButton.disabled = false;
+                    submitButton.innerText = "Submit Booking";
+                };
+            })
+            
                 .catch((error) => {
                     clearInterval(interval);
                     alert("Error! Please try again.");

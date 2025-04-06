@@ -243,6 +243,61 @@ header {
     font-style: italic;
     color: #888;
 }
+.booking-success-message {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #d1fae5;
+    border: 2px solid #10b981;
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.success-icon {
+    font-size: 36px;
+    color: #10b981;
+}
+
+.success-text {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #000;
+}
+
+.success-subtext {
+    font-size: 16px;
+    margin-top: 8px;
+    color: #000;
+}
+
+.success-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.action-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(135deg, #1e3a8a, #00aaff);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.action-button:hover {
+    background: linear-gradient(135deg, #162b68, #0088cc);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 /* Booking Message */
 .booking-message {
@@ -617,73 +672,48 @@ h2 {
     font-size: 16px;
     color: #666;
 }
-
-/* Floating Button Style */
+/* Floating Button Container */
 .floating_btn {
     position: fixed;
-    bottom: 20px; /* Adjust the bottom position */
-    right: 20px; /* Adjust the right position */
-    z-index: 1000; /* Ensure it's always on top */
-    animation: pulseEffect 3s infinite; /* Pulsing animation */
-    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth transitions for popup */
-}
-
-/* Floating Button Style */
-.floating_btn {
-    position: fixed;
-    bottom: 20px; /* Adjust the bottom position */
-    right: 20px; /* Adjust the right position */
-    z-index: 1000; /* Ensure it's always on top */
-    animation: pulseEffect 3s infinite; /* Pulsing animation */
-    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out; /* Smooth transitions */
-}
-
-/* Contact Icon inside the floating button */
-.floating_btn .contact_icon {
-    background-color: #25D366; /* WhatsApp color */
-    padding: 15px;
-    border-radius: 50%; /* Circular shape */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Initial soft shadow */
-    transition: box-shadow 0.3s ease-in-out; /* Smooth shadow transition */
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25D366;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: pulseEffect 2.5s infinite ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Floating link style */
-.floating_btn a {
-    display: block;
+/* WhatsApp Icon Style */
+.floating_btn img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Make icon white if needed */
 }
 
-/* WhatsApp icon style inside the floating button */
-.floating_btn .contact_icon svg {
-    fill: #060404;
-    width: 36px;
-    height: 36px;
+/* Hover Effect */
+.floating_btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.7);
 }
 
 /* Pulse Animation */
 @keyframes pulseEffect {
     0% {
-        transform: scale(1); /* No scaling */
-        }
+        transform: scale(1);
+    }
     50% {
-        transform: scale(1.2); /* Expand the icon */
-        }
+        transform: scale(1.15);
+    }
     100% {
-        transform: scale(1); /* Return to normal size */
-        }
-}
-
-/* Hover Effect for Popup-like behavior */
-.floating_btn:hover .contact_icon {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
-}
-
-/* Optional: If you want a more rounded shadow effect */
-.floating_btn:hover {
-    transform: scale(1.1); /* Slightly enlarge the button on hover */
+        transform: scale(1);
+    }
 }
 
 
