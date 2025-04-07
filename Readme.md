@@ -1,34 +1,57 @@
-# 🚖 ShRish Travels
+<h1 align="center">🚖 ShRish Travels</h1>
 
-Welcome to the official website of **ShRish Travels** – your trusted travel partner based in Chennai.
+<p align="center">
+  <em>Official website of <strong>ShRish Travels</strong> — Your Trusted Travel Partner from Chennai 🛣️</em>
+</p>
 
-🌐 **Live Website**: [https://shrishtravels.netlify.app](https://shrishtravels.netlify.app)
-
----
-
-### 📄 What's Included?
-- 🏠 Home Page with modern layout
-- 🚗 Services Page (Sedan, SUV, EVs like Tata Nexon, and more)
-- 📋 Booking Form (stores data in Google Sheets)
-- 📞 Contact Page (with WhatsApp integration)
-- 📱 Mobile-friendly and fully responsive design
+<p align="center">
+  <a href="https://shrishtravels.netlify.app" target="_blank">
+    🌐 <strong>Live Website</strong>
+  </a>
+</p>
 
 ---
 
-### 💡 Built With
-- HTML5 & CSS3
-- Google Apps Script for backend
-- Google Sheets as a free database
-- Netlify & Neocities for free hosting
+## 📦 Project Overview
+
+A clean and responsive travel booking website designed for **ShRish Travels**, offering a seamless cab booking experience. This site includes everything a modern travel service needs — and is built to scale.
 
 ---
 
-### 📬 Contact Us
-- 📞 Phone: [8903558066](tel:+918903558066)
-- 📧 Email: [shrishtravels1@gmail.com](mailto:shrishtravels1@gmail.com)
-- 💬 WhatsApp: [Chat Now](https://wa.me/918903558066)
+## 🧩 Features Included
+
+- 🏡 **Modern Home Page** with interactive layout  
+- 🚘 **Services Page** featuring Sedan, SUV, EV (e.g., Tata Nexon) & more  
+- 📝 **Booking Form** connected to **Google Sheets**  
+- 📲 **WhatsApp Integration** for instant confirmations  
+- 📱 **Mobile-First Responsive Design** — smooth on all devices  
+- ⚡ **Fast & Lightweight** for quick load times
 
 ---
 
-### 📌 Note
-This project is built with the goal of providing seamless cab bookings and professional travel services. All feedback and suggestions are welcome!
+## 🛠️ Tech Stack
+
+| Frontend     | Backend / Tools        | Hosting        |
+|--------------|------------------------|----------------|
+| HTML5 & CSS3 | Google Apps Script     | Netlify        |
+| JavaScript   | Google Sheets (Database) | Neocities     |
+
+---
+
+## 💬 Contact Info
+
+- 📞 Phone: [8903558066](tel:+918903558066)  
+- 📧 Email: [shrishtravels1@gmail.com](mailto:shrishtravels1@gmail.com)  
+- 💬 WhatsApp: [Chat Now](https://wa.me/918903558066)  
+
+---
+
+## 👨‍💻 Developer Note
+
+This project is part of my freelance works, combining design + automation using **Google Apps Script** and **Netlify** — all without a paid backend.
+
+If you're a small business or startup looking for a **custom website** with smart integrations (like this), feel free to [reach out](mailto:pragadeesh.s96@gmail.com) or [connect on LinkedIn](https://www.linkedin.com/in/praga1482).
+
+---
+
+⭐ *Feel free to fork this repo or drop a star if you found it useful!*
