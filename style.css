@@ -745,20 +745,19 @@ h2 {
     font-size: 16px;
     color: #666;
 }
-
-/* Floating WhatsApp Button */
+/* Floating WhatsApp Button (Premium Updated) */
 .floating_btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 60px;
     height: 60px;
-    background: #25d366;
+    background: linear-gradient(135deg, #25d366, #128c7e);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3), 0 0 4px rgba(37, 211, 102, 0.2);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4), 0 0 10px rgba(37, 211, 102, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
     z-index: 1000;
     overflow: hidden;
@@ -776,13 +775,12 @@ h2 {
 .floating_btn img {
     width: 36px;
     height: 36px;
-    filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
 }
 
 .floating_btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4), 0 0 6px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5), 0 0 15px rgba(37, 211, 102, 0.4), inset 0 0 8px rgba(255, 255, 255, 0.4);
 }
 
 .floating_btn:hover img {
@@ -798,8 +796,6 @@ h2 {
 .floating_btn {
     animation: pulse 2s infinite;
 }
-
-
 
 /* Footer */
 footer {
