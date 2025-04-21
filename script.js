@@ -1,3 +1,27 @@
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MBGR8GE2HH');
+
+function toggleVehicles() {
+    const moreVehicles = document.getElementById('moreVehicleList');
+    const btn = document.querySelectorAll('.view-more')[0];
+    moreVehicles.classList.toggle('hidden');
+    btn.textContent = moreVehicles.classList.contains('hidden')
+      ? 'View More Vehicles'
+      : 'View Less Vehicles';
+  }
+  
+  function toggleServices() {
+    const moreServices = document.getElementById('moreServiceList');
+    const btn = document.querySelectorAll('.view-more')[1];
+    moreServices.classList.toggle('hidden');
+    btn.textContent = moreServices.classList.contains('hidden')
+      ? 'View More Services'
+      : 'View Less Services';
+  }
+  
+
 document.addEventListener("DOMContentLoaded", function () {
     // ===== Menu Toggle =====
     const menuButton = document.getElementById("menu-button");
@@ -103,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function () {
             window.open(`https://wa.me/${number}?text=${message}`, "_blank");
         }
     }
-
+    AOS.init();
     // ===== Contact Form =====
     const contactForm = document.getElementById("contactForm");
     if (contactForm) {
@@ -167,4 +191,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 
         });
     }
+
 });

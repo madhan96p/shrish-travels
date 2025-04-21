@@ -1,26 +1,43 @@
 /* General Styles */
+
 body {
-    background: linear-gradient(to bottom right, #f0f4ff, #e0f7fa); /* Soft blue + teal tint */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    padding-top: 80px; /* Prevent content from being hidden behind fixed header */
-}
+    background-color: #f9fafb; /* Soft light gray */
+    color: #1f2937; /* Deep neutral gray for text */
+    line-height: 1.6;
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding-top: 80px;
+  }
+  
 /* Header Styling */
 header {
+    background:
+    linear-gradient(135deg, rgba(21, 94, 117, 0.95), rgba(22, 78, 99, 0.95)),
+    url('https://www.transparenttextures.com/patterns/pw-maze-white.png');
+
+    background-blend-mode: overlay;
+    backdrop-filter: blur(8px);
+    background-size: cover;
+    background-repeat: repeat;
+
+    padding: 15px;
+    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+
 
 /* Logo */
 .logo {
@@ -51,11 +68,7 @@ header {
     font-family: 'Poppins', sans-serif;
 }
 /* Navigation Bar */
-header {
-    background-color: #155e75;
-    padding: 15px;
-    text-align: center;
-}
+
 
 .nav-links {
     list-style: none;
@@ -102,6 +115,7 @@ header {
     transform: scale(1.05);
 }
 
+
 .nav-dropdown {
     display: none;
     position: absolute;
@@ -147,39 +161,182 @@ header {
 
 /* Hero Section */
 .hero {
-    background: url('/assets/background.jpg') no-repeat center center/cover;
-    color: white;
-    padding: 100px 2px;
+    background: 
+  linear-gradient(rgba(30, 64, 175, 0.95), rgba(2, 132, 199, 0.9)),
+  url('https://www.transparenttextures.com/patterns/diamond-upholstery.png');
+
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 10px 20px 8px;
     text-align: center;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.hero h2 {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 18px;
-}
-
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #ff9800;
-    color: white;
+  }
+  .hero-content {
+    backdrop-filter: blur(2px);
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+  
+  .hero-content h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInDown 1s ease-in-out;
+  }
+    
+  .hero-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 10px auto;
+    font-weight: 400;
+    animation: fadeInUp 1.2s ease-in-out;
+  }
+  
+  .hero-content .btn {
+    margin-top: 25px;
+    background: linear-gradient(135deg, #10b981, #059669); /* Smoother gradient green */
+    color: #fff;
+    padding: 12px 36px;
+    border-radius: 50px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     text-decoration: none;
-    border-radius: 8px;
-    margin-top: 10px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #e68900;
-}
-
+    display: inline-block;
+    letter-spacing: 0.5px;
+  }
+  
+  .hero-content .btn:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Bridge Section */
+.bridge-content {
+    background: linear-gradient(to bottom, #f0faff, #e0f7fa);
+    padding: 90px 20px;
+    text-align: center;
+    border-top: 1px solid #dbeafe;
+  }
+  
+  .bridge-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .bridge-text h2 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .bridge-text p {
+    font-size: 1.15rem;
+    color: #374151;
+    margin-bottom: 28px;
+    line-height: 1.8;
+  }
+  
+  .bridge-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 0;
+    margin: 40px 0;
+  }
+  
+  .bridge-features li {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    font-weight: 500;
+    color: #111827;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bridge-features li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bridge-features i {
+    font-size: 1.5rem;
+    color: #2563eb;
+    flex-shrink: 0;
+  }
+  
+  .cta-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #1e40af, #3b82f6);
+    color: #fff;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(30, 64, 175, 0.2);
+    text-decoration: none;
+    letter-spacing: 0.4px;
+  }
+  
+  .cta-btn:hover {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(30, 64, 175, 0.3);
+  }
+  
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .-content h2 {
+      font-size: 2rem;
+    }
+    .bridge-text h2 {
+      font-size: 2rem;
+    }
+    .bridge-features {
+      grid-template-columns: 1fr;
+    }
+  }
+  
 /* Booking Section */
 .booking-container {
     display: flex;
@@ -312,7 +469,22 @@ header {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
+.btn:hover {
+    background-color: #e68900;
+}
 /* Booking Message */
 .booking-message {
     text-align: center;
@@ -460,91 +632,92 @@ header {
     transform: translateY(-10px);
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
 }
+.overlay-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: auto;
+}
 
-.service-box:hover::after {
-    content: 'Explore Now';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(255, 174, 0);
-    font-size: 24px;
-    font-weight: 600;
-    background: rgba(157, 163, 176, 0.8);
-    padding: 10px 20px;
-    border-radius: 8px;
-    z-index: 1;
-    opacity: 0.9;
+.service-box:hover .overlay-link {
+  opacity: 1;
 }
 
 .service-box:hover img {
     filter: brightness(0.7);
 }
 
-
-/* Testimonials Section */
 .testimonials {
-    background: linear-gradient(145deg, #f7fafc, #edf2f7);
+    background: #f8fafc;
     padding: 60px 20px;
     text-align: center;
-    margin-top: 40px;
-}
-
-.testimonials h2 {
-    font-size: 36px;
-    color: #1e3a8a;
-    margin-bottom: 30px;
-}
-
-.testimonial-slider {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-
-.testimonial {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 16px;
-    width: 300px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.testimonial img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 2px solid #f59e0b;
-}
-
-.testimonial blockquote {
-    font-style: italic;
-    font-size: 16px;
-    color: #555;
+    border-top: 5px solid #8db7c1;
+    border-radius: 0 0 2rem 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .testimonials .section-title {
+    font-size: 2.2rem;
+    color: #1e40af;
+    font-weight: 700;
     margin-bottom: 10px;
-}
-
-.testimonial strong {
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+  }
+  
+  .testimonials .section-caption {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .testimonials .elfsight-app {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    /* Customize to make sure the widget fits within your layout */
+    display: block;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #ffffff; /* Make sure the widget background is white */
+  }
+  
+  .testimonials .cta-text {
+    font-size: 1rem;
+    color: #1e293b;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .testimonials .cta-text a {
+    color: #3eacc5;
+    text-decoration: none;
     font-weight: 600;
-}
-
-.testimonial .rating {
-    color: #FFD700;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.testimonial:hover {
-    transform: scale(1.05);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
-}
-
+  }
+  
+  .testimonials .cta-text a:hover {
+    color: #1e40af;
+    text-decoration: underline;
+  }
+  
 .cta-text {
     margin-top: 20px;
     font-size: 18px;
@@ -657,48 +830,91 @@ blockquote {
     padding: 40px;
 }
 
-
-
-/* Responsive Design */
-/* @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-dropdown {
-        width: 100%;
-        text-align: center;
-    }
-
-    .booking-form {
-        max-width: 90%;
-        padding: 30px;
-    }
-
-
-} */
-
-/* Page Title */
+/* Page Title Section */
 .page-title {
+    background: 
+      linear-gradient(to right, #3eacc5, #1e40af),
+      url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+    background-blend-mode: overlay;
+    padding: 60px 20px;
     text-align: center;
-    color: white;
-    padding: 80px 20px;
-    background-size: cover;
-    background-position: center;
-}
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-size: auto; /* or try cover / contain for different effects */
+  }
+  
+  
+  
+  .page-title-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .page-title-description strong {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .page-title-description em {
+    color: #ffd700;  /* gold color for emphasis */
+    font-style: italic;
+  }
+  
+  .highlight-text {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    color: #ffcc00; 
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .highlight-text:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  
+  /* Button Group */
 
-.page-title h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
-}
-
+  .cta-btn {
+    padding: 15px 30px;
+    background-color: #ffd700; /* golden yellow for CTA */
+    color: #1e40af;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ffcc00;
+    transform: translateY(-3px);
+  }
+  
+  .cta-btn:active {
+    transform: translateY(1px);
+  }
+  
 /* Vehicle Types Section */
 .vehicle-types, .special-services {
     text-align: center;
     padding: 50px 20px;
-    background-color: white;
+    background-image: url('https://www.transparenttextures.com/patterns/bright-squares.png');
+    background-repeat: repeat;
+
 }
 
 h2 {
@@ -793,6 +1009,26 @@ h2 {
     100% { transform: scale(1); }
 }
 
+.hidden {
+    display: none;
+  }
+  
+  .view-more {
+    background-color: #1e40af;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-more:hover {
+    background-color: #3eacc5;
+  }
+  
+
 .floating_btn {
     animation: pulse 2s infinite;
 }
@@ -827,308 +1063,404 @@ footer .social-icons a:hover {
     color: #FFD700;
 }
 
-
-
-
-
 /* Contact Section */
-/*Add a background image to the contact section*/
 .contact-section {
-    background: rgb(180, 232, 237);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    position: relative;
-}
-.contact-section {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.contact-section h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.subheading {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 30px;
-}
-
-
-/* --- Modern Contact Page Enhancements --- */
-
-.contact-section {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.contact-heading {
-    font-size: 2rem;
-    text-align: center;
-    color: #1e40af;
-    margin-bottom: 10px;
-}
-
-.subheading {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.modern-card {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    padding: 25px 30px;
-    margin-bottom: 30px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 14px;
-    margin: 12px 0;
-    border-radius: 10px;
-    border: 1px solid #a3a2a2;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    transition: border 0.3s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #1e40af;
-    outline: none;
-}
-
-.primary-btn,
-.action-button {
-    background-color: #1e40af;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.primary-btn:hover,
-.action-button:hover {
-    background-color: #1c3fa0;
-    transform: translateY(-2px);
-}
-
-.success-box {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.success-icon {
-    color: #10b981;
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-}
-
-.success-buttons {
-    margin-top: 15px;
     display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-/* Mobile responsive padding */
-@media (max-width: 600px) {
-    .modern-card {
-        padding: 20px;
-    }
-
-    .primary-btn,
-    .action-button {
-        width: 100%;
-    }
-
-    .success-buttons {
-        flex-direction: column;
-    }
-}
-.hidden {
-    display: none;
-}
-
-
-
-.page-title-description {
-    font-size: 20px;
-    color: white;
-    text-align: center;
-    line-height: 1.6;
-    max-width: 900px;
-    margin: 10px auto;
-    padding: 0 20px;
-}
-
-.page-title-description strong {
-    color: #ff9900; /* Highlight strong text with a golden color */
-    font-weight: bold;
-}
-
-.page-title-description em {
-    color: #66ccff; /* Highlight emphasized text with a light blue color */
-}
-
-.highlight-text {
-    display: block;
-    font-size: 18px;
-    margin-top: 15px;
-    color: #ffcc00; /* Highlight with a yellow tone */
-    font-weight: bold;
-    text-transform: uppercase;
-}
-/* Style the social media section */
-.social-media {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Make the icons bigger and more visually appealing */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between icons */
-    margin-top: 10px;
-}
-
-.social-icon {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 60px; /* Increase icon size */
-    height: 60px;
-    font-size: 30px; /* Make the icons larger */
-    border-radius: 50%;
+    background: linear-gradient(to right, #e0f7fa, #f0f4ff);
+    padding: 4rem 2rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  .section-title {
+    font-size: 2.5rem;
+    color: #1e3a8a;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+  }
+  .contact-section {
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+  }
+  .corner-badge {
+    position: fixed;
+    top: 20px;
+    right: -45px;
+    transform: rotate(45deg);
+    background: #2563eb;
     color: white;
-    text-decoration: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-/* Individual icon colors */
-.social-icon:nth-child(1) { background-color: #1877F2; } /* Facebook */
-.social-icon:nth-child(2) { background-color: #E4405F; } /* Instagram */
-.social-icon:nth-child(3) { background-color: #25D366; } /* Threads (Black) */
-
-/* Hover effects */
-.social-icon:hover {
-    transform: scale(1.2); /* Make the icon bigger on hover */
-    opacity: 0.9;
-}
-.contact-details { background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; font-size: 18px; font-weight: 500; color: #333; margin-top: 20px; } 
-.contact-details strong i { font-size: 22px; color: #1e40af; margin-right: 8px; } 
-.contact-details a { display: inline-block; font-weight: bold; color: #1e40af; text-decoration: none; padding: 5px 10px; border-radius: 6px; transition: all 0.3s ease; } 
-.contact-details a:hover { background: #405fc6; color: white; transform: scale(1.05); } 
-.contact-details p { line-height: 2; }
-
-.success-text,
-.success-subtext,
-.success-icon {
-    color: black;
-}
-
-/* Optional: Add a smooth fade-in animation */
-.contact-section {
-    padding: 60px 20px;
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Enhance headings for better visual hierarchy */
-.contact-section h2.contact-heading {
-    color: #1e40af;
-    font-size: 32px;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.contact-section .subheading {
-    color: #555;
-    font-size: 18px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-/* Trust Section */
-.trust-section {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.trust-section h2 {
-    font-size: 2.5em;
-    color: #1e40af;
-    margin-bottom: 40px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.trust-list {
+    padding: 6px 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+  .separator {
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, #2563eb, #60a5fa);
+    margin: 2rem auto;
+  }
+    
+  .contact-section {
+    background: linear-gradient(to right, #e0f7fa, #f0f4ff);
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    background-size: 200px;
+  }
+  .blur-bg {
+    position: absolute;
+    top: 0;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at center, #1e3a8a33 0%, transparent 70%);
+    z-index: 0;
+    filter: blur(120px);
+    pointer-events: none;
+  }
+  .contact-section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #1e3a8a;
+    margin: 0.5rem auto 0;
+    border-radius: 4px;
+  }
+  
+  .contact-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px;
-}
-
-.trust {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    max-width: 350px;
-    padding: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.trust:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
-}
-
-.trust img {
+    align-items: center;
+    gap: 2rem;
+    /* align-items: center; */
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.trust h3 {
-    font-size: 1.4em;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  .modern-card:hover {
+    transform: translateY(-6px);
+  }
+  
+  .contact-form h3,
+  .map-card h3 {
+    font-size: 1.8rem;
     color: #1e3a8a;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.9rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+    outline: none;
+  }
+  
+  .map-card iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 1rem;
+  }
+  
+  /* Contact Icons */
+  .contact-icons {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  /* .contact-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    margin: 20m auto 0;
+  } */
+  
+  .icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    /* width: 120px; */
+    text-align: center;
+    transition: 0.3s ease;
+  }
+  
+  .icon-box img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+  }
+  
+  .icon-box:hover img {
+    transform: scale(1.2);
+  }
+  
+  .icon-box .action-button {
+    background-color: #1e3a8a;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 0.1rem .5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  .icon-box .action-button:hover {
+    background-color: #223254;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contact-grid {
+      flex-direction: column;
+    }
+  }
+  
+
+.modern-card.contact-form {
+    background: linear-gradient(145deg, #1b1313, #0d2a59);
+    background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');
+    background-blend-mode: soft-light;
+    background-size: 150px;
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(200, 200, 255, 0.2);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .modern-card1 {
+    background: linear-gradient(135deg, #f5f9ff, #ffffff);
+    background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+    background-blend-mode: soft-light;
+    background-size: 200px;
+    padding: 2rem 2rem;
+    border-radius: 24px;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(180, 200, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+    max-width: 1000px;
+    margin: 2rem auto;
+  }
+  
+  .modern-card.contact-form:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  }
+  
+  .contact-form h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    background-color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+  }
+  
+  .primary-btn {
+    background: linear-gradient(to right, #2563eb, #4f46e5);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-btn:hover {
+    background: linear-gradient(to right, #1e3a8a, #4338ca);
+    transform: scale(1.03);
+  }
+  .success-icon {
+    font-size: 2rem;
+    color: #10b981;
+  }
+  
+  .success-text {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .success-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .action-button {
+    background: #1e40af;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  .action-button:hover {
+    opacity: 0.9;
+  }
+  
+  iframe {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+
+  .contact-details h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .contact-details .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details .social-icons > div {
+    text-align: center;
+    max-width: 120px;
+  }
+  
+  .contact-details img {
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .contact-details p {
+    margin: 6px 0;
+    font-weight: bold;
+    font-size: 0.95rem;
+  }
+  
+/* Trust Section */
+.trust-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('https://www.transparenttextures.com/patterns/hexellence.png');
+    background-repeat: repeat;
+    background-color: #f9fafb; /* fallback background */
+    color: #333;
+  }
+  
+  .trust-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .trust-section a.trust {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 16px;
+  }
+  
+  .trust-section a.trust:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .trust {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    max-width: 320px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .trust img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    object-fit: cover;
+  }
+  
+  .trust h3 {
+    font-size: 20px;
+    color: #1e40af;
     margin-bottom: 10px;
-}
-
-.trust p {font-size: 1em; color: #555; line-height: 1.6; font-family: 'Roboto', sans-serif;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .trust-list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .trust {
-        width: 90%;
-    }
-}
+    font-weight: 600;
+  }
+  
+  .trust p {
+    font-size: 16px;
+    color: #555;
+  }
   
