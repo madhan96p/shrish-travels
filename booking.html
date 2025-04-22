@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking - ShRish Travels</title>
+    <title>Home - ShRish Travels</title>
     <meta name="description" content="Book reliable and comfortable rides with ShRish Travels. We offer airport transfers, city tours, and outstation trips from Chennai." />
     <link rel="icon" href="assets/SH1.jpg" />
     <link rel="stylesheet" href="style.css" />
@@ -39,6 +39,7 @@
         <div class="header-title">
             <h1>Book Your Ride</h1>
             <p class="slogan"><em>Fast, Safe & Comfortable Journeys</em></p>
+       
         </div>
         <div class="nav-container">
             <button id="menu-button" class="nav-button">Menu</button>
@@ -46,62 +47,93 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="#" onclick="return false;">Booking</a></li>
+                    <!-- <li><a href="https://shrishtravelschennai.blogspot.com/p/best-cab-service-in-chennai-outstation.html">Blog</a></li> -->
+        
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-<!-- Add backgroung-->
- <section class="page-title" style="background-image: url('assets/backgrounds/TTB.webp');">
-    <!-- Booking Section -->
-    <section class="booking-container">
-        <div class="booking-message">
-            <h2>Plan Your Perfect Trip!</h2>
-            <p>Reliable, comfortable, and affordable travel solutions just for you.</p>
-        </div>
+<!-- Add background-->
+<section class="page-title">
+    <div class="booking-message">
+      <h2>Book a Ride That Matches Your Standards</h2>
+      <p>Comfort, style, and reliability—all in one seamless travel experience with ShRish Travels.</p>
+    </div>
+  </section>
+  
 
-        <div class="booking-form">
-            <h2>Fill in Your Travel Details</h2>
-            <form id="bookingForm" action="#" method="POST" onsubmit="gtagSendEvent()">
+<!-- Booking Section OUTSIDE page-title -->
+<section class="booking-container" id="booking-section">
+    <div class="booking-form">
+        <h2>Fill in Your Travel Details</h2>
+        <form id="bookingForm" action="#" method="POST" onsubmit="gtagSendEvent()">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
+            </div>
+            <div class="form-group">
+                <label for="pickup">Pickup Location:</label>
+                <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
+            </div>
+            <div class="form-group">
+                <label for="dropoff">Drop-off Location:</label>
+                <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
+            </div>
+            <div class="form-group">
+                <label for="travelers">Number of Travelers:</label>
+                <input type="number" id="travelers" name="travelers" placeholder="Enter number of travelers" min="1" required>
+            </div>
+            <button type="submit">Submit Booking</button>
+        </form>
+    </div>
+</section>
 
-                <div class="form-group">
-                    <label for="name">Full Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                </div>
+<div class="contact-icons">
+    <div class="icon-box">
+      <a href="tel:+918883451668" data-tooltip="Call Us">
+        <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call Us">
+      </a>
+    </div>
+  
+    <div class="icon-box">
+      <a href="mailto:shrishtravels1@gmail.com" data-tooltip="Email Us">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Us">
+      </a>
+    </div>
+  
+    <div class="icon-box">
+      <a href="https://www.instagram.com/shrish_travels" target="_blank" data-tooltip="Follow on Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+      </a>
+    </div>
+  
+    <div class="icon-box">
+      <a href="https://www.youtube.com/channel/UC5xOOggNg80T7uoijMfz3jA" target="_blank" data-tooltip="Subscribe on YouTube">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      </a>
+    </div>
+  
+    <div class="icon-box">
+        <a href="https://shrishtravelschennai.blogspot.com/p/best-cab-service-in-chennai-outstation.html" data-tooltip="Read More About Us" target="_blank" aria-label="Read our Blog">
+            <img src="https://simpleicons.org/icons/blogger.svg" alt="Blogger" class="blogger-icon">
+        </a>
+    </div>
+  </div>
+  
 
-                <div class="form-group">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
-                </div>
-
-                <div class="form-group">
-                    <label for="pickup">Pickup Location:</label>
-                    <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="dropoff">Drop-off Location:</label>
-                    <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="travelers">Number of Travelers:</label>
-                    <input type="number" id="travelers" name="travelers" placeholder="Enter number of travelers" min="1" required>
-                </div>
-
-                <button type="submit">Submit Booking</button>
-            </form>        
-        </div>
-    </section>
-    
-   
     <div class="floating_btn">
         <a href="https://wa.me/918883451668" target="_blank" rel="noreferrer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" width="36" height="36" />
         </a>
     </div>
-          
+
+      <br>
       
     <!-- Footer -->
     <footer>

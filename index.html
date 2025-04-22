@@ -35,9 +35,10 @@
       <button id="menu-button" class="nav-button">Menu</button>
       <nav id="dropdown-menu" class="nav-dropdown">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="#" onclick="return false;">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="booking.html">Booking</a></li>
+          <!-- <li><a href="https://shrishtravelschennai.blogspot.com/p/best-cab-service-in-chennai-outstation.html">Blog</a></li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -45,17 +46,30 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Where Every Journey Begins with Trust</h2>
-      <p>Experience seamless, safe, and stylish rides across Chennai and beyond.</p>
-      <p>Book now to enjoy professional drivers, modern vehicles, and top-rated service.</p>
-      <a href="booking.html" class="btn">Start Your Journey</a>
+<!-- Hero Section Start -->
+<section id="hero" class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title">Your Journey, Our Responsibility</h1>
+    <p class="hero-subtitle">Reliable cab services for airport, outstation, and city rides in Chennai</p>
+    <div class="hero-buttons">
+      <a href="booking.html" class="btn-primary">Book Now</a>
+      <a href="services.html" class="btn-secondary">View Our Services</a>
     </div>
-  </section>
-<br>
-  <!-- Bridge Content -->
-  <section class="bridge-content">
+  </div>
+</section>
+<!-- Hero Section End -->
+<!-- About Section Start -->
+<section id="about" class="bridge-content">
+  <div class="about-content">
+    <h2>About ShRish Travels</h2>
+    <p>
+      ShRish Travels is your trusted partner for reliable and comfortable cab services across Chennai and beyond. We specialize in airport transfers, outstation rides, and local travel — all delivered with punctuality, cleanliness, and care. 
+    </p>
+    <p>
+      With a fleet of well-maintained vehicles and professional drivers, we ensure every journey is safe, smooth, and stress-free. Whether it’s a business trip or a family vacation, ShRish Travels is committed to making your travel experience truly exceptional.
+    </p>
+  </div>
+
     <div class="bridge-container">
       <div class="bridge-text">
         <h2>Travel Redefined. Comfort Guaranteed.</h2>
@@ -105,10 +119,12 @@
 </section>
 
 <!-- Feedback/Contact Section -->
-<section class="feedback">
-  <h2>We'd Love to Hear from You!</h2>
-  <p>If you have any feedback, suggestions for improving our services, or inquiries about our offerings, feel free to get in touch with us. We're always looking to improve and provide the best travel experience possible!</p>
-  <a href="contact.html" class="btn">Contact Us</a>
+<section class="feedback" id="feedbackSection">
+  <div class="feedback-container">
+    <h2>We’d Love to Hear From You!</h2>
+    <p>If you have any feedback, suggestions for improving our services, or inquiries about our offerings, feel free to get in touch. We're committed to providing the best travel experience possible and value your input!</p>
+    <a href="contact.html" class="cta-btn">Contact Us</a>
+  </div>
 </section>
 
 <!-- Floating WhatsApp Button -->
@@ -118,17 +134,52 @@
   </a>
 </div>
 
+<section class="contact-icons-section" id="contact-icons-section">
+  <div class="contact-icons-wrapper">
+    <div class="contact-icons">
+      <div class="icon-box">
+        <a href="tel:+918883451668" data-tooltip="Call Us" aria-label="Call Shrish Travels">
+          <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call Us">
+        </a>
+      </div>
+      <div class="icon-box">
+        <a href="mailto:shrishtravels1@gmail.com" data-tooltip="Mail Us" aria-label="Email Shrish Travels">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Us">
+        </a>
+      </div>
+      <div class="icon-box">
+        <a href="https://www.instagram.com/shrish_travels" data-tooltip="See Our Travel Vibes" target="_blank" aria-label="Follow on Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        </a>
+      </div>
+      <div class="icon-box">
+        <a href="https://www.youtube.com/channel/UC5xOOggNg80T7uoijMfz3jA" data-tooltip="Explore with Us on YouTube" target="_blank" aria-label="Subscribe on YouTube">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+        </a>
+      </div>
+      <div class="icon-box">
+        <a href="https://shrishtravelschennai.blogspot.com/p/best-cab-service-in-chennai-outstation.html" data-tooltip="Read More About Us" target="_blank" aria-label="Read our Blog">
+          <img src="https://simpleicons.org/icons/blogger.svg" alt="Blogger" class="blogger-icon">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <div class="floating_btn">
+      <a href="https://wa.me/918883451668" target="_blank" rel="noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" width="36" height="36" />
+      </a>
+  </div>
+
+    <br>
+    
   <!-- Footer -->
   <footer>
-    <div class="social-icons">
-      <a href="https://www.facebook.com/drumsjega.drumsjega"><i class="fab fa-facebook-f"></i></a>
-      <!-- <a href="#"><i class="fab fa-twitter"></i></a> -->
-      <a href="https://www.instagram.com/shrish_travels"><i class="fab fa-instagram"></i></a>
-  </div>
-    <p>&copy; 2022 ShRish Travels. All rights reserved.</p>
+      <p>&copy; 2022 ShRish Travels. All rights reserved.</p>
   </footer>
-
-  <!-- External JS file -->
   <script src="script.js"></script>
+  <!-- <script src="//code.tidio.co/jx1aboumfp5oxnr4aeirxc7ackky6iwu.js" async></script> -->
 </body>
 </html>

@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="assets/SH1.jpg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBGR8GE2HH"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MBGR8GE2HH"></script>
 </head>
 <body>
+
   <header>
     <a href="index.html"><img src="assets/SH1.png" alt="ShRish Travels Logo" class="logo"></a>
     <div class="header-title">
@@ -26,26 +26,30 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="booking.html">Booking</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <!-- <li><a href="https://shrishtravelschennai.blogspot.com/p/best-cab-service-in-chennai-outstation.html">Blog</a></li> -->
+          <li><a href="#" onclick="return false;">Contact</a></li>
+
         </ul>
       </nav>
     </div>
   </header>
-  <section class="contact-section" class="blur-bg" data-aos="fade-up">
-        <!-- <div > -->
-        
+
+  <!-- Contact Form Section -->
+  <section class="contact-section" data-aos="fade-up">
     <div class="contact-grid">
       <div class="modern-card contact-form" data-aos="fade-up" data-aos-delay="100">
         <form id="contactForm">
-            <center><h2>Send Us a Message</h2></center>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
-            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit" class="primary-btn">Submit</button>
+          <center><h2>Send Us a Message </h2></center>
+          
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <input type="tel" id="phone" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}">
+          <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit" class="primary-btn">Submit</button>
         </form>
       </div>
     </div>
+
     <div id="successMessage" class="hidden">
       <center><i class="fas fa-check-circle success-icon"></i></center>
       <p class="success-text">Thank you! Your message was sent successfully.</p>
@@ -55,56 +59,70 @@
         <button id="whatsappNo" class="action-button">No</button>
       </div>
     </div>
-    <div><br>
-      <div class="modern-card1 map-card">
-        <center><h2>Find Us on Google Maps</h2></center>
-        <iframe 
-            src="https://www.google.com/maps?q=ShRish+Travels,+Gangai+Nagar,+Velachery,+Chennai&output=embed"
-            allowfullscreen loading="lazy">
-        </iframe>
-      </div>  
-       <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-       <script src="https://static.elfsight.com/platform/platform.js" async></script>
-       <div class="elfsight-app-6b4baccb-caf5-4d45-a9f8-97df6c9e7fd3" data-elfsight-app-lazy></div>  
+  </section> <!-- ✅ Contact Section Ends Here -->
 
+  <!-- Map Section -->
+  <section class="map-reviews-section">
+    <div class="modern-card1 map-card">
+      <center><h2>Find Us on Google Maps</h2></center>
+      <iframe 
+        src="https://www.google.com/maps?q=ShRish+Travels,+Gangai+Nagar,+Velachery,+Chennai&output=embed"
+        allowfullscreen loading="lazy">
+      </iframe>
+    </div>
+  </section>
+  <center><h2>Book Your Ride Instantly</h2></center>
+
+  
+  <!-- Google Reviews -->
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-6b4baccb-caf5-4d45-a9f8-97df6c9e7fd3" data-elfsight-app-lazy></div>  
+<br>
+  <!-- Social Icons Section -->
+  <section class="contact-icons-section" id="contact-icons-section">
+    <div class="contact-icons-wrapper">
       <div class="contact-icons">
         <div class="icon-box">
-            <a href="tel:+918883451668"><img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call Us"></a>
-            <a href="tel:+918883451668" class="action-button">Call Us</a>
-            
+          <a href="tel:+918883451668" data-tooltip="Call Us" aria-label="Call Shrish Travels">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Call Us">
+          </a>
         </div>
-    
         <div class="icon-box">
-            <a href="mailto:shrishtravels1@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Us"></a>
-            <a href="mailto:shrishtravels1@gmail.com" class="action-button">Mail Us</a>
+          <a href="mailto:shrishtravels1@gmail.com" data-tooltip="Mail Us" aria-label="Email Shrish Travels">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Us">
+          </a>
         </div>
-    
-        <!-- <div class="icon-box">
-            <a href="https://wa.me/918883451668" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
-            <a href="https://wa.me/918883451668" class="action-button">Chat Now</a>
-        </div> -->
-    
         <div class="icon-box">
-            <a href="https://www.instagram.com/shrish_travels" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram"></a>
-            <a href="https://www.instagram.com/shrish_travels" class="action-button">Follow</a>
+          <a href="https://www.instagram.com/shrish_travels" data-tooltip="See Our Travel Vibes" target="_blank" aria-label="Follow on Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+          </a>
         </div>
-    
         <div class="icon-box">
-          <a href="https://www.youtube.com/channel/UC5xOOggNg80T7uoijMfz3jA" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
-          <a href="https://www.youtube.com/channel/UC5xOOggNg80T7uoijMfz3jA" class="action-button">Subscribe</a>
+          <a href="https://www.youtube.com/channel/UC5xOOggNg80T7uoijMfz3jA" data-tooltip="Explore with Us on YouTube" target="_blank" aria-label="Subscribe on YouTube">
+            <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+          </a>
+        </div>
+        <div class="icon-box">
+          <a href="https://shrishtravelschennai.blogspot.com/p/best-cab-service-in-chennai-outstation.html" data-tooltip="Read More About Us" target="_blank" aria-label="Read our Blog">
+            <img src="https://simpleicons.org/icons/blogger.svg" alt="Blogger" class="blogger-icon">
+          </a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Floating WhatsApp Button -->
   <div class="floating_btn">
-        <a href="https://wa.me/918883451668" target="_blank" rel="noreferrer">
-             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" width="36" height="36">
-        </a>
+    <a href="https://wa.me/918883451668" target="_blank" rel="noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" width="36" height="36" />
+    </a>
   </div>
-  <!-- <div class="corner-badge">24/7 Support</div> -->
+<br>
+  <!-- Footer -->
   <footer>
     <p>&copy; 2022 ShRish Travels. All rights reserved.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
