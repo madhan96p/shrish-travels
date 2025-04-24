@@ -53,9 +53,9 @@
 
 <h2>📹 Digital Media & Growth Assets</h2>
 <ul>
-  <li>✍️ <a href="https://shrishtravels.blogspot.com">Official Blog</a></li>
+  <li>✍️ <a href="https://shrishtravelschennai.blogspot.com/p/best-cab-service-in-chennai-outstation.html">Official Blog</a></li>
   <li>📺 <a href="https://www.youtube.com/@shrishtravels">YouTube Channel</a></li>
-  <li>🌟 <a href="https://g.co/kgs/QY1hvKf">Google Business Reviews</a></li>
+  <li>🌟 <a href="https://g.co/kgs/nvNmHBv">Google Business Reviews</a></li>
 </ul>
 
 <h2>🧠 What I Learned</h2>
@@ -85,3 +85,7 @@
 <hr>
 
 <p align="center"><em>⭐ Fork this repo or drop a star if it inspires you!</em></p>
+
+> **Looking to build something similar for your brand?**  
+> Let's connect — [Email Me](mailto:pragadeesh.s96@gmail.com) | [LinkedIn](https://www.linkedin.com/in/praga1482/)
+
