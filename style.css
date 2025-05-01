@@ -67,6 +67,17 @@ header {
     margin-top: 5px;
     font-family: 'Poppins', sans-serif;
 }
+/* Before */
+header {
+  backdrop-filter: blur(8px);
+}
+
+/* After (with Safari support) */
+header {
+  -webkit-backdrop-filter: blur(8px); /* for Safari 9+ */
+  backdrop-filter: blur(8px);         /* for modern browsers */
+}
+
 /* Navigation Bar */
 
 
