@@ -1178,6 +1178,156 @@ h2 {
 
 
 /* Contact Section */
+.contact-intro {
+  background: url('https://www.transparenttextures.com/patterns/pw-maze-white.png'), #f4f8fb; /* Light texture */
+  padding: 80px 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1); /* Softer shadow for elegance */
+  position: relative;
+}
+
+.contact-heading {
+  font-size: 2.5rem;
+  color: #1e40af; /* Deep blue for a trust-building feel */
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact-lead {
+  font-size: 1.3rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  opacity: 0.85; /* Slight transparency for softness */
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+  opacity: 0.8; /* Slight transparency for cohesion */
+}
+
+.contact-intro p {
+  margin: 0 0 20px;
+  padding: 0;
+}
+
+.contact-intro .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .contact-heading {
+    font-size: 2rem;
+  }
+
+  .contact-lead {
+    font-size: 1.1rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+}
+
+/* Hover Effect on Paragraphs */
+.contact-lead:hover, .contact-text:hover {
+  color: #1e40af;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Animation on Entry (Slide-Up) */
+.contact-intro {
+  animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* FAQ Section */
+.faq-section {
+  background: #f9fafb;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.faq-section h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #e0e7ff;
+  cursor: pointer;
+}
+
+.faq-item:hover {
+  box-shadow: 0 10px 25px rgba(30, 64, 175, 0.1);
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  position: relative;
+  padding-right: 30px;
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.4rem;
+  color: #1e3a8a;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question::after {
+  content: '-';
+}
+
+.faq-answer {
+  display: none;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
+
 .contact-section {
     display: flex;
     flex-direction: column;
