@@ -37,6 +37,91 @@ header {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.header-title {
+  max-width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.flip-inner {
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-header:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.flip-front h1 {
+  font-size: 2.5rem;
+  color: #1e40af;
+  white-space: nowrap;     /* Prevent line breaks */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  width: 100%;
+}
+
+.flip-header {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 30px 0; /* Add vertical spacing instead */
+}
+
+
+
+.flip-inner {
+  width: 100%;
+  height: auto;
+  transform-style: preserve-3d;
+  animation: flipAuto 8s infinite; /* Flip every 8 seconds */
+  transition: transform 0.8s ease;
+  position: relative;
+}
+
+
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* .flip-back p {
+  font-size: 1.5rem;
+  color: #3e3e3e;
+  margin: 0;
+} */
+/* Animation keyframes */
+@keyframes flipAuto {
+  0%, 40% {
+    transform: rotateY(0deg);
+  }
+  50%, 90% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 
 
 /* Logo */

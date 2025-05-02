@@ -55,10 +55,18 @@
     <header>
         <a href="index.html"><img src="assets/SH1.png" alt="ShRish Travels Logo" class="logo" data-aos="slide-right"></a>
         <div class="header-title">
-            <h1 data-aos="slide-down">Book Your Ride</h1>
-            <p class="slogan" data-aos="slide-up"><em>Fast, Safe & Comfortable Journeys</em></p>
-       
+          <div class="flip-header">
+            <div class="flip-inner">
+              <div class="flip-front">
+                <h1 data-aos="slide-down">Book Your Ride</h1>
+              </div>
+              <div class="flip-back">
+                <p class="slogan" data-aos="slide-up"><strong><em>Fast, Safe & Comfortable Journeys</em></strong></p>
+              </div>
+            </div>
+          </div>
         </div>
+        
         <div class="nav-container" data-aos="slide-left">
             <button id="menu-button" class="nav-button">Menu</button>
             <nav id="dropdown-menu" class="nav-dropdown">
@@ -74,40 +82,40 @@
         </div>
     </header>
 <!-- Add background-->
-<section class="page-title">
-    <div class="booking-message">
-      <h2>Book a Ride That Matches Your Standards</h2>
-      <p>Comfort, style, and reliability—all in one seamless travel experience with ShRish Travels.</p>
+<section class="page-title" ddata-aos="fade-up">
+    <div class="booking-message" data-aos="fade-down">
+      <h2 data-aos="slide-up" data-aos-delay="2">Book a Ride That Matches Your Standards</h2>
+      <p  data-aos="fade-up" data-aos-delay="100">Comfort, style, and reliability—all in one seamless travel experience with ShRish Travels.</p>
     </div>
   </section>
   
 
 <!-- Booking Section OUTSIDE page-title -->
-<section class="booking-container" id="booking-section">
+<section class="booking-container" id="booking-section" data-aos="slide-up">
     <div class="booking-form">
-        <h2>Fill in Your Travel Details</h2>
+        <h2 data-aos="fade-down" data-aos-delay="100">Fill in Your Travel Details</h2>
         <form id="bookingForm" action="#" method="POST" onsubmit="gtagSendEvent()">
             <div class="form-group">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <label for="name" data-aos="fade-left" data-aos-delay="100">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required >
             </div>
             <div class="form-group">
-                <label for="phone">Phone Number:</label>
+                <label for="phone" data-aos="fade-left" data-aos-delay="100">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
             </div>
             <div class="form-group">
-                <label for="pickup">Pickup Location:</label>
+                <label for="pickup" data-aos="fade-left" data-aos-delay="100">Pickup Location:</label>
                 <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
             </div>
             <div class="form-group">
-                <label for="dropoff">Drop-off Location:</label>
+                <label for="dropoff" data-aos="fade-left" data-aos-delay="100">Drop-off Location:</label>
                 <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
             </div>
             <div class="form-group">
-                <label for="travelers">Number of Travelers:</label>
+                <label for="travelers" data-aos="fade-left" data-aos-delay="100">Number of Travelers:</label>
                 <input type="number" id="travelers" name="travelers" placeholder="Enter number of travelers" min="1" required>
             </div>
-            <button type="submit">Submit Booking</button>
+            <button type="submit" data-aos="fade-up">Submit Booking</button>
         </form>
     </div>
 </section>
