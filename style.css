@@ -830,8 +830,8 @@ header {
 .service-box {
     display: inline-block;
     width: 300px;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 20px;
+    background: rgba(224, 231, 235, 0.95);
+    padding: 19px;
     margin: 15px;
     border-radius: 16px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
