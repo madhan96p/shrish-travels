@@ -16,6 +16,24 @@ body {
   body, html {
   overflow-x: hidden;
 }
+/* Premium look for all paragraph text */
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.075rem;             /* slightly larger for readability */
+  line-height: 1.8;                /* generous line spacing */
+  color: #2e2e2e;                  /* dark, professional text */
+  font-weight: 400;                /* clean and modern */
+  margin-bottom: 1.2rem;           /* clear separation between paragraphs */
+  letter-spacing: 0.2px;
+  text-shadow: 0.3px 0.3px 0 rgba(0, 0, 0, 0.03);  /* subtle depth */
+  transition: all 0.3s ease;
+}
+
+/* Optional hover effect for sections like testimonials or about */
+p:hover {
+  color: #1e40af;                  /* rich blue on hover */
+  transform: scale(1.01);
+}
 
 /* Header Styling */
 header {
