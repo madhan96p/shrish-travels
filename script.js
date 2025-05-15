@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const bookingData = {
                 name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
                 phone: document.getElementById("phone").value,
                 pickup: document.getElementById("pickup").value,
                 dropoff: document.getElementById("dropoff").value,
@@ -64,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 submitButton.innerText = `Processing... Please wait (${countdown}s)`;
             }, 1000);
 
-            const scriptURL = "https://script.google.com/macros/s/AKfycbyMiXjJr4hYdc6SlzGQnrZPlTnKwRZ_s5KbpCLlNadlOvh96EspoA-aA0vqQsjpyxFo/exec";
+            const scriptURL = "https://script.google.com/macros/s/AKfycbzn_4oOBJafTUBPgvwmrhtjxJN3mcDz809YLUTBHjCmdDKYYG-lGRDMgLuM_WJ9ebhm/exec";
 
             fetch(scriptURL, {
                 method: "POST",
