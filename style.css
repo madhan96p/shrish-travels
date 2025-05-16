@@ -1997,6 +1997,95 @@ h2 {
 
   text-decoration: none; /* 💡 Add this line to remove underline */
 }
+.insta-hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.insta-hover-container i {
+  color: #facc15; /* Yellow or your preferred brand color */
+  transition: color 0.3s ease;
+}
+
+.insta-hover-container:hover i {
+  color: white;
+}
+
+.insta-preview {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  width: 300px;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.insta-hover-container:hover .insta-preview {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* YouTube Preview */
+.youtube-hover-container {
+  position: relative;
+  display: inline-block;
+}
+.youtube-preview iframe {
+  width: 280px;
+  height: 158px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-preview {
+  position: absolute;
+  top: 100%; /* Show below icon */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.youtube-hover-container:hover .youtube-preview {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.whatsapp-hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.whatsapp-hover-container:hover .whatsapp-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 
 .footer-socials a:hover {

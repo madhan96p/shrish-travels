@@ -198,5 +198,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       });
     document.getElementById("copyright-year").textContent = new Date().getFullYear();
+    const youtubeIcon = document.querySelector('.youtube-icon');
+    const youtubeIframe = document.querySelector('.youtube-preview iframe');
 
+    youtubeIcon.addEventListener('mouseenter', () => {
+        youtubeIframe.src = "https://www.youtube.com/embed/videoseries?list=PLoZgDfi6FBaFTZGN_K7HysKfpU81VwuiH&autoplay=1&mute=1";
+    });
+
+    youtubeIcon.addEventListener('mouseleave', () => {
+        youtubeIframe.src = ""; // Stop video
+    });
 });
