@@ -11,7 +11,7 @@ function toggleVehicles() {
       ? 'View More Vehicles'
       : 'View Less Vehicles';
   }
-  
+
   function toggleServices() {
     const moreServices = document.getElementById('moreServiceList');
     const btn = document.querySelectorAll('.view-more')[1];
@@ -21,7 +21,6 @@ function toggleVehicles() {
       : 'View Less Services';
   }
   
-
 document.addEventListener("DOMContentLoaded", function () {
     // ===== Menu Toggle =====
     const menuButton = document.getElementById("menu-button");
@@ -198,4 +197,6 @@ document.addEventListener("DOMContentLoaded", function () {
           item.classList.toggle('open');
         });
       });
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+
 });

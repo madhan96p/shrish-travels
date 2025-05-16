@@ -1879,19 +1879,250 @@ h2 {
     font-size: 16px;
     color: #555;
   }
-  /* Footer */
-  footer {
-    background: linear-gradient(to right, #1e3a8a, #2563eb);
-    color: #fff;
-    padding: 1px 20px 10px; /* Reduce bottom padding if needed */
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
+  /* Core layout */
+.footer {
+  background: linear-gradient(to right, #1e3a8a, #2563eb);
+  color: #f1f5f9;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 2rem; /* Reduced padding */
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.05), transparent 70%);
+  opacity: 0.2;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem 1.5rem; /* Reduced padding */
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* Reduced gap */
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
   }
-  /* Contact Icons Section */
-.contact-icons-wrapper {
-  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%); /* Subtle gradient for premium feel */
-  padding: 30px 0;
-  text-align: center;
+}
+
+/* Brand section */
+.footer-brand {
+  text-align: center; /* Center for mobile as per screenshot */
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-shrish {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #dc2626; /* Red for "ShRish" */
+  position: relative;
+}
+
+.logo-shrish::after {
+  content: '';
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+  background: #22c55e; /* Green swoosh */
+  border-radius: 5px;
+}
+
+.logo-travels {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #facc15; /* Yellow for "TRAVELS" */
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-brand p {
+  text-align: center; /* Center as per screenshot */
+  color: #d1d5db;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Social icons */
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.footer-socials a {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #facc15; /* Yellow icons */
+  transition: all 0.3s ease;
+
+  text-decoration: none; /* 💡 Add this line to remove underline */
+}
+
+
+.footer-socials a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Links and Headings */
+.footer h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #facc15; /* Yellow headings */
+  margin-bottom: 1rem;
+  position: relative;
+  text-align: left;
+}
+
+.footer h3::after {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 2.5rem;
+  height: 2px;
+  background: #facc15;
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #d1d5db;
+  text-align: left;
+}
+
+.footer-links a {
+  color: #f1f5f9;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-links a:hover {
+  color: #facc15;
+  padding-left: 0.5rem;
+}
+
+/* Contact Info */
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer-contact p {
+  margin: 0;
+  font-weight: 600;
+  color: #f1f5f9;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.footer-contact a,
+.footer-contact address {
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+
+.footer-contact a:hover {
+  color: #facc15;
+}
+
+.footer-contact i {
+  font-size: 1.1rem;
+  color: #facc15;
+  margin-top: 0.25rem;
+  text-align: left;
+}
+
+.footer-contact-item{
+  align-items: left;
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+  background: #0f172a;
+  padding: 1rem 0; /* Reduced padding */
+  text-align: left;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.footer-bottom p {
+  color: #d1d5db;
+  font-size: 0.8rem;
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .footer-brand {
+    text-align: left; /* Restore left alignment for desktop */
+  }
+
+  .footer-brand p {
+    text-align: left;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+  }
+
+  .footer-socials {
+    justify-content: flex-start;
+  }
 }
 
 .contact-icons {
@@ -2019,8 +2250,9 @@ h2 {
 
 footer p {
   margin: 20px 0 0;
-  font-size: 14px;
-  color: #dbeafe;
+  text-align: left;
+  /* font-size: 14px; */
+  /* color: #dbeafe; */
 }
 
 /* .contact-icons {
