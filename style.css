@@ -210,6 +210,7 @@ header {
 
 .nav-container {
     position: relative;
+    z-index: 10000;
 }
 
 .nav-button {
@@ -2507,3 +2508,170 @@ footer p {
 .faq-container details[open] summary {
   color: #007BFF;
 }
+
+/* Routes */
+
+.routes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.route-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.5rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.route-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+}
+
+.route-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #007BFF;
+}
+
+.route-desc {
+  font-size: 1rem;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+  color: #555;
+}
+
+.route-link {
+  text-align: center;
+  background-color: #007BFF;
+  color: white;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.route-link:hover,
+.route-link:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+
+/* slider */
+
+
+.ticker-wrapper {
+  overflow: hidden;
+  background: #f0f0f0;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  white-space: nowrap;
+}
+
+.ticker {
+  display: flex;
+  align-items: center;
+  animation: ticker-slide 40s linear infinite;
+}
+
+.prefix {
+  font-weight: bold;
+  color: #333;
+  margin-right: 30px;
+  flex-shrink: 0;
+}
+
+.routes {
+  display: flex;
+  gap: 30px;
+  flex-shrink: 0;
+}
+
+.route {
+  font-weight: bold;
+  color: #333;
+  cursor: default;
+  user-select: none;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-3px); }
+  40%, 80% { transform: translateX(3px); }
+}
+
+.route:hover {
+  animation: shake 0.5s ease-in-out;
+  color: #ff0015; /* optional: change color on hover */
+  cursor: pointer;
+}
+
+/* Animation */
+/* @keyframes ticker-slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+/* Pause on hover */
+.ticker-wrapper:hover .ticker {
+  animation-play-state: paused;
+}
+header {
+  height: 60px; /* fix your header height */
+  /* your existing header styles */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  /* other styles */
+}
+
+.fixed-slider {
+  position: fixed;
+  top: 90px; /* right below header */
+  left: 0;
+  width: 100%;
+  background: #f0f0f0;
+  padding: 20px 20px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  z-index: 9999; /* stays on top of everything except header */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.route:hover {
+  animation: glow 1.5s infinite alternate;
+  color: #0077cc;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #658f9c;
+  }
+  to {
+    text-shadow: 0 0 15px #cabb14, 0 0 25px #d2d60d;
+  }
+}
+

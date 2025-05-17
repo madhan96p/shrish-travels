@@ -157,7 +157,7 @@ template = '''<!DOCTYPE html>
 </head>
 <body>
   <header>
-    <a href="index.html"><img src="/assets/SH1.png" alt="ShRish Travels Logo" class="logo" data-aos="slide-right"></a>
+    <a href="/index.html"><img src="/assets/SH1.png" alt="ShRish Travels Logo" class="logo" data-aos="slide-right"></a>
     <div class="header-title">
       <div class="flip-header">
         <div class="flip-inner">
@@ -181,6 +181,17 @@ template = '''<!DOCTYPE html>
         </ul>
       </nav>
     </div>
+<div id="route-wrapper" class="fixed-slider" style="display: flex; align-items: center; overflow: hidden; background: #eaeaea; padding: 10px; font-weight: bold; color: #333; font-family: sans-serif;">
+      <div id="fixed-left" style="white-space: nowrap; flex-shrink: 0; margin-right: 20px;" data-aos="fade-left">
+        Chennai
+      </div>
+      <div id="scrolling-right" style="white-space: nowrap; overflow: hidden; flex-grow: 1; position: relative; cursor: pointer;">
+        <div id="scrolling-content" style="display: inline-block; white-space: nowrap; will-change: transform;">
+          <!-- Sliding cities will go here -->
+        </div>
+      </div>
+    </div>
+
   </header>
 <main class="page-content">
   <h1 class="hero-title" data-aos="slide-up" style="text-align: center;">
@@ -403,3 +414,10 @@ for city in destinations:
         print(f'✅ Created {filename}')
     except Exception as e:
         print(f'❌ Error processing {city}: {e}')
+
+# links = []
+
+# for i in destinations:
+#     city_lower = i.lower().replace(" ", "-")
+#     links.append(f"https://shrishtravels.netlify.app/py/chennai-to-{city_lower}-cab.html")
+# print(links)

@@ -208,4 +208,67 @@ document.addEventListener("DOMContentLoaded", function () {
     youtubeIcon.addEventListener('mouseleave', () => {
         youtubeIframe.src = ""; // Stop video
     });
+
+    // Popular routes from Chennai ordered by popularity
+const popularRoutes = [
+    "Pondicherry", "Bangalore", "Tirupati", "Kumbakonam",
+    "Velankanni", "Ooty", "Madurai", "Rameswaram", "Yelagiri",
+    "Thanjavur", "Tiruvannamalai", "Sabarimala", "Palani",
+    "Chidambaram", "Srirangam", "Kanchipuram", "Yercaud",
+    "Valparai", "Kolli Hills", "Kotagiri", "Mahabalipuram",
+    "Kodaikanal", "Coimbatore", "Trichy", "Vellore",
+    "Munnar", "Alleppey", "Kovalam", "Kanyakumari", "Nagercoil"
+  ];
+
+  function cityToSlug(city) {
+    return city.toLowerCase().replace(/\s+/g, '-');
+  }
+
+  const scrollingContent = document.getElementById('scrolling-content');
+  const scrollingRight = document.getElementById('scrolling-right');
+
+  function createScrollingLinks() {
+    for (let i = 0; i < 2; i++) {
+      popularRoutes.forEach(city => {
+        const a = document.createElement('a');
+        a.className = 'route';
+        a.textContent = city;
+        a.href = `https://shrishtravels.netlify.app/py/chennai-to-${cityToSlug(city)}-cab.html`;
+        a.style.marginRight = '20px';
+        a.style.color = '#333';
+        a.style.textDecoration = 'none';
+        scrollingContent.appendChild(a);
+      });
+    }
+  }
+
+  createScrollingLinks();
+
+  let scrollX = 0;
+  const speed = 1;
+  let animationFrameId;
+  let paused = false;
+
+  function animate() {
+    if (!paused) {
+      scrollX -= speed;
+      if (Math.abs(scrollX) >= scrollingContent.scrollWidth / 2) {
+        scrollX = 0;
+      }
+      scrollingContent.style.transform = `translateX(${scrollX}px)`;
+    }
+    animationFrameId = requestAnimationFrame(animate);
+  }
+
+  scrollingRight.addEventListener('mouseenter', () => {
+    paused = true;
+  });
+
+  scrollingRight.addEventListener('mouseleave', () => {
+    paused = false;
+  });
+
+  animate();
+
+
 });
