@@ -206,11 +206,12 @@ header {
 .nav-links a.active {
     font-weight: bold;
     text-decoration: underline;
+    z-index: 10000;
 }
 
 .nav-container {
     position: relative;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 .nav-button {
@@ -2800,7 +2801,7 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* .route:hover {
+.route:hover {
   animation: glow 1.5s infinite alternate;
   color: #0077cc;
 }
@@ -2812,5 +2813,5 @@ header {
   to {
     text-shadow: 0 0 15px #cabb14, 0 0 25px #d2d60d;
   }
-} */
+}
 
