@@ -237,6 +237,8 @@ const popularRoutes = [
         a.style.marginRight = '20px';
         a.style.color = '#333';
         a.style.textDecoration = 'none';
+
+        
         scrollingContent.appendChild(a);
       });
     }
