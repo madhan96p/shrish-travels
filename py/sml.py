@@ -152,7 +152,7 @@ template = '''<!DOCTYPE html>
   <meta property="og:title" content="Chennai to {city} Cab Booking – ShRish Travels Velachery" />
   <meta property="og:description" content="Reliable, affordable AC taxi service from Chennai to {city}. Round-trip available. 24x7 booking via call or WhatsApp." />
   <meta property="og:image" content="/assets/SH1.jpg" />
-  <meta property="og:url" content="https://shrishtravels.netlify.app/py/chennai-to-{city}-cab.html" />
+  <meta property="og:url" content="https://shrishtravels.netlify.app/py/chennai-to-{city}-cab" />
   <meta property="og:type" content="website" />
 </head>
 <body>
