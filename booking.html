@@ -228,66 +228,71 @@
             </nav>
         </div>
     </header>
-<!-- Add background-->
-<section class="page-title" ddata-aos="fade-up" id = "booking-page">
+<main>
+  <!-- Add background-->
+  <section class="page-title" ddata-aos="fade-up" id = "booking-page">
     <div class="booking-message" data-aos="fade-down">
       <h2 data-aos="slide-up" data-aos-delay="2">Book a Ride That Matches Your Standards</h2>
       <p  data-aos="fade-up" data-aos-delay="100">Comfort, style, and reliability—all in one seamless travel experience with ShRish Travels.</p>
     </div>
   </section>
   
-
 <!-- Booking Section OUTSIDE page-title -->
-<section class="booking-container" id="booking-section" data-aos="slide-up">
+  <section class="booking-container" id="booking-section" data-aos="slide-up">
     <div class="booking-form">
         <h2 data-aos="fade-down" data-aos-delay="100">
-  <i class="fas fa-car-side"></i> Your Premium Ride Awaits – Comfort, Class & Care
-</h2>
+          <i class="fas fa-car-side"></i> Your Premium Ride Awaits – Comfort, Class & Care
+        </h2>
+        <form id="bookingForm" action="#" method="POST" onsubmit="gtagSendEvent()">
+          <div class="form-group">
+            <label for="name" data-aos="fade-left" data-aos-delay="100">
+                <i class="fas fa-user"></i> Full Name:
+            </label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="email" data-aos="fade-left" data-aos-delay="100">
+                  <i class="fas fa-envelope"></i> E-mail:
+              </label>
+              <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
+          </div>
+          
+          <div class="form-group">
+              <label for="phone" data-aos="fade-left" data-aos-delay="100">
+                  <i class="fas fa-phone-alt"></i> Phone Number:
+              </label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
+          </div>
+          
+          <div class="form-group">
+              <label for="pickup" data-aos="fade-left" data-aos-delay="100">
+                  <i class="fas fa-map-marker-alt"></i> Pickup Location:
+              </label>
+              <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="dropoff" data-aos="fade-left" data-aos-delay="100">
+                  <i class="fas fa-map-pin"></i> Drop-off Location:
+              </label>
+              <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
+          </div>
+          
+          <div class="form-group">
+              <label for="travelers" data-aos="fade-left" data-aos-delay="100">
+                  <i class="fas fa-users"></i> Number of Travelers:
+              </label>
+              <input type="number" id="travelers" name="travelers" placeholder="Enter number of travelers" min="1" required>
+          </div>
+          
+          <button type="submit" data-aos="fade-up">
+              Submit Booking
+          </button>
+        </form>
 
-<form id="bookingForm" action="#" method="POST" onsubmit="gtagSendEvent()">
-    <div class="form-group">
-        <label for="name" data-aos="fade-left" data-aos-delay="100">
-            <i class="fas fa-user"></i> Full Name:
-        </label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
     </div>
-    <div class="form-group">
-        <label for="email" data-aos="fade-left" data-aos-delay="100">
-            <i class="fas fa-envelope"></i> E-mail:
-        </label>
-        <input type="email" id="email" name="email" placeholder="Enter your email (optional)">
-    </div>
-    <div class="form-group">
-        <label for="phone" data-aos="fade-left" data-aos-delay="100">
-            <i class="fas fa-phone-alt"></i> Phone Number:
-        </label>
-        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Phone number should be 10 digits">
-    </div>
-    <div class="form-group">
-        <label for="pickup" data-aos="fade-left" data-aos-delay="100">
-            <i class="fas fa-map-marker-alt"></i> Pickup Location:
-        </label>
-        <input type="text" id="pickup" name="pickup" placeholder="Enter pickup location" required>
-    </div>
-    <div class="form-group">
-        <label for="dropoff" data-aos="fade-left" data-aos-delay="100">
-            <i class="fas fa-map-pin"></i> Drop-off Location:
-        </label>
-        <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
-    </div>
-    <div class="form-group">
-        <label for="travelers" data-aos="fade-left" data-aos-delay="100">
-            <i class="fas fa-users"></i> Number of Travelers:
-        </label>
-        <input type="number" id="travelers" name="travelers" placeholder="Enter number of travelers" min="1" required>
-    </div>
-    <button type="submit" data-aos="fade-up">
-        Submit Booking
-    </button>
-</form>
-
-    </div>
-</section>
+  </section>
 <!-- 
 <div class="contact-icons">
     <div class="icon-box">
@@ -321,41 +326,40 @@
     </div>
   </div> -->
   <section class="faq-section" data-aos="fade-up">
-  <div class="container">
-    <h2>Booking FAQs</h2>
-
-    <div class="faq-item" data-aos="fade-up">
-      <div class="faq-question">📝 What information do I need to fill in the booking form?</div>
-      <div class="faq-answer">You’ll need to enter your name, pickup/drop location, travel date, and contact details. This helps us confirm your ride quickly and accurately.</div>
+    <div class="container">
+      <h2>Booking FAQs</h2>
+      
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">📝 What information do I need to fill in the booking form?</div>
+        <div class="faq-answer">You’ll need to enter your name, pickup/drop location, travel date, and contact details. This helps us confirm your ride quickly and accurately.</div>
+      </div>
+      
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">📆 How early should I book my trip?</div>
+        <div class="faq-answer">We recommend booking at least 1 day in advance for smooth planning. However, urgent bookings are also accepted 24/7 if vehicles are available.</div>
+      </div>
+      
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">🔒 Is my data safe when I submit the booking form?</div>
+        <div class="faq-answer">Absolutely. Your data is securely stored and only used to confirm and manage your booking. We never share it with third parties.</div>
+      </div>
+      
+      <div class="faq-item" data-aos="fade-up">
+        <div class="faq-question">📱 Will I get a WhatsApp confirmation?</div>
+        <div class="faq-answer">Yes! Once you submit your booking, you’ll get an instant WhatsApp message from us confirming your request and sharing the next steps.</div>
+      </div>
     </div>
+  </section>
+</main>
 
-    <div class="faq-item" data-aos="fade-up">
-      <div class="faq-question">📆 How early should I book my trip?</div>
-      <div class="faq-answer">We recommend booking at least 1 day in advance for smooth planning. However, urgent bookings are also accepted 24/7 if vehicles are available.</div>
-    </div>
-
-    <div class="faq-item" data-aos="fade-up">
-      <div class="faq-question">🔒 Is my data safe when I submit the booking form?</div>
-      <div class="faq-answer">Absolutely. Your data is securely stored and only used to confirm and manage your booking. We never share it with third parties.</div>
-    </div>
-
-    <div class="faq-item" data-aos="fade-up">
-      <div class="faq-question">📱 Will I get a WhatsApp confirmation?</div>
-      <div class="faq-answer">Yes! Once you submit your booking, you’ll get an instant WhatsApp message from us confirming your request and sharing the next steps.</div>
-    </div>
-
+  <div class="floating_btn">
+      <a href="https://wa.me/918883451668" target="_blank" rel="noreferrer">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" width="36" height="36" />
+      </a>
   </div>
-</section>
-
-
-    <div class="floating_btn">
-        <a href="https://wa.me/918883451668" target="_blank" rel="noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" width="36" height="36" />
-        </a>
-    </div>
 
       <br>
-       <footer class="footer">
+<footer class="footer">
   <div class="footer-container">
     <div class="footer-grid">
   <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
