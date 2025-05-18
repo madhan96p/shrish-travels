@@ -48,7 +48,7 @@ template = '''<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chennai to {city} Cab Booking – ShRish Travels Velachery</title>
   <meta name="description" content="Affordable one-way and round-trip cab from Chennai to {city}. Book AC cabs from ShRish Travels Velachery. 24x7 support." />
-  <link rel="canonical" href="https://shrishtravels.netlify.app/py/chennai-to-{city_lower}-cab.html" />
+  <link rel="canonical" href="https://shrishtravels.netlify.app/py/chennai-to-{city_lower}-cab" />
   <link rel="stylesheet" href="/style.css" />
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />

@@ -64,74 +64,49 @@ header {
   text-align: center;
 }
 
-
-.flip-inner {
-  transition: transform 0.8s ease;
-  transform-style: preserve-3d;
+.flip-header {
+  width: 100%;
+  margin: 0 auto;
   position: relative;
+  padding: 30px 0;
+  perspective: 1000px; /* This is required */
+  overflow: hidden; /* Prevents overflow bleed */
 }
 
-.flip-header:hover .flip-inner {
-  transform: rotateY(180deg);
+.flip-inner {
+  width: 100%;
+  height: 100px; /* FIXED height for consistency */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  animation: flipAuto 8s infinite;
 }
 
 .flip-front,
 .flip-back {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Safari fallback */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 1.8rem;
 }
 
-
-
-.flip-front h1 {
-  font-size: 2.5rem;
-  color: #1e40af;
-  white-space: nowrap;     /* Prevent line breaks */
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
-  width: 100%;
+.flip-front {
+  transform: rotateY(0deg);
+  z-index: 2;
 }
-
-.flip-header {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  position: relative;
-  padding: 30px 0; /* Add vertical spacing instead */
-}
-
-
-
-.flip-inner {
-  width: 100%;
-  height: auto;
-  transform-style: preserve-3d;
-  animation: flipAuto 8s infinite; /* Flip every 8 seconds */
-  transition: transform 0.8s ease;
-  position: relative;
-}
-
-
 
 .flip-back {
   transform: rotateY(180deg);
+  z-index: 1;
 }
 
-/* .flip-back p {
-  font-size: 1.5rem;
-  color: #3e3e3e;
-  margin: 0;
-} */
-/* Animation keyframes */
+/* Flip animation */
 @keyframes flipAuto {
   0%, 40% {
     transform: rotateY(0deg);
