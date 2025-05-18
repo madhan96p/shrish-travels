@@ -169,7 +169,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     `;
 
                     document.getElementById("whatsappYes").onclick = function () {
-                        window.open("https://wa.me/918883451668", "_blank");
+                        const name = contactData.name;
+                        const phone = contactData.phone;
+                        const message = contactData.message;
+
+                        const encodedMessage = encodeURIComponent(
+                            `Hello ShRish Travels 👋,\n` +
+                            `I’ve just submitted a message through your contact form and would like to follow up regarding support or feedback.\n\n` +
+                            `Name: ${name}\n` +
+                            `Phone: ${phone}\n` +
+                            `Message: ${message}\n\n` +
+                            `Looking forward to your response. Thank you!`
+                        );
+
+                        window.open(`https://wa.me/918883451668?text=${encodedMessage}`, "_blank");
                     };
 
                     document.getElementById("whatsappNo").onclick = function () {

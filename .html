@@ -2,45 +2,221 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShRish Travels - Quick Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Types of Popups - ShRish Travels</title>
   <style>
     body {
       font-family: sans-serif;
-      background: #f9f9f9;
       margin: 0;
-      padding: 40px 20px;
+      padding: 0;
+    }
+
+    /* Overlay base */
+    .popup-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .popup-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
       text-align: center;
     }
-    h1 {
-      color: #333;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+
+    .popup-box h2 {
+      margin-top: 0;
     }
-    .link {
+
+    /* 1. Welcome popup on page load */
+    .popup-overlay.welcome:target {
+      display: flex;
+    }
+
+    /* 2. Click-to-open popup */
+    .popup-overlay.click:target {
+      display: flex;
+    }
+
+    /* 3. Hover popup */
+    .hover-popup {
+      position: relative;
+      display: inline-block;
+      margin: 40px;
+    }
+
+    .hover-popup-content {
+      visibility: hidden;
+      width: 250px;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      border-radius: 6px;
+      padding: 10px;
+      position: absolute;
+      z-index: 1;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .hover-popup:hover .hover-popup-content {
+      visibility: visible;
+    }
+
+    /* 4. Timed delay popup */
+    #timedPopup {
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    body.timed .timed-popup-visible {
+      display: flex;
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* 5. Scroll popup (placed at bottom) */
+    .scroll-popup {
+      position: fixed;
+      bottom: 0;
+      right: 10px;
+      width: 250px;
+      background: #fff;
+      padding: 15px;
+      box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+      border-radius: 10px 10px 0 0;
+      display: none;
+    }
+
+    body.scroll-popup-active .scroll-popup {
       display: block;
-      background: #ffc107;
-      color: #111;
+    }
+
+    /* 6. Bottom Bar Notification */
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #333;
+      color: #fff;
+      padding: 12px;
+      text-align: center;
+    }
+
+    /* 7. Exit intent popup */
+    .exit-popup {
+      display: none;
+    }
+
+    body.exit .exit-popup {
+      display: flex;
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    a.close {
+      display: inline-block;
+      margin-top: 10px;
+      color: red;
       font-weight: bold;
       text-decoration: none;
-      padding: 15px 25px;
-      margin: 12px auto;
-      max-width: 400px;
-      border-radius: 30px;
-      transition: background 0.3s;
-    }
-    .link:hover {
-      background: #ffb300;
     }
   </style>
 </head>
 <body>
-  <h1>Quick Links - ShRish Travels</h1>
-  <a class="link" href="https://shrishtravels.netlify.app" target="_blank">🌐 Visit Our Main Website</a>
-  <a class="link" href="https://shrishtravels.netlify.app/booking" target="_blank">🚗 Book a Cab Now</a>
-  <a class="link" href="https://www.instagram.com/shrish_travels/" target="_blank">📷 Instagram</a>
-  <a class="link" href="https://www.youtube.com/@shrishtourism" target="_blank">📺 YouTube</a>
-  <a class="link" href="tel:8883451668">📞 Call: 88834 51668</a>
-  <a class="link" href="mailto:shrishtravels1@gmail.com">📧 Email Us</a>
+
+<!-- 1. Welcome popup on page load -->
+<div id="welcome" class="popup-overlay welcome">
+  <div class="popup-box">
+    <h2>Welcome to ShRish Travels</h2>
+    <p>Book your perfect ride now!</p>
+    <a href="#" class="close">Close</a>
+  </div>
+</div>
+
+<!-- 2. Click-to-open popup -->
+<a href="#clickpopup" class="button">Click to Open Popup</a>
+<div id="clickpopup" class="popup-overlay click">
+  <div class="popup-box">
+    <h2>Click Popup</h2>
+    <p>This popup opened on click!</p>
+    <a href="#" class="close">Close</a>
+  </div>
+</div>
+
+<!-- 3. Hover Popup -->
+<div class="hover-popup">
+  <a href="#" class="button">Hover Me</a>
+  <div class="hover-popup-content">
+    <strong>Surprise!</strong><br>This is a hover popup.
+  </div>
+</div>
+
+<!-- 4. Timed popup -->
+<div id="timedPopup" class="popup-overlay timed-popup-visible">
+  <div class="popup-box">
+    <h2>Limited Time Offer!</h2>
+    <p>Get 10% off your next booking.</p>
+    <a href="#" class="close">Close</a>
+  </div>
+</div>
+
+<!-- 5. Scroll popup -->
+<div class="scroll-popup">
+  <strong>Need Help?</strong><br>Contact us for instant support!
+</div>
+
+<!-- 6. Bottom Bar Notification -->
+<div class="bottom-bar">
+  ✅ Book with confidence — 24/7 support on all routes!
+</div>
+
+<!-- 7. Exit Intent Popup -->
+<div class="popup-overlay exit-popup">
+  <div class="popup-box">
+    <h2>Wait! Don’t leave!</h2>
+    <p>Let us help you plan your next trip!</p>
+    <a href="#" class="close">Close</a>
+  </div>
+</div>
+
+<script>
+  // Add timed popup after 5s
+  setTimeout(() => document.body.classList.add("timed"), 5000);
+
+  // Add scroll popup after user scrolls
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      document.body.classList.add("scroll-popup-active");
+    }
+  });
+
+  // Simulate exit intent (when mouse leaves top edge)
+  document.addEventListener("mouseout", e => {
+    if (e.clientY < 50) {
+      document.body.classList.add("exit");
+    }
+  });
+</script>
+
 </body>
 </html>
