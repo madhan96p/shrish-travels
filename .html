@@ -2,262 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Types of Popups - ShRish Travels</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Embark on a Majestic South India Getaway with ShRish Travels. Explore temples, hill stations, and backwaters from Chennai. Custom itineraries & comfortable travel guaranteed.">
+  <meta name="keywords" content="South India tour, Chennai to Munnar, Madurai, Alleppey, Mahabalipuram, ShRish Travels, Travel Packages">
+  <meta name="author" content="ShRish Travels">
+  <title>Majestic South India Getaway | ShRish Travels</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
     }
-
-    /* Overlay base */
-    .popup-overlay {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-
-    .popup-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      width: 90%;
-      max-width: 400px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-      text-align: center;
-    }
-
-    .popup-box h2 {
-      margin-top: 0;
-    }
-
-    /* 1. Welcome popup on page load */
-    .popup-overlay.welcome:target {
-      display: flex;
-    }
-
-    /* 2. Click-to-open popup */
-    .popup-overlay.click:target {
-      display: flex;
-    }
-
-    /* 3. Hover popup */
-    .hover-popup {
-      position: relative;
-      display: inline-block;
-      margin: 40px;
-    }
-
-    .hover-popup-content {
-      visibility: hidden;
-      width: 250px;
-      background-color: #fff;
-      color: #000;
-      text-align: center;
-      border-radius: 6px;
-      padding: 10px;
-      position: absolute;
-      z-index: 1;
-      top: 120%;
-      left: 50%;
-      transform: translateX(-50%);
-      box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .hover-popup:hover .hover-popup-content {
-      visibility: visible;
-    }
-
-    /* 4. Timed delay popup */
-    #timedPopup {
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s ease;
-    }
-
-    body.timed .timed-popup-visible {
-      display: flex;
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    /* 5. Scroll popup (placed at bottom) */
-    .scroll-popup {
-      position: fixed;
-      bottom: 0;
-      right: 10px;
-      width: 250px;
-      background: #fff;
-      padding: 15px;
-      box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
-      border-radius: 10px 10px 0 0;
-      display: none;
-    }
-
-    body.scroll-popup-active .scroll-popup {
-      display: block;
-    }
-
-    /* 6. Bottom Bar Notification */
-    .bottom-bar {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #333;
-      color: #fff;
-      padding: 12px;
-      text-align: center;
-    }
-
-    /* 7. Exit intent popup */
-    .exit-popup {
-      display: none;
-    }
-
-    body.exit .exit-popup {
-      display: flex;
-    }
-
-    a.button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 10px;
-      background: #007bff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-    }
-
-    a.close {
-      display: inline-block;
-      margin-top: 10px;
-      color: red;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    /* Hide popup by default */
-.popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-/* Popup box styling */
-.popup-box {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  position: relative;
-  max-width: 400px;
-  width: 100%;
-}
-
-/* Close button styling */
-.popup-box .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  color: #333;
-  text-decoration: none;
-}
-
-.popup-box .close:hover {
-  color: #f00;
-}
-
-  </style>
+  </script>
 </head>
-<body>
+<body class="bg-white text-gray-900 font-sans">
 
-<!-- 1. Welcome popup on page load -->
-<div id="welcome" class="popup-overlay welcome">
-  <div class="popup-box">
-    <h2>Welcome to ShRish Travels</h2>
-    <p>Book your perfect ride now!</p>
-    <a href="#" class="close">Close</a>
-  </div>
-</div>
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-blue-600">ShRish Travels</h1>
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="services.html" class="hover:text-blue-600">Services</a>
+        <a href="routes.html" class="hover:text-blue-600">Routes</a>
+        <a href="booking.html" class="hover:text-blue-600">Booking</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </nav>
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2">Home</a>
+      <a href="services.html" class="block py-2">Services</a>
+      <a href="routes.html" class="block py-2">Routes</a>
+      <a href="booking.html" class="block py-2">Booking</a>
+      <a href="contact.html" class="block py-2">Contact</a>
+    </div>
+  </header>
 
-<!-- 2. Click-to-open popup -->
-<a href="#clickpopup" class="button">Click to Open Popup</a>
-<div id="clickpopup" class="popup-overlay click">
-  <div class="popup-box">
-    <h2>Click Popup</h2>
-    <p>This popup opened on click!</p>
-    <a href="#" class="close">Close</a>
-  </div>
-</div>
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-100 to-indigo-100 text-center p-10">
+    <h2 class="text-4xl font-extrabold text-blue-900 mb-2">Majestic South India Getaway</h2>
+    <p class="text-lg text-gray-700">Temples, hills, and backwaters — all in one perfect trip.</p>
+  </section>
 
-<!-- 3. Hover Popup -->
-<div class="hover-popup">
-  <a href="#" class="button">Hover Me</a>
-  <div class="hover-popup-content">
-    <strong>Surprise!</strong><br>This is a hover popup.
-  </div>
-</div>
+  <!-- Itinerary -->
+  <section class="p-6 max-w-5xl mx-auto">
+    <h3 class="text-2xl font-bold mb-6 text-center">7-Day Itinerary</h3>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="bg-white border p-4 rounded shadow">
+        <h4 class="text-lg font-semibold">Day 1: Chennai → Mahabalipuram</h4>
+        <p>Shore Temple, Pancha Rathas, and a scenic beach sunset.</p>
+      </div>
+      <div class="bg-white border p-4 rounded shadow">
+        <h4 class="text-lg font-semibold">Day 2: Mahabalipuram → Pondicherry</h4>
+        <p>French town vibes, Auroville, and seaside cafés.</p>
+      </div>
+      <div class="bg-white border p-4 rounded shadow">
+        <h4 class="text-lg font-semibold">Day 3: Pondicherry → Chidambaram → Kumbakonam</h4>
+        <p>Spiritual trail with ancient temples and heritage sites.</p>
+      </div>
+      <div class="bg-white border p-4 rounded shadow">
+        <h4 class="text-lg font-semibold">Day 4: Kumbakonam → Thanjavur → Madurai</h4>
+        <p>Brihadeeswarar Temple & Madurai’s vibrant markets.</p>
+      </div>
+      <div class="bg-white border p-4 rounded shadow">
+        <h4 class="text-lg font-semibold">Day 5: Madurai → Munnar</h4>
+        <p>Tea estates, hills, and waterfalls – nature at its best.</p>
+      </div>
+      <div class="bg-white border p-4 rounded shadow">
+        <h4 class="text-lg font-semibold">Day 6: Munnar → Alleppey</h4>
+        <p>Backwater cruise with authentic Kerala lunch.</p>
+      </div>
+      <div class="bg-white border p-4 rounded shadow">
+        <h4 class="text-lg font-semibold">Day 7: Alleppey → Kochi</h4>
+        <p>Explore Fort Kochi before return journey.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- 4. Timed popup -->
-<div id="timedPopup" class="popup-overlay timed-popup-visible">
-  <div class="popup-box">
-    <h2>Limited Time Offer!</h2>
-    <p>Get 10% off your next booking.</p>
-    <a href="#" class="close">Close</a>
-  </div>
-</div>
+  <!-- Routes -->
+  <section class="bg-gray-50 py-8">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-2xl font-bold mb-6 text-center">Popular Routes from Chennai</h3>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="text-lg font-semibold text-blue-700">Chennai → Munnar</h4>
+          <p>Hill station paradise with tea gardens and fresh air.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="text-lg font-semibold text-blue-700">Chennai → Madurai</h4>
+          <p>Meenakshi Temple and rich Tamil heritage.</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <h4 class="text-lg font-semibold text-blue-700">Chennai → Alleppey</h4>
+          <p>Relaxing houseboats and lush backwaters of Kerala.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- 5. Scroll popup -->
-<div class="scroll-popup">
-  <strong>Need Help?</strong><br>Contact us for instant support!
-</div>
+  <!-- Call to Action -->
+  <section class="text-center py-10">
+    <h3 class="text-xl font-bold mb-2">Ready for Your South India Adventure?</h3>
+    <p class="mb-4 text-gray-700">Book your custom package today with ShRish Travels.</p>
+    <a href="booking.html" class="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700">Book Now</a>
+    <p class="mt-4 text-sm text-gray-500">📞 8883451668 | 📧 shrishtravels1@gmail.com</p>
+  </section>
 
-<!-- 6. Bottom Bar Notification -->
-<div class="bottom-bar">
-  ✅ Book with confidence — 24/7 support on all routes!
-</div>
-
-<!-- 7. Exit Intent Popup -->
-<div class="popup-overlay exit-popup">
-  <div class="popup-box">
-    <h2>Wait! Don’t leave!</h2>
-    <p>Let us help you plan your next trip!</p>
-    <a href="#" class="close">Close</a>
-  </div>
-</div>
-
-
-<script>
-  // Add timed popup after 5s
-  setTimeout(() => document.body.classList.add("timed"), 5000);
-
-  // Add scroll popup after user scrolls
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      document.body.classList.add("scroll-popup-active");
-    }
-  });
-
-  // Simulate exit intent (when mouse leaves top edge)
-  document.addEventListener("mouseout", e => {
-    if (e.clientY < 50) {
-      document.body.classList.add("exit");
-    }
-  });
-</script>
+  <!-- Footer -->
+  <footer class="bg-blue-50 text-center text-sm text-gray-600 p-4">
+    <p>© 2025 ShRish Travels | Chennai, Tamil Nadu</p>
+    <p>Follow us: 
+      <a href="https://www.instagram.com/shrish_travels/" class="text-blue-600 underline">Instagram</a> | 
+      <a href="https://www.youtube.com/@shrishtravels" class="text-blue-600 underline">YouTube</a>
+    </p>
+  </footer>
 
 </body>
 </html>
