@@ -7,6 +7,39 @@ destinations = [
     "Munnar", "Alleppey", "Kovalam", "Kanyakumari", "Nagercoil"
 ]
 
+destinations_dict = {
+    "Kumbakonam": "கும்பகோணம்",
+    "Tirupati": "திருப்பதி",
+    "Pondicherry": "புதுச்சேரி",
+    "Velankanni": "வேலாங்கண்ணி",
+    "Bangalore": "பெங்களூரு",
+    "Ooty": "ஊட்டி",
+    "Rameswaram": "ராமேசுவரம்",
+    "Madurai": "மதுரை",
+    "Yelagiri": "யேலகிரி",
+    "Thanjavur": "தஞ்சாவூர்",
+    "Tiruvannamalai": "திருவண்ணாமலை",
+    "Sabarimala": "சபரிமலை",
+    "Palani": "பழனி",
+    "Chidambaram": "சிதம்பரம்",
+    "Srirangam": "ஸ்ரீரங்கம்",
+    "Kanchipuram": "காஞ்சிபுரம்",
+    "Yercaud": "எர்காடு",
+    "Valparai": "வல்பரை",
+    "Kolli Hills": "கொல்லி மலை",
+    "Kotagiri": "கோடகிரி",
+    "Mahabalipuram": "மாமல்லபுரம்",
+    "Kodaikanal": "கோடைக்கானல்",
+    "Coimbatore": "கோயம்புத்தூர்",
+    "Trichy": "திருச்சி",
+    "Vellore": "வேலூர்",
+    "Munnar": "முன்னார்",
+    "Alleppey": "அல்லாப்பி",
+    "Kovalam": "கோவளம்",
+    "Kanyakumari": "கன்னியாகுமரி",
+    "Nagercoil": "நாகர்கோவில்"
+}
+
 # Approximate duration mapping (generalized ranges)
 durations = {
     "Pondicherry": "2–4 hours",
@@ -50,6 +83,10 @@ template = '''<!DOCTYPE html>
   <meta name="description" content="Affordable one-way and round-trip cab from Chennai to {city}. Book AC cabs from ShRish Travels Velachery. 24x7 support." />
   <link rel="canonical" href="https://shrishtravels.netlify.app/routes/chennai-to-{city_lower}-cab" />
   <link rel="stylesheet" href="/style.css" />
+
+  <meta name="keywords" content="Best {city} travel packages, Best {city_ta} சுற்றுலா தொகுப்புகள், Premium {city} tour services, பிரீமியம் {city_ta} சுற்றுலா சேவைகள், Affordable {city} tours, மலிவான {city_ta} சுற்றுலா, Top-rated {city} travel agency, உயர்தர {city_ta} பயண முகவரி, Explore {city} with ShRish Travels, ஷ்ரீஷ் டிராவல்ஸுடன் {city_ta} அனுபவிக்கவும், Book your {city} trip today, உங்கள் {city_ta} பயணத்தை இப்போது முன்பதிவு செய்யுங்கள், Reliable {city} sightseeing tours, நம்பகமான {city_ta} சுற்றுலா பயணங்கள், Exclusive {city} tour deals, பிரத்தியேக {city_ta} சுற்றுலா சலுகைகள், Customized {city} travel plans, தனிப்பயன் {city_ta} பயண திட்டங்கள், Experience the best of {city}, {city_ta} சிறந்த அனுபவம்" />
+
+
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <!-- AOS Script -->
@@ -413,12 +450,15 @@ template = '''<!DOCTYPE html>
 for city in destinations:
     try:
         city_lower = city.lower().replace(" ", "-")
+        city_ta = destinations_dict.get(city, "")  # Get Tamil city name or empty string if missing
         duration = durations.get(city, "Varies based on route and traffic")
         filename = f'chennai-to-{city_lower}-cab.html'
-        content = template.format(city=city, city_lower=city_lower, duration=duration)
+        
+        # Add city_ta to the template formatting
+        content = template.format(city=city, city_ta=city_ta, city_lower=city_lower, duration=duration)
+        
         with open(filename, 'w', encoding='utf-8') as f:
             f.write(content)
         print(f'✅ Created {filename}')
     except Exception as e:
         print(f'❌ Error processing {city}: {e}')
-
