@@ -388,22 +388,22 @@ template = '''<!DOCTYPE html>
         <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
         <h3>Quick Links</h3>
           <ul>
-            <li><a href="#" onclick="return false;">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="services.html#vehicles">Our Vehicles</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="booking.html#booking-page">Book Now</a></li>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/services.html#vehicles">Our Vehicles</a></li>
+            <li><a href="/contact.html">Contact Us</a></li>
+            <li><a href="/booking.html#booking-form">Book Now</a></li>
             <li><a href="https://shrishtravelschennai.blogspot.com/p/best-cab-service-in-chennai-outstation.html" target="_blank">Blog</a></li>
           </ul>
         </div>
         <div class="footer-links" data-aos="fade-up" data-aos-delay="200">
         <h3>Services</h3>
           <ul style="text-align: center;">
-            <li><a href="services.html#service">Airport Transfers</a></li>
-            <li><a href="services.html#service">City Tours</a></li>
-            <li><a href="services.html#service">Outstation Trips</a></li>
-            <li><a href="services.html#service">Corporate Travel</a></li>
-            <li><a href="services.html#service">Wedding Transportation</a></li>
+            <li><a href="/services.html#service">Airport Transfers</a></li>
+            <li><a href="/services.html#service">City Tours</a></li>
+            <li><a href="/services.html#service">Outstation Trips</a></li>
+            <li><a href="/services.html#service">Corporate Travel</a></li>
+            <li><a href="/services.html#service">Wedding Transportation</a></li>
           </ul>
         </div>
         <div class="footer-contact" data-aos="fade-up" data-aos-delay="400">
