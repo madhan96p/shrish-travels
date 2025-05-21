@@ -135,8 +135,13 @@ header {
 
 /* Logo */
 .logo {
-    width: 100px;
-    height: auto;
+  height: 60px;
+  transition: var(--transition-normal);
+}
+
+.logo:hover {
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.4));
 }
 
 /* Header Title */
@@ -1922,6 +1927,20 @@ h2 {
   align-items: center;
   margin-bottom: 1rem;
 }
+.footer-brand .logo {
+  height: 70px;
+  margin-bottom: var(--space-4);
+}
+
+.logo {
+  height: 60px;
+  transition: var(--transition-normal);
+}
+
+.logo:hover {
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.4));
+}
 
 .logo-text {
   display: flex;
@@ -2803,3 +2822,17 @@ header {
   }
 }
 
+.footer-brand .logo {
+  height: 70px;
+  margin-bottom: var(--space-4);
+}
+
+.logo {
+  height: 60px;
+  transition: var(--transition-normal);
+}
+
+.logo:hover {
+  transform: scale(1.15) rotate(5deg);
+  filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.4));
+}
