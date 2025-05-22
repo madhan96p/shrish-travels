@@ -1991,7 +1991,15 @@ h2 {
   margin-top: 1rem;
   text-align: left;
 }
+/* Ensure the entire container (icon + preview) is the hover area */
+.insta-hover-container,
+.youtube-hover-container,
+.whatsapp-hover-container {
+  position: relative;
+  display: inline-block;
+}
 
+/* ICON STYLE */
 .footer-socials a {
   width: 2.5rem;
   height: 2.5rem;
@@ -2001,107 +2009,145 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #facc15; /* Yellow icons */
+  color: #facc15;
   transition: all 0.3s ease;
-
-  text-decoration: none; /* 💡 Add this line to remove underline */
-}
-.insta-hover-container {
+  text-decoration: none;
+  z-index: 1;
   position: relative;
-  display: inline-block;
 }
-
-.insta-hover-container i {
-  color: #facc15; /* Yellow or your preferred brand color */
-  transition: color 0.3s ease;
-}
-
-.insta-hover-container:hover i {
-  color: white;
-}
-
-.insta-preview {
-  position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
-  width: 300px;
-  height: 380px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
-
-.insta-hover-container:hover .insta-preview {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* YouTube Preview */
-.youtube-hover-container {
-  position: relative;
-  display: inline-block;
-}
-.youtube-preview iframe {
-  width: 280px;
-  height: 158px;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
-
-.youtube-preview {
-  position: absolute;
-  top: 100%; /* Show below icon */
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 10;
-}
-
-.youtube-hover-container:hover .youtube-preview {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.whatsapp-hover-container {
-  position: relative;
-  display: inline-block;
-}
-
-.whatsapp-tooltip {
-  position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #25d366; /* WhatsApp green */
-  color: white;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 100;
-}
-
-.whatsapp-hover-container:hover .whatsapp-tooltip {
-  opacity: 1;
-  pointer-events: auto;
-}
-
 
 .footer-socials a:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* == INSTAGRAM == */
+.insta-preview {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  width: 300px;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  pointer-events: auto;
+}
+
+.insta-hover-container:hover .insta-preview,
+.insta-preview:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* == YOUTUBE == */
+.youtube-preview {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.youtube-preview iframe {
+  width: 280px;
+  height: 158px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  background: #000;
+}
+
+.youtube-hover-container:hover .youtube-preview,
+.youtube-preview:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* == WHATSAPP == */
+.whatsapp-tooltip {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #25d366;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+  /* pointer-events: auto; */
+}
+
+.whatsapp-hover-container:hover .whatsapp-tooltip,
+.whatsapp-tooltip:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+.developer-hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.developer-link {
+  text-decoration: none;
+  color: #888;
+  font-size: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.developer-link strong {
+  font-size: 0.85rem;
+}
+
+.developer-hover-container:hover .developer-link {
+  color: #facc15;
+}
+
+.developer-preview {
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.developer-hover-container:hover .developer-preview,
+.developer-preview:hover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.developer-preview iframe {
+  width: 360px;
+  height: 215px;
+  border: none;
+  border-radius: 10px;
+}
+
 
 /* Links and Headings */
 .footer h3 {
