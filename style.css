@@ -48,6 +48,15 @@ p:hover {
   transform: scale(1.01);
 }
 
+.main-heading {
+  font-size: 1.5rem;       /* Similar to <h1> size */
+  font-weight: bold;       /* Make it bold */
+  margin-bottom: 1rem;     /* Add spacing below */
+  color: #ffffff;          /* Dark gray/black */
+  line-height: 1.2;
+}
+
+
 /* Header Styling */
 header {
     background:
@@ -498,26 +507,22 @@ header {
   color: #22c55e; /* Emerald green icons */
   margin-right: 12px;
 }
-
 .cta-btn {
-  display: inline-block;
-  margin-top: 30px;
-  background: linear-gradient(135deg, #1e40af, #3b82f6); /* Premium gradient */
-  color: #fff;
-  padding: 16px 40px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 15px 40px rgba(30, 64, 175, 0.15);
-  text-decoration: none;
-  letter-spacing: 0.5px;
+    background: linear-gradient(to right, #f59e0b, #FFD700);
+    color: #1f2937;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: left 0.5s ease;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
 }
 
+
 .cta-btn:hover {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Darker gradient for hover */
-  transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(30, 64, 175, 0.2);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(255, 165, 0, 0.4);
 }
 
 /* Animations */
@@ -789,25 +794,6 @@ header {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
-
-.cta-btn {
-    background: linear-gradient(to right, #f59e0b, #FFD700);
-    color: #1f2937;
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 12px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
-}
-
-.cta-btn:hover {
-    background: linear-gradient(to right, #fbbf24, #fde047);
-    transform: scale(1.05);
-    box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
-}
-
 
 /* Services Section */
 .services {
@@ -1110,30 +1096,6 @@ blockquote {
   
   .highlight-text:hover {
     background-color: rgba(255, 255, 255, 0.25);
-  }
-  
-  
-  /* Button Group */
-
-  .cta-btn {
-    padding: 15px 30px;
-    background-color: #ffd700; /* golden yellow for CTA */
-    color: #1e40af;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 600;
-    border-radius: 30px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .cta-btn:hover {
-    background-color: #ffcc00;
-    transform: translateY(-3px);
-  }
-  
-  .cta-btn:active {
-    transform: translateY(1px);
   }
   
 /* Vehicle Types Section */
