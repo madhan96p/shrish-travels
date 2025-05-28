@@ -1,5 +1,5 @@
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
 gtag('config', 'G-MBGR8GE2HH');
 
@@ -8,19 +8,19 @@ function toggleVehicles() {
     const btn = document.querySelectorAll('.view-more')[0];
     moreVehicles.classList.toggle('hidden');
     btn.textContent = moreVehicles.classList.contains('hidden')
-      ? 'View More Vehicles'
-      : 'View Less Vehicles';
-  }
+        ? 'View More Vehicles'
+        : 'View Less Vehicles';
+}
 
-  function toggleServices() {
+function toggleServices() {
     const moreServices = document.getElementById('moreServiceList');
     const btn = document.querySelectorAll('.view-more')[1];
     moreServices.classList.toggle('hidden');
     btn.textContent = moreServices.classList.contains('hidden')
-      ? 'View More Services'
-      : 'View Less Services';
-  }
-  
+        ? 'View More Services'
+        : 'View Less Services';
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     // ===== Menu Toggle =====
     const menuButton = document.getElementById("menu-button");
@@ -72,13 +72,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 headers: { "Content-Type": "application/json" },
                 mode: "no-cors"
             })
-            .then(() => {
-                clearInterval(interval);
-                
-                // Show success message and ask for WhatsApp confirmation
-                const successMessage = document.createElement("div");
-                successMessage.classList.add("booking-success-message");
-                successMessage.innerHTML = `
+                .then(() => {
+                    clearInterval(interval);
+
+                    // Show success message and ask for WhatsApp confirmation
+                    const successMessage = document.createElement("div");
+                    successMessage.classList.add("booking-success-message");
+                    successMessage.innerHTML = `
                     <i class="fas fa-check-circle success-icon"></i>
                     <p class="success-text">Your booking application has been submitted.</p>
                     <p class="success-subtext">Would you like to confirm your booking via WhatsApp?</p>
@@ -87,31 +87,31 @@ document.addEventListener("DOMContentLoaded", function () {
                         <button id="confirmNo" class="action-button">No</button>
                     </div>
                 `;
-                bookingForm.parentElement.appendChild(successMessage);
-                submitButton.style.display = "none";
-            
-                // Handle WhatsApp confirmation
-                document.getElementById("confirmYes").onclick = function () {
-                    sendWhatsAppMessage(bookingData);
-                    bookingForm.reset();
-                    successMessage.remove();
-                    submitButton.style.display = "block";
-                    submitButton.disabled = false;
-                    submitButton.innerText = "Submit Booking";
-                };
-            
-                document.getElementById("confirmNo").onclick = function () {
-                    successMessage.innerHTML = `
+                    bookingForm.parentElement.appendChild(successMessage);
+                    submitButton.style.display = "none";
+
+                    // Handle WhatsApp confirmation
+                    document.getElementById("confirmYes").onclick = function () {
+                        sendWhatsAppMessage(bookingData);
+                        bookingForm.reset();
+                        successMessage.remove();
+                        submitButton.style.display = "block";
+                        submitButton.disabled = false;
+                        submitButton.innerText = "Submit Booking";
+                    };
+
+                    document.getElementById("confirmNo").onclick = function () {
+                        successMessage.innerHTML = `
                         <i class="fas fa-smile-beam success-icon"></i>
                         <p class="success-text">Thank you! We will contact you shortly.</p>
                     `;
-                    bookingForm.reset();
-                    submitButton.style.display = "block";
-                    submitButton.disabled = false;
-                    submitButton.innerText = "Submit Booking";
-                };
-            })
-            
+                        bookingForm.reset();
+                        submitButton.style.display = "block";
+                        submitButton.disabled = false;
+                        submitButton.innerText = "Submit Booking";
+                    };
+                })
+
                 .catch((error) => {
                     clearInterval(interval);
                     alert("Error! Please try again.");
@@ -201,15 +201,15 @@ document.addEventListener("DOMContentLoaded", function () {
                     submitButton.innerText = "Submit";
                     submitButton.disabled = false;
                 });
-                
+
         });
     }
     document.querySelectorAll('.faq-question').forEach(question => {
         question.addEventListener('click', () => {
-          const item = question.parentElement;
-          item.classList.toggle('open');
+            const item = question.parentElement;
+            item.classList.toggle('open');
         });
-      });
+    });
     document.getElementById("copyright-year").textContent = new Date().getFullYear();
     const youtubeIcon = document.querySelector('.youtube-icon');
     const youtubeIframe = document.querySelector('.youtube-preview iframe');
@@ -223,67 +223,67 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Popular routes from Chennai ordered by popularity
-const popularRoutes = [
-    "Pondicherry", "Bangalore", "Tirupati", "Kumbakonam",
-    "Velankanni", "Ooty", "Madurai", "Rameswaram", "Yelagiri",
-    "Thanjavur", "Tiruvannamalai", "Sabarimala", "Palani",
-    "Chidambaram", "Srirangam", "Kanchipuram", "Yercaud",
-    "Valparai", "Kolli Hills", "Kotagiri", "Mahabalipuram",
-    "Kodaikanal", "Coimbatore", "Trichy", "Vellore",
-    "Munnar", "Alleppey", "Kovalam", "Kanyakumari", "Nagercoil"
-  ];
+    const popularRoutes = [
+        "Pondicherry", "Bangalore", "Tirupati", "Kumbakonam",
+        "Velankanni", "Ooty", "Madurai", "Rameswaram", "Yelagiri",
+        "Thanjavur", "Tiruvannamalai", "Sabarimala", "Palani",
+        "Chidambaram", "Srirangam", "Kanchipuram", "Yercaud",
+        "Valparai", "Kolli Hills", "Kotagiri", "Mahabalipuram",
+        "Kodaikanal", "Coimbatore", "Trichy", "Vellore",
+        "Munnar", "Alleppey", "Kovalam", "Kanyakumari", "Nagercoil"
+    ];
 
-  function cityToSlug(city) {
-    return city.toLowerCase().replace(/\s+/g, '-');
-  }
-
-  const scrollingContent = document.getElementById('scrolling-content');
-  const scrollingRight = document.getElementById('scrolling-right');
-
-  function createScrollingLinks() {
-    for (let i = 0; i < 2; i++) {
-      popularRoutes.forEach(city => {
-        const a = document.createElement('a');
-        a.className = 'route';
-        a.textContent = city;
-        a.href = `https://shrishtravels.netlify.app/routes/chennai-to-${cityToSlug(city)}-cab`;
-        a.style.marginRight = '20px';
-        a.style.color = '#333';
-        a.style.textDecoration = 'none';
-
-        
-        scrollingContent.appendChild(a);
-      });
+    function cityToSlug(city) {
+        return city.toLowerCase().replace(/\s+/g, '-');
     }
-  }
 
-  createScrollingLinks();
+    const scrollingContent = document.getElementById('scrolling-content');
+    const scrollingRight = document.getElementById('scrolling-right');
 
-  let scrollX = 0;
-  const speed = 1;
-  let animationFrameId;
-  let paused = false;
+    function createScrollingLinks() {
+        for (let i = 0; i < 2; i++) {
+            popularRoutes.forEach(city => {
+                const a = document.createElement('a');
+                a.className = 'route';
+                a.textContent = city;
+                a.href = `https://shrishtravels.netlify.app/routes/chennai-to-${cityToSlug(city)}-cab`;
+                a.style.marginRight = '20px';
+                a.style.color = '#333';
+                a.style.textDecoration = 'none';
 
-  function animate() {
-    if (!paused) {
-      scrollX -= speed;
-      if (Math.abs(scrollX) >= scrollingContent.scrollWidth / 2) {
-        scrollX = 0;
-      }
-      scrollingContent.style.transform = `translateX(${scrollX}px)`;
+
+                scrollingContent.appendChild(a);
+            });
+        }
     }
-    animationFrameId = requestAnimationFrame(animate);
-  }
 
-  scrollingRight.addEventListener('mouseenter', () => {
-    paused = true;
-  });
+    createScrollingLinks();
 
-  scrollingRight.addEventListener('mouseleave', () => {
-    paused = false;
-  });
+    let scrollX = 0;
+    const speed = 1;
+    let animationFrameId;
+    let paused = false;
 
-  animate();
+    function animate() {
+        if (!paused) {
+            scrollX -= speed;
+            if (Math.abs(scrollX) >= scrollingContent.scrollWidth / 2) {
+                scrollX = 0;
+            }
+            scrollingContent.style.transform = `translateX(${scrollX}px)`;
+        }
+        animationFrameId = requestAnimationFrame(animate);
+    }
+
+    scrollingRight.addEventListener('mouseenter', () => {
+        paused = true;
+    });
+
+    scrollingRight.addEventListener('mouseleave', () => {
+        paused = false;
+    });
+
+    animate();
 
 
 });
