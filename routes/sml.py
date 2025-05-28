@@ -432,14 +432,7 @@ target="_blank" title="WhatsApp Chat" style="text-decoration: none; color: inher
             target="_blank">
             <em>Developed by</em> <strong>PS</strong>
           </a>
-          <div class="developer-preview">
-            <iframe 
-              src="http://pragadeeshfolioo.netlify.app" 
-              width="360" 
-              height="215" 
-              frameborder="0">
-            </iframe>
-          </div>
+          
         </div>
 
         </div>

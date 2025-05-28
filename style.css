@@ -3135,6 +3135,15 @@ tr:hover {
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .footer-links h3 {
+    display: none;
+  }
+
+  .footer-links ul {
+    display: none;
+  }
+}
 
 /* @media (max-width: 576px) {
   .section-title {
@@ -3206,8 +3215,9 @@ tr:hover {
 /* Floating Warning Popup */
 .floating-warning {
   position: fixed;
-  bottom: 30px;
-  left: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: #fff8e1;
   border: 2px solid #f59e0b;
   padding: 20px;
@@ -3228,29 +3238,51 @@ tr:hover {
   margin: 8px 0;
   font-size: 14px;
 }
-
 .floating-warning-actions {
   margin-top: 10px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 10px;
-  flex-wrap: wrap;
 }
 
 .floating-warning-btn {
-  padding: 8px 12px;
+  width: 45px;
+  height: 45px;
   background: #f59e0b;
   color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-size: 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background 0.3s;
 }
+
+/* Blue color for Call button */
+.call-btn {
+  background: #0b32f5;
+}
+
+/* Push the last icon to the right */
+.spacer {
+  flex: 1;
+}
+
+/* Optional hover styles */
+.floating-warning-btn:hover {
+  opacity: 0.9;
+}
+
 
 .floating-warning-close {
   position: absolute;
   top: 10px;
   right: 14px;
   font-size: 20px;
-  color: #d97706;
+  color: #000000;
   cursor: pointer;
 }
 
