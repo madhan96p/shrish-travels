@@ -3045,7 +3045,7 @@ tr:hover {
 }
 
 /* Contact CTA Section */
-.contact-cta-section {
+/* .contact-cta-section {
   background-color: #1a3c6d;
   color: #fff;
   padding: 40px 0;
@@ -3104,17 +3104,17 @@ tr:hover {
 
 .call-btn:hover {
   background-color: #0056b3;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .section-title {
+  /* .section-title {
     font-size: 2rem;
   }
 
   .sub-section-title {
     font-size: 1.5rem;
-  }
+  } */
 
   .table-responsive {
     font-size: 0.9rem;
@@ -3129,14 +3129,14 @@ tr:hover {
     align-items: center;
   }
 
-  .cta-btn {
+  .cta-btn .btn-secondary{
     width: 100%;
     max-width: 300px;
     text-align: center;
   }
 }
 
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
   .section-title {
     font-size: 1.8rem;
   }
@@ -3155,7 +3155,7 @@ tr:hover {
   .features-grid {
     grid-template-columns: 1fr;
   }
-}
+} */
 
 /* AOS Animation Overrides */
 [data-aos] {
