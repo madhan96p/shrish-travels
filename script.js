@@ -287,31 +287,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // Tariff Page Under Development Pop-up Logic
-    // document.addEventListener('DOMContentLoaded', function () {
-        // Check if the current page is tariff.html
-        if (window.location.pathname.endsWith('tariff.html') || document.body.classList.contains('tariff-page-identifier')) { // Added an alternative identifier
-            const popupOverlay = document.getElementById('tariff-warning-popup');
-            const closeBtn = popupOverlay ? popupOverlay.querySelector('.popup-close-btn') : null;
 
-            if (popupOverlay) {
-                // Show the pop-up after a short delay (e.g., 1 second)
-                setTimeout(() => {
-                    popupOverlay.style.display = 'flex';
-                }, 1000); // 1000 milliseconds = 1 second
+    // Wait for DOM to load
+    window.addEventListener('DOMContentLoaded', function () {
+        // Show popup after 1 seconds
+        setTimeout(() => {
+            document.getElementById('floating-tariff-warning').style.display = 'block';
+        }, 1000);
 
-                if (closeBtn) {
-                    closeBtn.addEventListener('click', function () {
-                        popupOverlay.style.display = 'none';
-                    });
-                }
+        // Close popup and show blinking icon
+        document.querySelector('.floating-warning-close').addEventListener('click', function () {
+            document.getElementById('floating-tariff-warning').style.display = 'none';
+            document.getElementById('floating-warning-icon').style.display = 'block';
+        });
 
-                // Optional: Close pop-up if user clicks outside the content area
-                popupOverlay.addEventListener('click', function (event) {
-                    if (event.target === popupOverlay) { // Check if the click is on the overlay itself
-                        popupOverlay.style.display = 'none';
-                    }
-                });
-            }
-        }
-   
+        // Clicking icon reopens the popup
+        document.getElementById('floating-warning-icon').addEventListener('click', function () {
+            document.getElementById('floating-tariff-warning').style.display = 'block';
+            document.getElementById('floating-warning-icon').style.display = 'none';
+        });
+    });
 });

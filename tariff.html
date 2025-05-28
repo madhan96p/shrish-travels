@@ -73,8 +73,8 @@
   </script>
 
   <!-- Google Ads -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4721377568679078"
-    crossorigin="anonymous"></script>
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4721377568679078"
+    crossorigin="anonymous"></script> -->
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -96,7 +96,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Tariff"
+          "name": "Tariff",
+          "item": "https://shrishtravels.netlify.app/tariff.html"
         }
       ]
     },
@@ -633,20 +634,27 @@
   </footer>
 
   <!-- Tariff Page Under Development Pop-up -->
-  <div id="tariff-warning-popup" class="popup-overlay">
-    <div class="popup-content">
-      <span class="popup-close-btn" title="Close">&times;</span>
-      <h3><i class="fas fa-exclamation-triangle"></i> Page Under Development</h3>
-      <p>Our Tariff page is currently being updated to provide you with the most accurate and comprehensive pricing
-        information.</p>
-      <p>For the latest rates, custom quotes, or any inquiries, please get in touch with our team directly. We're here
-        to help!</p>
-      <div class="popup-actions">
-        <a href="tel:+918883451668" class="popup-btn call-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
-        <a href="contact.html" class="popup-btn contact-btn"><i class="fas fa-envelope"></i> Go to Contact</a>
+  <!-- Floating Warning Popup -->
+  <div id="floating-tariff-warning" class="floating-warning" style="display: none;">
+    <div class="floating-warning-box">
+      <span class="floating-warning-close" title="Close">&times;</span>
+      <h3><i class="fas fa-exclamation-triangle"></i> Tariff Page Under Enhancement</h3>
+      <p>We're currently upgrading our Tariff page to bring you the most accurate, transparent, and up-to-date pricing
+        details.</p>
+      <p>For personalized quotes, special offers, or immediate assistance, our team is just a call or message away.</p>
+      <div class="floating-warning-actions">
+        <a href="tel:+918883451668" class="floating-warning-btn call-btn"><i class="fas fa-phone-alt"></i> Call Us</a>
+        <a href="contact.html" class="floating-warning-btn contact-btn"><i class="fas fa-envelope"></i> Contact</a>
       </div>
     </div>
   </div>
+
+  <!-- Blinking Icon Trigger -->
+  <div id="floating-warning-icon" class="floating-warning-icon" title="View Tariff Notice" style="display: none;">
+    <i class="fas fa-exclamation-triangle"></i>
+  </div>
+
+
   <!-- End Tariff Page Under Development Pop-up -->
 
   <script src="script.js"></script>
