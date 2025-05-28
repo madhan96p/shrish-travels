@@ -263,7 +263,11 @@ header {
 
 .nav-dropdown ul li {
     padding: 12px 20px;
-    text-align: center;
+    text-align: left;
+}
+
+.nav-dropdown ul li a i {
+    margin-right: 8px; /* adds space between icon and text */
 }
 
 .nav-dropdown ul li a {
@@ -272,12 +276,14 @@ header {
     font-size: 16px;
     display: block;
     transition: all 0.3s ease;
+    
 }
 
 .nav-dropdown ul li a:hover {
     color: #ffffff;
     background: #FFD700;
     border-radius: 8px;
+    transform: translateX(+6px); /* shifts left on hover */
 }
 
 /* Hero Section */

@@ -1,126 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Embark on a Majestic South India Getaway with ShRish Travels. Explore temples, hill stations, and backwaters from Chennai. Custom itineraries & comfortable travel guaranteed.">
-  <meta name="keywords" content="South India tour, Chennai to Munnar, Madurai, Alleppey, Mahabalipuram, ShRish Travels, Travel Packages">
-  <meta name="author" content="ShRish Travels">
-  <title>Majestic South India Getaway | ShRish Travels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Website Navigation</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script>
-    function toggleMenu() {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #e0f2fe, #bae6fd);
     }
-  </script>
+
+    .nav-container {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 50;
+      background: linear-gradient(to right, #1e3a8a, #3b82f6);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+    }
+
+    .nav-button {
+      background-color: #2563eb;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.375rem;
+      font-weight: 600;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .nav-button:hover {
+      background-color: #1e40af;
+      transform: translateY(-2px);
+    }
+
+    .nav-button:focus {
+      outline: none;
+      ring: 2px;
+      ring-color: #93c5fd;
+    }
+
+    .nav-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      min-width: 200px;
+      overflow: hidden;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+
+    .nav-dropdown.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-dropdown ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-dropdown li {
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav-dropdown li:last-child {
+      border-bottom: none;
+    }
+
+    .nav-dropdown a {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-dropdown a:hover {
+      background-color: #dbeafe;
+      color: #2563eb;
+    }
+
+    .nav-dropdown i {
+      margin-right: 0.75rem;
+      color: #60a5fa;
+    }
+
+    @media (max-width: 768px) {
+      .nav-button {
+        width: 100%;
+        text-align: center;
+      }
+
+      .nav-dropdown {
+        width: 100%;
+        right: 0;
+        border-radius: 0;
+      }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body>
+  <div class="nav-container">
+    <button id="menu-button" class="nav-button">Menu</button>
+    <nav id="dropdown-menu" class="nav-dropdown">
+      <ul>
+        <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="/services.html"><i class="fas fa-globe"></i> Services</a></li>
+        <li><a href="/booking.html"><i class="fas fa-calendar-check"></i> Booking</a></li>
+        <li><a href="/tariff.html"><i class="fas fa-money-bill-wave"></i> Tariff</a></li>
+        <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 
-  <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-blue-600">ShRish Travels</h1>
-      <nav class="hidden md:flex space-x-4">
-        <a href="index.html" class="hover:text-blue-600">Home</a>
-        <a href="services.html" class="hover:text-blue-600">Services</a>
-        <a href="routes.html" class="hover:text-blue-600">Routes</a>
-        <a href="booking.html" class="hover:text-blue-600">Booking</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </nav>
-      <button class="md:hidden" onclick="toggleMenu()">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-      <a href="index.html" class="block py-2">Home</a>
-      <a href="services.html" class="block py-2">Services</a>
-      <a href="routes.html" class="block py-2">Routes</a>
-      <a href="booking.html" class="block py-2">Booking</a>
-      <a href="contact.html" class="block py-2">Contact</a>
-    </div>
-  </header>
+  <script>
+    document.getElementById('menu-button').addEventListener('click', function() {
+      const dropdown = document.getElementById('dropdown-menu');
+      dropdown.classList.toggle('show');
+    });
 
-  <!-- Hero -->
-  <section class="bg-gradient-to-r from-blue-100 to-indigo-100 text-center p-10">
-    <h2 class="text-4xl font-extrabold text-blue-900 mb-2">Majestic South India Getaway</h2>
-    <p class="text-lg text-gray-700">Temples, hills, and backwaters — all in one perfect trip.</p>
-  </section>
-
-  <!-- Itinerary -->
-  <section class="p-6 max-w-5xl mx-auto">
-    <h3 class="text-2xl font-bold mb-6 text-center">7-Day Itinerary</h3>
-    <div class="grid gap-6 md:grid-cols-2">
-      <div class="bg-white border p-4 rounded shadow">
-        <h4 class="text-lg font-semibold">Day 1: Chennai → Mahabalipuram</h4>
-        <p>Shore Temple, Pancha Rathas, and a scenic beach sunset.</p>
-      </div>
-      <div class="bg-white border p-4 rounded shadow">
-        <h4 class="text-lg font-semibold">Day 2: Mahabalipuram → Pondicherry</h4>
-        <p>French town vibes, Auroville, and seaside cafés.</p>
-      </div>
-      <div class="bg-white border p-4 rounded shadow">
-        <h4 class="text-lg font-semibold">Day 3: Pondicherry → Chidambaram → Kumbakonam</h4>
-        <p>Spiritual trail with ancient temples and heritage sites.</p>
-      </div>
-      <div class="bg-white border p-4 rounded shadow">
-        <h4 class="text-lg font-semibold">Day 4: Kumbakonam → Thanjavur → Madurai</h4>
-        <p>Brihadeeswarar Temple & Madurai’s vibrant markets.</p>
-      </div>
-      <div class="bg-white border p-4 rounded shadow">
-        <h4 class="text-lg font-semibold">Day 5: Madurai → Munnar</h4>
-        <p>Tea estates, hills, and waterfalls – nature at its best.</p>
-      </div>
-      <div class="bg-white border p-4 rounded shadow">
-        <h4 class="text-lg font-semibold">Day 6: Munnar → Alleppey</h4>
-        <p>Backwater cruise with authentic Kerala lunch.</p>
-      </div>
-      <div class="bg-white border p-4 rounded shadow">
-        <h4 class="text-lg font-semibold">Day 7: Alleppey → Kochi</h4>
-        <p>Explore Fort Kochi before return journey.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Routes -->
-  <section class="bg-gray-50 py-8">
-    <div class="max-w-6xl mx-auto px-4">
-      <h3 class="text-2xl font-bold mb-6 text-center">Popular Routes from Chennai</h3>
-      <div class="grid gap-6 md:grid-cols-3">
-        <div class="bg-white p-4 rounded shadow">
-          <h4 class="text-lg font-semibold text-blue-700">Chennai → Munnar</h4>
-          <p>Hill station paradise with tea gardens and fresh air.</p>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <h4 class="text-lg font-semibold text-blue-700">Chennai → Madurai</h4>
-          <p>Meenakshi Temple and rich Tamil heritage.</p>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <h4 class="text-lg font-semibold text-blue-700">Chennai → Alleppey</h4>
-          <p>Relaxing houseboats and lush backwaters of Kerala.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Call to Action -->
-  <section class="text-center py-10">
-    <h3 class="text-xl font-bold mb-2">Ready for Your South India Adventure?</h3>
-    <p class="mb-4 text-gray-700">Book your custom package today with ShRish Travels.</p>
-    <a href="booking.html" class="px-6 py-2 bg-blue-600 text-white font-medium rounded shadow hover:bg-blue-700">Book Now</a>
-    <p class="mt-4 text-sm text-gray-500">📞 8883451668 | 📧 shrishtravels1@gmail.com</p>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-blue-50 text-center text-sm text-gray-600 p-4">
-    <p>© 2025 ShRish Travels | Chennai, Tamil Nadu</p>
-    <p>Follow us: 
-      <a href="https://www.instagram.com/shrish_travels/" class="text-blue-600 underline">Instagram</a> | 
-      <a href="https://www.youtube.com/@shrishtravels" class="text-blue-600 underline">YouTube</a>
-    </p>
-  </footer>
-
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      const dropdown = document.getElementById('dropdown-menu');
+      const button = document.getElementById('menu-button');
+      if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+        dropdown.classList.remove('show');
+      }
+    });
+  </script>
 </body>
 </html>
