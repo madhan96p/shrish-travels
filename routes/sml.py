@@ -83,10 +83,9 @@ template = '''<!DOCTYPE html>
   <meta name="description" content="Affordable one-way and round-trip cab from Chennai to {city}. Book AC cabs from ShRish Travels Velachery. 24x7 support." />
   <link rel="canonical" href="https://shrishtravels.netlify.app/routes/chennai-to-{city_lower}-cab" />
   <link rel="stylesheet" href="/style.css" />
-
-  <meta name="keywords" content="Best {city} travel packages, Best {city_ta} சுற்றுலா தொகுப்புகள், Premium {city} tour services, பிரீமியம் {city_ta} சுற்றுலா சேவைகள், Affordable {city} tours, மலிவான {city_ta} சுற்றுலா, Top-rated {city} travel agency, உயர்தர {city_ta} பயண முகவரி, Explore {city} with ShRish Travels, ஷ்ரீஷ் டிராவல்ஸுடன் {city_ta} அனுபவிக்கவும், Book your {city} trip today, உங்கள் {city_ta} பயணத்தை இப்போது முன்பதிவு செய்யுங்கள், Reliable {city} sightseeing tours, நம்பகமான {city_ta} சுற்றுலா பயணங்கள், Exclusive {city} tour deals, பிரத்தியேக {city_ta} சுற்றுலா சலுகைகள், Customized {city} travel plans, தனிப்பயன் {city_ta} பயண திட்டங்கள், Experience the best of {city}, {city_ta} சிறந்த அனுபவம்" />
-
-
+  
+  <meta name="keywords" content="Best {city} travel packages, Best {city_ta} சுற்றுலா தொகுப்புகள், Premium {city} tour services, பிரீமியம் {city_ta} சுற்றுலா சேவைகள், Affordable {city} tours, மலிவான {city_ta} சுற்றுலா, Top-rated {city} travel agency, உயர்தர {city_ta} பயண முகவரி, Explore {city} with ShRish Travels, ஷ்ரீஷ் டிராவல்ஸுடன் {city_ta} அனுபவிக்கவும், Book your {city} trip today, உங்கள் {city_ta} பயணத்தை இப்போது முன்பதிவு செய்யுங்கள், Reliable {city} sightseeing tours, நம்பகமான {city_ta} சுற்றுலா பயணங்கள், Exclusive {city} tour deals, பிரத்தியேக {city_ta} சுற்றுலா சலுகைகள், Customized {city} travel plans, தனிப்பயன் {city_ta} பயண திட்டங்கள், Experience the best of {city}, {city_ta} சிறந்த அனுபவம், Family trips in {city}, {city_ta} குடும்ப பயணங்கள், Honeymoon packages {city}, {city_ta} தாம்பத்ய சுற்றுலா தொகுப்புகள், Weekend getaways from {city}, {city_ta} விடுமுறை பயணங்கள், ShRish Travels in {city}, {city_ta} ShRish Travels, Trusted travel company {city}, நம்பகமான {city_ta} டிராவல்ஸ், Tourist taxi in {city}, சுற்றுலா டாக்ஸி {city_ta}, Cab booking {city}, காப் முன்பதிவு {city_ta}, Local tour operator {city}, உள்ளூர் சுற்றுலா முகவர் {city_ta}" />
+  <meta name="author" content="Pragadeesh Srinivasan" />
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <!-- AOS Script -->
