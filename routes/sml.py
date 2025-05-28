@@ -232,10 +232,12 @@ template = '''<!DOCTYPE html>
       <button id="menu-button" class="nav-button">Menu</button>
       <nav id="dropdown-menu" class="nav-dropdown">
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/booking.html#booking-page">Booking</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="/services.html"><i class="fas fa-globe"></i> Services</a></li>
+          <li><a href="/booking.html"><i class="fas fa-calendar-check"></i> Booking</a></li>
+          <li><a href="/tariff.html"><i class="fas fa-money-bill-wave"></i> Tariff</a>
+          </li>
+          <li><a href="/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
       </nav>
     </div>

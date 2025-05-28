@@ -286,4 +286,32 @@ document.addEventListener("DOMContentLoaded", function () {
     animate();
 
 
+    // Tariff Page Under Development Pop-up Logic
+    // document.addEventListener('DOMContentLoaded', function () {
+        // Check if the current page is tariff.html
+        if (window.location.pathname.endsWith('tariff.html') || document.body.classList.contains('tariff-page-identifier')) { // Added an alternative identifier
+            const popupOverlay = document.getElementById('tariff-warning-popup');
+            const closeBtn = popupOverlay ? popupOverlay.querySelector('.popup-close-btn') : null;
+
+            if (popupOverlay) {
+                // Show the pop-up after a short delay (e.g., 1 second)
+                setTimeout(() => {
+                    popupOverlay.style.display = 'flex';
+                }, 1000); // 1000 milliseconds = 1 second
+
+                if (closeBtn) {
+                    closeBtn.addEventListener('click', function () {
+                        popupOverlay.style.display = 'none';
+                    });
+                }
+
+                // Optional: Close pop-up if user clicks outside the content area
+                popupOverlay.addEventListener('click', function (event) {
+                    if (event.target === popupOverlay) { // Check if the click is on the overlay itself
+                        popupOverlay.style.display = 'none';
+                    }
+                });
+            }
+        }
+   
 });
