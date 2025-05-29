@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ===== Booking Form =====
     const bookingForm = document.getElementById("bookingForm");
     if (bookingForm) {
-        bookingForm.addEventListener("submit", function (event) {
+        bookingForm.addEventListener("submit", async function (event) {
             event.preventDefault();
 
             const bookingData = {
@@ -66,19 +66,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const scriptURL = "https://script.google.com/macros/s/AKfycbzn_4oOBJafTUBPgvwmrhtjxJN3mcDz809YLUTBHjCmdDKYYG-lGRDMgLuM_WJ9ebhm/exec";
 
-            fetch(scriptURL, {
-                method: "POST",
-                body: JSON.stringify(bookingData),
-                headers: { "Content-Type": "application/json" },
-                mode: "no-cors"
-            })
-                .then(() => {
-                    clearInterval(interval);
+            try {
+                const response = await fetch(scriptURL, {
+                    method: "POST",
+                    body: JSON.stringify(bookingData),
+                    headers: { "Content-Type": "application/json" },
+                    mode: "no-cors" // Note: with no-cors, response body and status are not directly accessible.
+                });
+                clearInterval(interval);
 
-                    // Show success message and ask for WhatsApp confirmation
-                    const successMessage = document.createElement("div");
-                    successMessage.classList.add("booking-success-message");
-                    successMessage.innerHTML = `
+                // Show success message and ask for WhatsApp confirmation
+                const successMessage = document.createElement("div");
+                successMessage.classList.add("booking-success-message");
+                successMessage.innerHTML = `
                     <i class="fas fa-check-circle success-icon"></i>
                     <p class="success-text">Your booking application has been submitted.</p>
                     <p class="success-subtext">Would you like to confirm your booking via WhatsApp?</p>
@@ -87,38 +87,36 @@ document.addEventListener("DOMContentLoaded", function () {
                         <button id="confirmNo" class="action-button">No</button>
                     </div>
                 `;
-                    bookingForm.parentElement.appendChild(successMessage);
-                    submitButton.style.display = "none";
+                bookingForm.parentElement.appendChild(successMessage);
+                submitButton.style.display = "none";
 
-                    // Handle WhatsApp confirmation
-                    document.getElementById("confirmYes").onclick = function () {
-                        sendWhatsAppMessage(bookingData);
-                        bookingForm.reset();
-                        successMessage.remove();
-                        submitButton.style.display = "block";
-                        submitButton.disabled = false;
-                        submitButton.innerText = "Submit Booking";
-                    };
+                // Handle WhatsApp confirmation
+                document.getElementById("confirmYes").onclick = function () {
+                    sendWhatsAppMessage(bookingData);
+                    bookingForm.reset();
+                    successMessage.remove();
+                    submitButton.style.display = "block";
+                    submitButton.disabled = false;
+                    submitButton.innerText = "Submit Booking";
+                };
 
-                    document.getElementById("confirmNo").onclick = function () {
-                        successMessage.innerHTML = `
+                document.getElementById("confirmNo").onclick = function () {
+                    successMessage.innerHTML = `
                         <i class="fas fa-smile-beam success-icon"></i>
                         <p class="success-text">Thank you! We will contact you shortly.</p>
                     `;
-                        bookingForm.reset();
-                        submitButton.style.display = "block";
-                        submitButton.disabled = false;
-                        submitButton.innerText = "Submit Booking";
-                    };
-                })
-
-                .catch((error) => {
-                    clearInterval(interval);
-                    alert("Error! Please try again.");
-                    submitButton.innerText = "Submit Booking";
+                    bookingForm.reset();
+                    submitButton.style.display = "block";
                     submitButton.disabled = false;
-                    console.error("Booking error:", error);
-                });
+                    submitButton.innerText = "Submit Booking";
+                };
+            } catch (error) {
+                clearInterval(interval);
+                alert("Error! Please try again.");
+                submitButton.innerText = "Submit Booking";
+                submitButton.disabled = false;
+                console.error("Booking error:", error);
+            }
         });
 
         function sendWhatsAppMessage(data) {
@@ -131,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ===== Contact Form =====
     const contactForm = document.getElementById("contactForm");
     if (contactForm) {
-        contactForm.addEventListener("submit", function (event) {
+        contactForm.addEventListener("submit", async function (event) {
             event.preventDefault();
 
             const contactData = {
@@ -147,18 +145,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const scriptURL = "https://script.google.com/macros/s/AKfycbywid3X23kc-9VyHcfYxNK1fkLl0AWYm7c4sarsn7DAdTeA4eGUZp8nOlyxsgckfkMu/exec";
 
-            fetch(scriptURL, {
-                method: "POST",
-                body: JSON.stringify(contactData),
-                headers: { "Content-Type": "application/json" },
-                mode: "no-cors"
-            })
-                .then(() => {
-                    contactForm.style.display = "none";
+            try {
+                const response = await fetch(scriptURL, {
+                    method: "POST",
+                    body: JSON.stringify(contactData),
+                    headers: { "Content-Type": "application/json" },
+                    mode: "no-cors" // Note: with no-cors, response body and status are not directly accessible.
+                });
 
-                    const successMessage = document.getElementById("successMessage");
-                    successMessage.classList.remove("hidden");
-                    successMessage.innerHTML = `
+                contactForm.style.display = "none";
+                const successMessage = document.getElementById("successMessage");
+                successMessage.classList.remove("hidden");
+                successMessage.innerHTML = `
                         <i class="fas fa-check-circle success-icon"></i>
                         <p class="success-text">Thank you! Your message has been sent successfully.</p>
                         <p class="success-subtext">Would you like to chat with us on WhatsApp?</p>
@@ -168,40 +166,38 @@ document.addEventListener("DOMContentLoaded", function () {
                         </div>
                     `;
 
-                    document.getElementById("whatsappYes").onclick = function () {
-                        const name = contactData.name;
-                        const phone = contactData.phone;
-                        const message = contactData.message;
+                document.getElementById("whatsappYes").onclick = function () {
+                    const name = contactData.name;
+                    const phone = contactData.phone;
+                    const message = contactData.message;
 
-                        const encodedMessage = encodeURIComponent(
-                            `Hello ShRish Travels 👋,\n` +
-                            `I’ve just submitted a message through your contact form and would like to follow up regarding support or feedback.\n\n` +
-                            `Name: ${name}\n` +
-                            `Phone: ${phone}\n` +
-                            `Message: ${message}\n\n` +
-                            `Looking forward to your response. Thank you!`
-                        );
+                    const encodedMessage = encodeURIComponent(
+                        `Hello ShRish Travels 👋,\n` +
+                        `I’ve just submitted a message through your contact form and would like to follow up regarding support or feedback.\n\n` +
+                        `Name: ${name}\n` +
+                        `Phone: ${phone}\n` +
+                        `Message: ${message}\n\n` +
+                        `Looking forward to your response. Thank you!`
+                    );
 
-                        window.open(`https://wa.me/918883451668?text=${encodedMessage}`, "_blank");
-                    };
+                    window.open(`https://wa.me/918883451668?text=${encodedMessage}`, "_blank");
+                };
 
-                    document.getElementById("whatsappNo").onclick = function () {
-                        successMessage.innerHTML = `
+                document.getElementById("whatsappNo").onclick = function () {
+                    successMessage.innerHTML = `
                             <i class="fas fa-smile-beam success-icon"></i>
                             <p class="success-text">Thanks again! We'll reach out to you shortly.</p>
                         `;
-                    };
+                };
 
-                    submitButton.innerText = "Submit";
-                    submitButton.disabled = false;
-                })
-                .catch((error) => {
-                    alert("Error submitting contact form. Please try again.");
-                    console.error("Contact error:", error);
-                    submitButton.innerText = "Submit";
-                    submitButton.disabled = false;
-                });
-
+                submitButton.innerText = "Submit";
+                submitButton.disabled = false;
+            } catch (error) {
+                alert("Error submitting contact form. Please try again.");
+                console.error("Contact error:", error);
+                submitButton.innerText = "Submit";
+                submitButton.disabled = false;
+            }
         });
     }
     document.querySelectorAll('.faq-question').forEach(question => {
