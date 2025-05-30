@@ -319,7 +319,7 @@ header {
 /* Hero Section */
 .hero-section {
   background: url('assets/hero.avif') no-repeat center center/cover;
-  min-height: 9vh;
+  min-height: 90vh; /* Or another appropriate value like 600px or 100vh */
   display: flex;
   align-items: center;
   justify-content: center;
