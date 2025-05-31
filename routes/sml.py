@@ -262,7 +262,7 @@ template = '''<!DOCTYPE html>
   <p data-aos="fade-in" data-aos-delay="50" style="text-align: center; max-width: 800px; margin: 0 auto;">
     Embark on a seamless journey from <strong>Chennai to {city}</strong> with ShRish Travels, your trusted partner for comfortable and reliable outstation travel. Whether it’s a weekend getaway, a spiritual pilgrimage, a business trip, or a family adventure, our premium cab services ensure a safe, stylish, and stress-free ride tailored to your needs.
   </p>
-
+<hr>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4721377568679078"
     crossorigin="anonymous"></script>
@@ -271,7 +271,7 @@ template = '''<!DOCTYPE html>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({{}});
   </script>
-
+<hr>
   <section data-aos="fade-up" class="destination-info">
     <h2>Explore the Charm of {city}</h2>
     <p>{city} offers a delightful blend of culture, history, and scenic beauty. From iconic landmarks and serene landscapes to vibrant markets and spiritual retreats, there’s something for every traveler. With ShRish Travels, your journey to {city} is as enjoyable as the destination itself, with comfortable rides and personalized services.</p>
@@ -304,7 +304,7 @@ template = '''<!DOCTYPE html>
     <h2>Travel with Comfort and Confidence</h2>
     <p>At ShRish Travels, your safety and comfort are our priorities. Our vehicles are regularly sanitized, equipped with modern amenities, and driven by experienced professionals. Enjoy real-time trip tracking, complimentary water bottles, and round-the-clock customer support for a worry-free journey to {city}.</p>
   </section>
-
+<hr>
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4721377568679078"
     crossorigin="anonymous"></script>
@@ -312,7 +312,7 @@ template = '''<!DOCTYPE html>
     data-ad-client="ca-pub-4721377568679078" data-ad-slot="2277354529"></ins>
   <script>
     (adsbygoogle = window.adsbygoogle || []).push({{}});
-  </script>
+  </script><hr>
 
   <section data-aos="fade-up" class="call-to-action" style="text-align: center; margin: 2rem 0;">
     <p style="font-size: 1.2rem;">
@@ -369,7 +369,7 @@ template = '''<!DOCTYPE html>
 >WhatsApp</a>. Whether you need to modify your booking or have questions during your trip, we’re here to help. <a href="/booking.html">Book today!</a></p>
     </details>
   </div>
-</section>
+</section><hr>
 <!-- Google AdSense -->
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4721377568679078"
         crossorigin="anonymous"></script>
@@ -377,7 +377,7 @@ template = '''<!DOCTYPE html>
         data-ad-client="ca-pub-4721377568679078" data-ad-slot="2277354529"></ins>
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({{}});
-      </script>
+      </script><hr>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-grid">
