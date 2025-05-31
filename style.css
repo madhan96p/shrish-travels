@@ -2769,8 +2769,8 @@ footer p {
 }
 
 .route-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
 }
 
 .route-card.featured {
@@ -2866,6 +2866,10 @@ footer p {
 
 .route-link.view-page:hover {
   background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  border: #000;
+  /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .route-link.book-now {
@@ -2876,6 +2880,7 @@ footer p {
 
 .route-link.book-now:hover {
   background: #1d4ed8;
+  transform: translateY(-2px) !important;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.5);
 }
 
