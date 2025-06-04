@@ -3892,11 +3892,14 @@ tr:hover {
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: #eaeaea; /* Consider using a CSS variable if this color is part of a theme */
+  background: #eaeaea;
+  /* Consider using a CSS variable if this color is part of a theme */
   padding: 10px;
   font-weight: bold;
-  color: #333; /* Ensure good contrast */
-  font-family: sans-serif; /* Consider using a more specific font stack from your design */
+  color: #333;
+  /* Ensure good contrast */
+  font-family: sans-serif;
+  /* Consider using a more specific font stack from your design */
 }
 
 .iframe-no-border {
@@ -3914,4 +3917,24 @@ tr:hover {
 
 .text-align-left {
   text-align: left;
+}
+
+/* hiring floating */
+#hiring-float-icon {
+  position: fixed;
+  top: 150px;
+  left: 10px;
+  width: 100px;
+  height: auto;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+  /* Prevent accidental click when hidden */
+}
+
+#hiring-float-icon.visible {
+  opacity: 1;
+  pointer-events: auto;
 }

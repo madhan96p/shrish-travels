@@ -498,6 +498,9 @@ template = '''<!DOCTYPE html>
     </div>
   </footer>
   <script src="/script.js"></script>
+<img src="assets/we-are-hiring.svg" id="hiring-float-icon" alt="We're Hiring"
+     onclick="window.location.href='hiring.html'" />
+
 </body>
 </html>
 '''

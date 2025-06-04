@@ -391,4 +391,30 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('floating-warning-icon').style.display = 'none';
         });
     });
+
+    const hiringIcon = document.getElementById("hiring-float-icon");
+    let hideAfterClick = false;
+
+    function showHiringIcon() {
+        if (hideAfterClick) return;
+
+        hiringIcon.classList.add("visible");
+
+        // 👇 Increase visible time here (e.g. 6000ms = 6 seconds)
+        setTimeout(() => {
+            hiringIcon.classList.remove("visible");
+
+            // 👇 Optional: Hidden delay (e.g. 2 seconds before next appearance)
+            setTimeout(showHiringIcon, 2000);
+        }, 6000);
+    }
+
+    // Initial launch delay (1 second)
+    setTimeout(showHiringIcon, 1000);
+
+    hiringIcon.addEventListener("click", () => {
+        hideAfterClick = true;
+        hiringIcon.style.display = "none";
+    });
+
 });
