@@ -319,7 +319,8 @@ header {
 /* Hero Section */
 .hero-section {
   background: url('assets/hero.avif') no-repeat center center/cover;
-  min-height: 90vh; /* Or another appropriate value like 600px or 100vh */
+  min-height: 90vh;
+  /* Or another appropriate value like 600px or 100vh */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3518,378 +3519,399 @@ tr:hover {
   }
 }
 
-  /* Hero Section */
-  .hero-section-wrapper {
-    background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite;
-    padding: 80px 60px;
-    text-align: center;
-    border-radius: 30px;
-    margin-bottom: 40px;
-    box-shadow: 
-      0 30px 60px rgba(0,0,0,0.3),
-      0 0 0 1px rgba(255,255,255,0.1),
-      inset 0 1px 0 rgba(255,255,255,0.2);
-    transform: rotateX(5deg) rotateY(-2deg);
-    transition: transform 0.3s ease;
-    position: relative;
-    overflow: hidden;
-  }
+/* General Main Container for Hiring Page */
+.hiring-main-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  background: #f4f7f6;
+  /* background color */
+  color: #333;
+  position: relative;
+}
 
-  .hero-section-wrapper::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-  }
+/* Style iframe separately */
+.map-iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
 
-  .hero-section-wrapper:hover {
-    transform: rotateX(0deg) rotateY(0deg) scale(1.02);
-  }
 
-  @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+/* Section Styling */
+.hiring-main-container section {
+  margin-bottom: 50px;
+  background: #ffffff;
+  padding: 40px;
+  /* Increased padding */
+  border-radius: 16px;
+  /* Slightly less rounded */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.08);
+  /* More pronounced shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Add transition for hover */
+}
 
-  @keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+/* Optional: Add a subtle hover effect to sections */
+.hiring-main-container section:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.15), 0 12px 12px rgba(0, 0, 0, 0.1);
+}
 
-  .main-hero-title {
-    font-size: 4rem;
-    font-weight: 900;
-    color: white;
-    text-shadow: 
-      0 0 20px rgba(0,0,0,0.5),
-      0 0 40px rgba(255,255,255,0.3);
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
-  }
 
-  .hero-subtitle-text {
-    font-size: 1.5rem;
-    color: rgba(255,255,255,0.95);
-    margin-bottom: 40px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    position: relative;
-    z-index: 2;
-  }
+/* Hero Section Specifics */
+.hero-section-wrapper h1.main-hero-title {
+  font-size: 2.8rem;
+  /* Slightly larger */
+  margin-bottom: 15px;
+  color: #1e3a8a;
+  /* Darker blue */
+  text-align: center;
+  font-weight: 700;
+  /* Bold */
+}
 
-  .primary-cta-button {
-    background: linear-gradient(45deg, #ff6b6b, #feca57);
-    color: white;
-    border: none;
-    padding: 20px 50px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 
-      0 15px 30px rgba(255,107,107,0.4),
-      0 0 0 1px rgba(255,255,255,0.1),
-      inset 0 1px 0 rgba(255,255,255,0.3);
-    transform: translateY(0px);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    z-index: 2;
-  }
+.hero-section-wrapper p.hero-subtitle-text {
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
 
-  .primary-cta-button:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 
-      0 25px 50px rgba(255,107,107,0.6),
-      0 0 0 1px rgba(255,255,255,0.2),
-      inset 0 1px 0 rgba(255,255,255,0.4);
-  }
+.hero-section-wrapper .primary-cta-button {
+  display: block;
+  /* Make button block for centering */
+  width: fit-content;
+  /* Fit content width */
+  margin: 0 auto;
+  /* Center the button */
+  background-color: #2563eb;
+  /* Primary blue */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  /* Form Section */
-  .application-form-section {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(20px);
-    border-radius: 25px;
-    padding: 50px;
-    margin-bottom: 40px;
-    box-shadow: 
-      0 25px 50px rgba(0,0,0,0.2),
-      0 0 0 1px rgba(255,255,255,0.3),
-      inset 0 1px 0 rgba(255,255,255,0.8);
-    transform: translateZ(20px);
-    position: relative;
-  }
+.hero-section-wrapper .primary-cta-button:hover {
+  background-color: #1a56cc;
+  /* Darker blue on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
 
-  .application-form-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-    border-radius: 25px;
-    z-index: -1;
-  }
 
-  .driver-application-form {
-    display: grid;
-    gap: 30px;
-  }
+/* Section Titles */
+.hiring-main-container h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1e3a8a;
+  /* Darker blue */
+  text-align: center;
+  font-weight: 700;
+}
 
-  .form-row-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-  }
+/* Benefits Section */
+.benefits-showcase-section ul.benefits-list-container {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* Adjusted min-width */
+  gap: 20px;
+  /* Increased gap */
+}
 
-  .input-field-wrapper {
-    position: relative;
-  }
+.benefits-showcase-section ul.benefits-list-container li.benefit-item-wrapper {
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+  /* Subtle gradient */
+  border: 1px solid #93c5fd;
+  /* Subtle border */
+  padding: 25px;
+  /* Increased padding */
+  border-radius: 10px;
+  font-weight: 500;
+  display: flex;
+  /* Use flexbox for icon and text */
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .form-input-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #2c3e50;
-    font-size: 1.1rem;
-  }
+.benefits-showcase-section ul.benefits-list-container li.benefit-item-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
 
-  .text-input-field, .select-dropdown-field {
-    width: 100%;
-    padding: 18px 25px;
-    border: 2px solid rgba(102,126,234,0.2);
-    border-radius: 15px;
-    font-size: 1.1rem;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    box-shadow: 
-      0 5px 15px rgba(0,0,0,0.1),
-      inset 0 1px 0 rgba(255,255,255,0.8);
-  }
 
-  .text-input-field:focus, .select-dropdown-field:focus {
-    outline: none;
-    border-color: #667eea;
-    box-shadow: 
-      0 0 0 4px rgba(102,126,234,0.1),
-      0 10px 25px rgba(0,0,0,0.15),
-      inset 0 1px 0 rgba(255,255,255,0.8);
-    transform: translateY(-2px);
-  }
+.benefits-showcase-section ul.benefits-list-container li.benefit-item-wrapper i {
+  color: #2563eb;
+  /* Primary blue icon color */
+  font-size: 1.5rem;
+  /* Larger icon */
+  margin-right: 15px;
+  /* Space between icon and text */
+}
 
-  .form-submit-button {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    border: none;
-    padding: 20px 60px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    border-radius: 15px;
-    cursor: pointer;
-    box-shadow: 
-      0 15px 30px rgba(102,126,234,0.4),
-      0 0 0 1px rgba(255,255,255,0.1),
-      inset 0 1px 0 rgba(255,255,255,0.3);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    justify-self: center;
-  }
+.benefits-showcase-section ul.benefits-list-container li.benefit-item-wrapper strong.benefit-title-text {
+  font-weight: 600;
+  color: #1f2937;
+  /* Darker text */
+}
 
-  .form-submit-button:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 
-      0 20px 40px rgba(102,126,234,0.6),
-      0 0 0 1px rgba(255,255,255,0.2),
-      inset 0 1px 0 rgba(255,255,255,0.4);
-  }
 
-  /* Benefits Section */
-  .benefits-showcase-section {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(20px);
-    border-radius: 25px;
-    padding: 50px;
-    margin-bottom: 40px;
-    box-shadow: 
-      0 25px 50px rgba(0,0,0,0.2),
-      0 0 0 1px rgba(255,255,255,0.3),
-      inset 0 1px 0 rgba(255,255,255,0.8);
-    transform: translateZ(10px);
-  }
+/* Form Section */
+.application-form-section form.driver-application-form {
+  display: grid;
+  gap: 25px;
+  /* Increased gap */
+  max-width: 700px;
+  /* Increased max-width */
+  margin: 20px auto 0 auto;
+  /* Center the form */
+  padding: 30px;
+  background: #f8f8f8;
+  /* Slightly different background for form */
+  border-radius: 12px;
+  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.05);
+  /* Inset shadow for depth */
+}
 
-  .benefits-section-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #2c3e50;
-    margin-bottom: 40px;
-    text-align: center;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
+.application-form-section .form-row-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* Stack columns by default */
+  gap: 20px;
+}
 
-  .benefits-list-container {
-    list-style: none;
-    display: grid;
-    gap: 20px;
-  }
+@media (min-width: 600px) {
 
-  .benefit-item-wrapper {
-    background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(254,202,87,0.1));
-    padding: 25px;
-    border-radius: 15px;
-    border-left: 5px solid #ff6b6b;
-    box-shadow: 
-      0 10px 20px rgba(0,0,0,0.1),
-      inset 0 1px 0 rgba(255,255,255,0.8);
-    transition: all 0.3s ease;
-    transform: translateX(0);
+  /* Two columns on larger screens */
+  .application-form-section .form-row-container {
+    grid-template-columns: 1fr 1fr;
   }
+}
 
-  .benefit-item-wrapper:hover {
-    transform: translateX(10px) translateY(-2px);
-    box-shadow: 
-      0 15px 30px rgba(0,0,0,0.15),
-      inset 0 1px 0 rgba(255,255,255,0.9);
-  }
 
-  .benefit-title-text {
-    color: #ff6b6b;
-    font-size: 1.2rem;
-    margin-right: 10px;
-  }
+.application-form-section .input-field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
-  /* Testimonial Section */
-  .testimonial-display-section {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 25px;
-    padding: 50px;
-    margin-bottom: 40px;
-    box-shadow: 
-      0 25px 50px rgba(0,0,0,0.3),
-      0 0 0 1px rgba(255,255,255,0.1),
-      inset 0 1px 0 rgba(255,255,255,0.2);
-    transform: rotateX(-5deg) rotateY(2deg);
-    transition: transform 0.3s ease;
-  }
+.application-form-section .form-input-label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
 
-  .testimonial-display-section:hover {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
+.application-form-section input.text-input-field,
+.application-form-section textarea.text-input-field,
+.application-form-section select.select-dropdown-field {
+  padding: 14px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  /* Lighter border */
+  width: 100%;
+  box-sizing: border-box;
+  /* Include padding and border in element's total width and height */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
 
-  .testimonial-section-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: white;
-    margin-bottom: 30px;
-    text-align: center;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  }
+.application-form-section input.text-input-field:focus,
+.application-form-section textarea.text-input-field:focus,
+.application-form-section select.select-dropdown-field:focus {
+  outline: none;
+  border-color: #2563eb;
+  /* Primary blue border on focus */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  /* Subtle focus ring */
+}
 
-  .driver-testimonial-quote {
-    text-align: center;
-    font-style: italic;
-  }
+.application-form-section textarea.text-input-field {
+  resize: vertical;
+  /* Allow vertical resizing */
+  min-height: 100px;
+}
 
-  .testimonial-quote-text {
-    font-size: 1.4rem;
-    color: rgba(255,255,255,0.95);
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-  }
 
-  .testimonial-author-info {
-    font-size: 1.1rem;
-    color: rgba(255,255,255,0.8);
-    font-weight: 600;
-  }
+.application-form-section button.form-submit-button {
+  background-color: #1a56cc;
+  /* Primary blue */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 30px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: auto;
+  /* Auto width */
+  margin-top: 10px;
+  /* Space above button */
+  justify-self: center;
+  /* Center button in grid */
+}
 
-  /* Final CTA Section */
-  .final-cta-section {
-    background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(20px);
-    border-radius: 25px;
-    padding: 50px;
-    text-align: center;
-    box-shadow: 
-      0 25px 50px rgba(0,0,0,0.2),
-      0 0 0 1px rgba(255,255,255,0.3),
-      inset 0 1px 0 rgba(255,255,255,0.8);
-    transform: translateZ(15px);
-  }
+.application-form-section button.form-submit-button:hover {
+  background-color: #1e40af;
+  /* Darker blue on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
 
-  .cta-section-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
+.application-form-section button.form-submit-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  .cta-description-text {
-    font-size: 1.3rem;
-    color: #34495e;
-    margin-bottom: 40px;
-    line-height: 1.6;
-  }
 
-  .secondary-cta-button {
-    background: linear-gradient(135deg, #48dbfb, #0abde3);
-    color: white;
-    border: none;
-    padding: 20px 50px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 
-      0 15px 30px rgba(72,219,251,0.4),
-      0 0 0 1px rgba(255,255,255,0.1),
-      inset 0 1px 0 rgba(255,255,255,0.3);
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+/* Testimonials Section */
+.testimonial-display-section blockquote.driver-testimonial-quote {
+  font-style: italic;
+  color: #444;
+  padding: 20px 30px;
+  /* Increased padding */
+  border-left: 5px solid #2563eb;
+  /* Primary blue border */
+  margin: 20px auto;
+  /* Center and add margin */
+  max-width: 800px;
+  /* Limit width */
+  background: #eef2ff;
+  /* Lighter blue background */
+  border-radius: 10px;
+  position: relative;
+  /* Needed for pseudo-elements */
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
 
-  .secondary-cta-button:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 
-      0 25px 50px rgba(72,219,251,0.6),
-      0 0 0 1px rgba(255,255,255,0.2),
-      inset 0 1px 0 rgba(255,255,255,0.4);
-  }
+/* Add quote icons for a premium touch */
+.testimonial-display-section blockquote.driver-testimonial-quote::before {
+  content: "\201C";
+  /* Left double quote */
+  font-size: 3em;
+  color: #2563eb;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  opacity: 0.3;
+  line-height: 1;
+}
 
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hiring-main-container {
-      padding: 10px;
-    }
-    
-    .hero-section-wrapper {
-      padding: 40px 30px;
-      transform: none;
-    }
-    
-    .main-hero-title {
-      font-size: 2.5rem;
-    }
-    
-    .hero-subtitle-text {
-      font-size: 1.2rem;
-    }
-    
-    .application-form-section,
-    .benefits-showcase-section,
-    .testimonial-display-section,
-    .final-cta-section {
-      padding: 30px;
-      transform: none;
-    }
-    
-    .form-row-container {
-      grid-template-columns: 1fr;
-    }
-  }
+.testimonial-display-section blockquote.driver-testimonial-quote::after {
+  content: "\201D";
+  /* Right double quote */
+  font-size: 3em;
+  color: #2563eb;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.testimonial-display-section blockquote.driver-testimonial-quote .testimonial-author-info {
+  display: block;
+  /* New line for author */
+  margin-top: 15px;
+  font-weight: 600;
+  color: #1e3a8a;
+  /* Darker blue */
+  text-align: right;
+  font-style: normal;
+  /* Remove italic from cite */
+}
+
+/* Final CTA Section */
+.final-cta-section {
+  text-align: center;
+}
+
+.final-cta-section .cta-section-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+.final-cta-section .cta-description-text {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.final-cta-section .secondary-cta-button {
+  display: inline-block;
+  background-color: transparent;
+  /* Light background */
+  color: #2563eb;
+  /* Primary blue text */
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid #2563eb;
+  /* Blue border */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.final-cta-section .secondary-cta-button:hover {
+  background-color: #2563eb;
+  /* Primary blue on hover */
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.12);
+}
+
+.final-cta-section .secondary-cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* In style.css */
+#route-wrapper {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #eaeaea; /* Consider using a CSS variable if this color is part of a theme */
+  padding: 10px;
+  font-weight: bold;
+  color: #333; /* Ensure good contrast */
+  font-family: sans-serif; /* Consider using a more specific font stack from your design */
+}
+
+.iframe-no-border {
+  border: none;
+}
+
+.iframe-no-border-overflow-hidden {
+  border: none;
+  overflow: hidden;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
