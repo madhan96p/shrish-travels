@@ -126,6 +126,94 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     AOS.init();
+    // ===== Driver Application Form =====
+    const driverForm = document.querySelector(".driver-application-form");
+    if (driverForm) {
+        driverForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const driverData = {
+                fullName: document.getElementById("full-name").value,
+                phoneNumber: document.getElementById("phone-number").value,
+                cityArea: document.getElementById("city-area").value,
+                experience: document.getElementById("driving-experience").value,
+                ownsVehicle: document.getElementById("own-vehicle").value
+            };
+
+            const submitButton = driverForm.querySelector("button[type='submit']");
+            submitButton.disabled = true;
+            submitButton.innerText = "Submitting... Please wait (5s)";
+
+            let countdown = 5;
+            const interval = setInterval(() => {
+                countdown--;
+                submitButton.innerText = `Submitting... Please wait (${countdown}s)`;
+            }, 1000);
+
+            const scriptURL = "https://script.google.com/macros/s/AKfycbybd2RurJw0Laqk1hk5MSppyZwZGeNddfAQeMnbY7PXMAVpINtqEF4Q08Pxj1EzsU0Q4w/exec";
+
+            try {
+                const response = await fetch(scriptURL, {
+                    method: "POST",
+                    body: JSON.stringify(driverData),
+                    headers: { "Content-Type": "application/json" },
+                    mode: "no-cors"
+                });
+
+                clearInterval(interval);
+
+                // Success message
+                const successBox = document.createElement("div");
+                successBox.classList.add("driver-success-message");
+                successBox.innerHTML = `
+          <i class="fas fa-check-circle success-icon"></i>
+          <p class="success-text">Application submitted successfully.</p>
+          <p class="success-subtext">Would you like to confirm via WhatsApp?</p>
+          <div class="success-buttons">
+            <button id="driverYes" class="action-button">Yes</button>
+            <button id="driverNo" class="action-button">No</button>
+          </div>
+        `;
+                driverForm.parentElement.appendChild(successBox);
+                submitButton.style.display = "none";
+
+                document.getElementById("driverYes").onclick = function () {
+                    sendWhatsAppMessage(driverData);
+                    driverForm.reset();
+                    successBox.remove();
+                    submitButton.disabled = false;
+                    submitButton.innerText = "Submit Application";
+                    submitButton.style.display = "block";
+                };
+
+                document.getElementById("driverNo").onclick = function () {
+                    successBox.innerHTML = `
+            <i class="fas fa-thumbs-up success-icon"></i>
+            <p class="success-text">Thank you! We'll get in touch soon.</p>
+          `;
+                    driverForm.reset();
+                    submitButton.disabled = false;
+                    submitButton.innerText = "Submit Application";
+                    submitButton.style.display = "block";
+                };
+            } catch (error) {
+                clearInterval(interval);
+                alert("Error! Please try again.");
+                console.error("Driver form error:", error);
+                submitButton.innerText = "Submit Application";
+                submitButton.disabled = false;
+            }
+        });
+
+        function sendWhatsAppMessage(data) {
+            const msg = `Hello ShRish Travels,%0A%0A*New Driver Application*%0AName: ${data.fullName}%0APhone: ${data.phoneNumber}%0AArea: ${data.cityArea}%0AExperience: ${data.experience}%0AOwn Vehicle: ${data.ownsVehicle}`;
+            const number = "918883451668";
+            window.open(`https://wa.me/${number}?text=${msg}`, "_blank");
+        }
+    }
+
+    AOS.init();
+
     // ===== Contact Form =====
     const contactForm = document.getElementById("contactForm");
     if (contactForm) {
