@@ -3654,6 +3654,28 @@ tr:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Reduce horizontal padding of container inside application form section */
+.application-form-section .container {
+  padding-left: 5px;
+  /* smaller than default, e.g., 15-20px */
+  padding-right: 5px;
+
+}
+
+/* Increase max-width or remove margin to let form expand */
+.application-form-section form.driver-application-form {
+  max-width: 100%;
+  /* instead of 800px */
+  margin-left: auto;
+  /* center horizontally */
+  margin-right: auto;
+  padding-left: 5px;
+  /* optional: small padding inside form */
+  padding-right: 5px;
+  box-sizing: border-box;
+  /* ensure padding doesn’t break width */
+}
+
 
 .benefits-showcase-section ul.benefits-list-container li.benefit-item-wrapper i {
   color: #2563eb;
@@ -3676,9 +3698,9 @@ tr:hover {
   display: grid;
   gap: 25px;
   /* Increased gap */
-  max-width: 700px;
+  max-width: 800px;
   /* Increased max-width */
-  margin: 20px auto 0 auto;
+  margin: 10px auto 0 auto;
   /* Center the form */
   padding: 30px;
   background: #f8f8f8;
@@ -3701,6 +3723,28 @@ tr:hover {
   .application-form-section .form-row-container {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* Reduce horizontal padding of container inside application form section */
+  .application-form-section .container {
+    padding-left: 10px;
+    /* smaller than default, e.g., 15-20px */
+    padding-right: 10px;
+  }
+
+  /* Increase max-width or remove margin to let form expand */
+  .application-form-section form.driver-application-form {
+    max-width: 100%;
+    /* instead of 800px */
+    margin-left: auto;
+    /* center horizontally */
+    margin-right: auto;
+    padding-left: 5px;
+    /* optional: small padding inside form */
+    padding-right: 5px;
+    box-sizing: border-box;
+    /* ensure padding doesn’t break width */
+  }
+
 }
 
 
