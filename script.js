@@ -427,22 +427,41 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.style.filter = isLight ? "invert(1)" : "invert(0)";
     });
 
-    const banner = document.getElementById("cookie-consent-banner");
-    const accepted = localStorage.getItem("cookieConsent");
+// Cookie Consent Logic
+    document.addEventListener("DOMContentLoaded", function () {
+        const banner = document.getElementById("cookie-consent-banner");
+        const accepted = localStorage.getItem("cookieConsent");
 
-    if (!accepted) {
-        banner.style.display = "block";
-    }
+        if (!accepted) {
+            banner.style.display = "block";
+        } else if (accepted === "accepted") {
+            loadAnalytics(); // Load GA if already accepted
+        }
 
-    document.getElementById("accept-cookies").onclick = () => {
-        localStorage.setItem("cookieConsent", "accepted");
-        banner.style.display = "none";
-    };
+        document.getElementById("accept-cookies").onclick = () => {
+            localStorage.setItem("cookieConsent", "accepted");
+            banner.style.display = "none";
+            loadAnalytics(); // Load GA after accepting
+        };
 
-    document.getElementById("reject-cookies").onclick = () => {
-        localStorage.setItem("cookieConsent", "rejected");
-        banner.style.display = "none";
-    };
+        document.getElementById("reject-cookies").onclick = () => {
+            localStorage.setItem("cookieConsent", "rejected");
+            banner.style.display = "none";
+        };
+
+        function loadAnalytics() {
+            const script = document.createElement("script");
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-MBGR8GE2HH"; // ✅ Use your real GA ID
+            script.async = true;
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-MBGR8GE2HH');
+        }
+    });
+// Service Worker Registration
 
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
