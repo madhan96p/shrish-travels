@@ -499,7 +499,7 @@ template = '''<!DOCTYPE html>
   </footer>
   <script src="/script.js"></script>
 <img src="/assets/we-are-hiring.svg" id="hiring-float-icon" alt="We're Hiring"
-     onclick="window.location.href='/hiring.html'" />
+     onclick="window.location.href='/hiring.html'" data-aos="slide-up">
 
 </body>
 </html>

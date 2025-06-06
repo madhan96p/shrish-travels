@@ -416,5 +416,15 @@ document.addEventListener("DOMContentLoaded", function () {
         hideAfterClick = true;
         hiringIcon.style.display = "none";
     });
+    window.addEventListener("scroll", () => {
+        const icon = document.getElementById("hiring-float-icon");
+        const section = document.elementFromPoint(icon.offsetLeft, icon.offsetTop);
+        const bgColor = window.getComputedStyle(section).backgroundColor;
+
+        // Rough check — you can expand this
+        const isLight = bgColor.includes("255") || bgColor.includes("rgb(255");
+
+        icon.style.filter = isLight ? "invert(1)" : "invert(0)";
+    });
 
 });
