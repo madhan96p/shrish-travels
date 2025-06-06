@@ -427,4 +427,35 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.style.filter = isLight ? "invert(1)" : "invert(0)";
     });
 
+    const banner = document.getElementById("cookie-consent-banner");
+    const accepted = localStorage.getItem("cookieConsent");
+
+    if (!accepted) {
+        banner.style.display = "block";
+    }
+
+    document.getElementById("accept-cookies").onclick = () => {
+        localStorage.setItem("cookieConsent", "accepted");
+        banner.style.display = "none";
+    };
+
+    document.getElementById("reject-cookies").onclick = () => {
+        localStorage.setItem("cookieConsent", "rejected");
+        banner.style.display = "none";
+    };
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(reg => {
+                    console.log("Service Worker registered successfully");
+                    // No alert, works silently
+                })
+                .catch(err => {
+                    console.error("Service Worker registration failed:", err);
+                });
+        });
+    }
+
+
 });
