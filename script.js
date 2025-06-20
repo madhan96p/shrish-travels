@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
                 clearInterval(interval);
                 // ✅ Google Analytics Event for Booking
+                // ✅ Google Analytics Event for Booking
                 gtag('event', 'booking_submission', {
                     event_category: 'Booking',
                     event_label: 'Booking Form Submitted',
@@ -179,24 +180,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     event_label: 'Driver Form Submitted',
                     value: 1
                 });
-                // ✅ Google Analytics Event Tracking
-                gtag('event', 'driver_application', {
-                    event_category: 'Hiring',
-                    event_label: 'Driver Form Submitted',
-                    value: 1
-                });
                 // Success message
                 const successBox = document.createElement("div");
                 successBox.classList.add("driver-success-message");
                 successBox.innerHTML = `
-                    <i class="fas fa-check-circle success-icon"></i>
-                    <p class="success-text">Application submitted successfully.</p>
-                    <p class="success-subtext">Would you like to confirm via WhatsApp?</p>
-                    <div class="success-buttons">
-                    <button id="driverYes" class="action-button">Yes</button>
-                    <button id="driverNo" class="action-button">No</button>
-                    </div>
-                `;
                     <i class="fas fa-check-circle success-icon"></i>
                     <p class="success-text">Application submitted successfully.</p>
                     <p class="success-subtext">Would you like to confirm via WhatsApp?</p>
@@ -221,7 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     successBox.innerHTML = `
             <i class="fas fa-thumbs-up success-icon"></i>
             <p class="success-text">Thank you! We'll get in touch soon.</p>
-            `;
             `;
                     driverForm.reset();
                     submitButton.disabled = false;
@@ -285,11 +271,6 @@ document.addEventListener("DOMContentLoaded", function () {
                             <button id="whatsappNo" class="action-button">No</button>
                         </div>
                     `;
-                gtag('event', 'form_submission', {
-                    event_category: 'Contact',
-                    event_label: 'Contact Form Submitted',
-                    value: 1
-                });
                 gtag('event', 'form_submission', {
                     event_category: 'Contact',
                     event_label: 'Contact Form Submitted',
@@ -470,7 +451,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Cookie Consent Logic
-    // Cookie Consent Logic
     document.addEventListener("DOMContentLoaded", function () {
         const banner = document.getElementById("cookie-consent-banner");
         const accepted = localStorage.getItem("cookieConsent");
@@ -504,7 +484,6 @@ document.addEventListener("DOMContentLoaded", function () {
             gtag('config', 'G-MBGR8GE2HH');
         }
     });
-    // Service Worker Registration
     // Service Worker Registration
 
     if ('serviceWorker' in navigator) {
