@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
                 clearInterval(interval);
                 // ✅ Google Analytics Event for Booking
+                // ✅ Google Analytics Event for Booking
                 gtag('event', 'booking_submission', {
                     event_category: 'Booking',
                     event_label: 'Booking Form Submitted',
