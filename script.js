@@ -81,6 +81,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     value: 1
                 });
 
+                // ✅ Google Ads Conversion Tracking
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-16969327986/abc123xyz' // 🔁 replace with your actual ID
+                });
+
                 // Show success message and ask for WhatsApp confirmation
                 const successMessage = document.createElement("div");
                 successMessage.classList.add("booking-success-message");
