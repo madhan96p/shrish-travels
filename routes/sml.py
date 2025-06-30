@@ -596,11 +596,11 @@ template = '''
     </div>
   </footer>
   <script src="/script.js"></script>
-  <img src="/assets/we-are-hiring.svg" id="hiring-float-icon" alt="We're Hiring"
+  <img src="/assets/transparent_hiring.png" id="hiring-float-icon" alt="We're Hiring"
     onclick="window.location.href='/hiring.html'" data-aos="slide-up">
 
 
-  <img src="/assets/we-are-hiring.svg" id="hiring-float-icon" alt="We're Hiring"
+  <img src="/assets/transparent_hiring.png" id="hiring-float-icon" alt="We're Hiring"
     onclick="window.location.href='/hiring.html'" data-aos="slide-up">
 
   <div id="cookie-consent-banner"

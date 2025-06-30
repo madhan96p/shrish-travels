@@ -18,7 +18,7 @@ const urlsToCache = [
     '/Home.jpg',
 
     // SVG & Images
-    '/assets/we-are-hiring.svg',
+    '/assets/transparent_hiring.png',
     '/assets/hero.avif',
     '/assets/background.jpg',
     '/assets/preview-image.jpg',
