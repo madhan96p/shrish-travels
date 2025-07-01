@@ -1,2 +1,5 @@
-/sitemap.xml  /sitemap.xml  200
-/*           /:splat.html  200
+/*                /:splat.html    200
+/sitemap.xml      /sitemap.xml    200
+/%7Bignore%7D     /               301
+/{ignore}         /               301
+
