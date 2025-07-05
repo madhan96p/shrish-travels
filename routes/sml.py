@@ -275,7 +275,7 @@ template = '''
   </script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag() {{ dataLayer.push(arguments); }}
     gtag('js', new Date());
 
     gtag('config', 'AW-16969327986');
@@ -290,7 +290,7 @@ template = '''
       <div class="flip-header">
         <div class="flip-inner">
           <div class="flip-front">
-            <h1 data-aos="slide-down">ShRish Travels</h1>
+            <h2 data-aos="slide-down">ShRish Travels</h2>
           </div>
           <div class="flip-back">
             <p class="slogan" data-aos="slide-up"><strong><em>Velachery, Chennai</em></strong></p>
@@ -492,7 +492,7 @@ template = '''
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
-          <a href="index.html"><img src="/assets/SH1.png" alt="ShRish Travels Logo" class="logo"
+          <a href="/index.html"><img src="/assets/SH1.png" alt="ShRish Travels Logo" class="logo"
               data-aos="slide-right"></a>
           <p>
             Providing reliable and comfortable cab services in Chennai and beyond since 2021. Your journey, our
