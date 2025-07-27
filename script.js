@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         function sendWhatsAppMessage(data) {
-            const message = `Hello ShRish Travels,%0A%0A*New Booking Details*%0AName: ${data.name}%0APhone: ${data.phone}%0APickup: ${data.pickup}%0ADrop-off: ${data.dropoff}%0ATravelers: ${data.travelers}`;
+            const message = `Hello Shrish Travels,%0A%0A*New Booking Details*%0AName: ${data.name}%0APhone: ${data.phone}%0APickup: ${data.pickup}%0ADrop-off: ${data.dropoff}%0ATravelers: ${data.travelers}`;
             const number = "918883451668";
             window.open(`https://wa.me/${number}?text=${message}`, "_blank");
         }
@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         function sendWhatsAppMessage(data) {
-            const msg = `Hello ShRish Travels,%0A%0A*New Driver Application*%0AName: ${data.fullName}%0APhone: ${data.phoneNumber}%0AArea: ${data.cityArea}%0AExperience: ${data.experience}%0AOwn Vehicle: ${data.ownsVehicle}`;
+            const msg = `Hello Shrish Travels,%0A%0A*New Driver Application*%0AName: ${data.fullName}%0APhone: ${data.phoneNumber}%0AArea: ${data.cityArea}%0AExperience: ${data.experience}%0AOwn Vehicle: ${data.ownsVehicle}`;
             const number = "918883451668";
             window.open(`https://wa.me/${number}?text=${msg}`, "_blank");
         }
@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const message = contactData.message;
 
                     const encodedMessage = encodeURIComponent(
-                        `Hello ShRish Travels 👋,\n` +
+                        `Hello Shrish Travels 👋,\n` +
                         `I’ve just submitted a message through your contact form and would like to follow up regarding support or feedback.\n\n` +
                         `Name: ${name}\n` +
                         `Phone: ${phone}\n` +

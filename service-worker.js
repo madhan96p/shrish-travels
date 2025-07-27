@@ -2,7 +2,7 @@ const CACHE_NAME = 'shrish-cache-v1';
 
 const urlsToCache = [
     '/',
-    '/index.html',
+    '/home.html',
     '/booking.html',
     '/contact.html',
     '/hiring.html',

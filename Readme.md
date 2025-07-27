@@ -1,6 +1,6 @@
-<h1 align="center">🚖 ShRish Travels</h1>
+<h1 align="center">🚖 Shrish Travels</h1>
 <p align="center">
-  <em>Official website of <strong>ShRish Travels</strong> — Your Trusted Travel Partner from Chennai 🛣️</em>
+  <em>Official website of <strong>Shrish Travels</strong> — Your Trusted Travel Partner from Chennai 🛣️</em>
 </p>
 <p align="center">
   <a href="https://shrishtravels.netlify.app" target="_blank">
@@ -12,7 +12,7 @@
 
 <h2>📦 Project Overview</h2>
 <p>
-  ShRish Travels is a complete online booking platform for a local travel business in Chennai — built for speed, simplicity, and smart automation.
+  Shrish Travels is a complete online booking platform for a local travel business in Chennai — built for speed, simplicity, and smart automation.
   This project handles both front-end presentation and back-end integration (Google Sheets, WhatsApp API), all without a paid backend.
 </p>
 
@@ -43,7 +43,7 @@
 <h2>📂 Project Structure</h2>
 <pre>
 📁 shrish-travels/
-├── index.html              → Landing + Home Page
+├── home.html              → Landing + Home Page
 ├── services.html           → Cab types listing
 ├── booking.js              → Google Sheets form integration
 ├── whatsapp.js             → WhatsApp autofill redirection
