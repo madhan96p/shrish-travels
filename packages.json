@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "name": "Marina Beach, Chennai",
+    "category": "Beaches",
+    "description": "Marina Beach, the longest urban beach in India, is famous for its golden sands, breathtaking sunrises, and vibrant street food culture. A must-visit spot for locals and tourists alike.",
+    "image": "https://i.pinimg.com/736x/76/79/3d/76793da7bfafd0a39c5a47d896d2d730.jpg?auto=compress&cs=tinysrgb&w=800",
+    "rating": 4.6,
+    "price": "₹3000 – ₹8000\n(Local food & rides)",
+    "coordinates": { "latitude": 13.048720, "longitude": 80.282024 },
+    "highlights": ["Golden sands", "Sunrise views", "Street food", "Historic landmarks"]
+  },
+  {
+    "id": "2",
+    "name": "Kodaikanal, Tamil Nadu",
+    "category": "Mountains",
+    "description": "Famed as the 'Princess of Hill Stations,' Kodaikanal offers mist-covered mountains, lush valleys, crystal-clear lakes, and a cool climate perfect for trekking, boating, and year-round relaxation.",
+    "image": "https://www.namasteindiatrip.com/blog/wp-content/uploads/2017/04/Pillar-Rocks-Kodaikanal-in-tamil-nadu.webp?auto=compress&cs=tinysrgb&w=800",
+    "rating": 4.8,
+    "price": "₹3000 – ₹6000\n(Stay + Travel)",
+    "coordinates": { "latitude": 10.2383337, "longitude": 77.4893264 },
+    "highlights": [
+      "Coaker’s Walk – scenic viewpoint",
+      "Kodaikanal Lake – boating & cycling",
+      "Pine Forests – iconic photo spots",
+      "Trekking Trails – misty hills & waterfalls"
+    ]
+  }
+]
