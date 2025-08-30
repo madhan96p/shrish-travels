@@ -308,8 +308,8 @@ header {
 }
 
 .nav-dropdown ul li a:hover {
-  color: #ffffff;
-  background: #FFD700;
+  color: #0066ff;
+  background: #edeaeaa5;
   border-radius: 8px;
   transform: translateX(+6px);
   /* shifts left on hover */
@@ -807,6 +807,46 @@ header {
   max-width: 600px;
   margin: 0 auto;
 }
+.form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none; /* Removes native dropdown arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.form-group select:focus {
+  border-color: var(--primary-color); /* Or your theme's primary color */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.form-group select option {
+  padding: 0.5rem;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '\f078'; /* Font Awesome down arrow */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #555;
+}
+
 
 /* Bridge Content */
 .bridge-content {
@@ -2084,7 +2124,7 @@ iframe {
   font-size: 1.5rem;
   font-weight: 700;
   color: #dc2626;
-  /* Red for "shrish" */
+  /* Red for "ShRish" */
   position: relative;
 }
 

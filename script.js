@@ -22,21 +22,34 @@ function toggleServices() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // ===== Menu Toggle =====
     const menuButton = document.getElementById("menu-button");
     const dropdownMenu = document.getElementById("dropdown-menu");
+    const navOverlay = document.querySelector(".nav-overlay");
+    const navLinks = document.querySelectorAll(".nav-dropdown a");
 
-    if (menuButton && dropdownMenu) {
+    if (menuButton && dropdownMenu && navOverlay) {
         menuButton.addEventListener("click", function (event) {
-            dropdownMenu.classList.toggle("active");
+            toggleMenu();
             event.stopPropagation();
         });
 
-        document.addEventListener("click", function (event) {
-            if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.remove("active");
-            }
+        navOverlay.addEventListener("click", function () {
+            toggleMenu();
         });
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                if (dropdownMenu.classList.contains("active")) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        function toggleMenu() {
+            dropdownMenu.classList.toggle("active");
+            navOverlay.classList.toggle("active");
+            document.body.classList.toggle("no-scroll");
+        }
     }
 
     // ===== Booking Form =====
@@ -52,6 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 pickup: document.getElementById("pickup").value,
                 dropoff: document.getElementById("dropoff").value,
                 travelers: document.getElementById("travelers").value,
+                date: document.getElementById("date").value,
+                journeytype: document.getElementById("journeytype").value,
             };
 
             const submitButton = bookingForm.querySelector("button[type='submit']");
@@ -64,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 submitButton.innerText = `Processing... Please wait (${countdown}s)`;
             }, 1000);
 
-            const scriptURL = "https://script.google.com/macros/s/AKfycbzn_4oOBJafTUBPgvwmrhtjxJN3mcDz809YLUTBHjCmdDKYYG-lGRDMgLuM_WJ9ebhm/exec";
-
+            const scriptURL = "https://script.google.com/macros/s/AKfycbwY6JLOSO9zZUcBkQ_38EIKMLWMwCZtpotLo61D_rsaRzBltxF5AhK-Mz8y9kST3mQC/exec";
+                                
             try {
                 const response = await fetch(scriptURL, {
                     method: "POST",
@@ -131,12 +146,13 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         function sendWhatsAppMessage(data) {
-            const message = `Hello Shrish Travels,%0A%0A*New Booking Details*%0AName: ${data.name}%0APhone: ${data.phone}%0APickup: ${data.pickup}%0ADrop-off: ${data.dropoff}%0ATravelers: ${data.travelers}`;
+            const message = `*Subject: Travel Booking Inquiry*%0A%0AHello Shrish Travels,%0A%0AI am writing to request a quote and confirm availability for the following journey:%0A%0A*Passenger Details:*%0A• Name: ${data.name}%0A• Contact: ${data.phone}%0A%0A*Trip Details:*%0A• From: ${data.pickup}%0A• To: ${data.dropoff}%0A• Date: ${data.date}%0A• Passengers: ${data.travelers}%0A• Type: ${data.journeytype}%0A%0ACould you please provide the fare and next steps for booking?%0A%0AThanks,%0A${data.name}`;
             const number = "918883451668";
             window.open(`https://wa.me/${number}?text=${message}`, "_blank");
         }
     }
     AOS.init();
+    
     // ===== Driver Application Form =====
     const driverForm = document.querySelector(".driver-application-form");
     if (driverForm) {
@@ -223,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         function sendWhatsAppMessage(data) {
-            const msg = `Hello Shrish Travels,%0A%0A*New Driver Application*%0AName: ${data.fullName}%0APhone: ${data.phoneNumber}%0AArea: ${data.cityArea}%0AExperience: ${data.experience}%0AOwn Vehicle: ${data.ownsVehicle}`;
+            const msg = `Hello ShRish Travels,%0A%0A*New Driver Application*%0AName: ${data.fullName}%0APhone: ${data.phoneNumber}%0AArea: ${data.cityArea}%0AExperience: ${data.experience}%0AOwn Vehicle: ${data.ownsVehicle}`;
             const number = "918883451668";
             window.open(`https://wa.me/${number}?text=${msg}`, "_blank");
         }
@@ -282,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const message = contactData.message;
 
                     const encodedMessage = encodeURIComponent(
-                        `Hello Shrish Travels 👋,\n` +
+                        `Hello ShRish Travels 👋,\n` +
                         `I’ve just submitted a message through your contact form and would like to follow up regarding support or feedback.\n\n` +
                         `Name: ${name}\n` +
                         `Phone: ${phone}\n` +

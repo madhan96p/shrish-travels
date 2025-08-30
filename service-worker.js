@@ -26,7 +26,7 @@ const urlsToCache = [
     '/assets/outstation-trips.jpg',
     '/assets/luxury-car.avif',
     '/assets/airport-transfer.avif',
-    '/assets/sh1.jpg',
+    'assets/sh1.png',
     '/assets/sh1.png',
 
 ];

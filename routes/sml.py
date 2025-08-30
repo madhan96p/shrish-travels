@@ -81,14 +81,14 @@ template = '''
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Chennai to {city} Cab Booking – Shrish Travels Velachery</title>
+  <title>Chennai to {city} Cab Booking – ShRish Travels Velachery</title>
   <meta name="description"
-    content="Affordable one-way and round-trip cab from Chennai to {city}. Book AC cabs from Shrish Travels Velachery. 24x7 support." />
+    content="Affordable one-way and round-trip cab from Chennai to {city}. Book AC cabs from ShRish Travels Velachery. 24x7 support." />
   <link rel="canonical" href="https://shrishtravels.netlify.app/routes/chennai-to-{city_lower}-cab" />
   <link rel="stylesheet" href="/style.css" />
 
   <meta name="keywords"
-    content="Best {city} travel packages, Best {city_ta} சுற்றுலா தொகுப்புகள், Premium {city} tour services, பிரீமியம் {city_ta} சுற்றுலா சேவைகள், Affordable {city} tours, மலிவான {city_ta} சுற்றுலா, Top-rated {city} travel agency, உயர்தர {city_ta} பயண முகவரி, Explore {city} with Shrish Travels, ஷ்ரீஷ் டிராவல்ஸுடன் {city_ta} அனுபவிக்கவும், Book your {city} trip today, உங்கள் {city_ta} பயணத்தை இப்போது முன்பதிவு செய்யுங்கள், Reliable {city} sightseeing tours, நம்பகமான {city_ta} சுற்றுலா பயணங்கள், Exclusive {city} tour deals, பிரத்தியேக {city_ta} சுற்றுலா சலுகைகள், Customized {city} travel plans, தனிப்பயன் {city_ta} பயண திட்டங்கள், Experience the best of {city}, {city_ta} சிறந்த அனுபவம், Family trips in {city}, {city_ta} குடும்ப பயணங்கள், Honeymoon packages {city}, {city_ta} தாம்பத்ய சுற்றுலா தொகுப்புகள், Weekend getaways from {city}, {city_ta} விடுமுறை பயணங்கள், Shrish Travels in {city}, {city_ta} Shrish Travels, Trusted travel company {city}, நம்பகமான {city_ta} டிராவல்ஸ், Tourist taxi in {city}, சுற்றுலா டாக்ஸி {city_ta}, Cab booking {city}, காப் முன்பதிவு {city_ta}, Local tour operator {city}, உள்ளூர் சுற்றுலா முகவர் {city_ta}" />
+    content="Best {city} travel packages, Best {city_ta} சுற்றுலா தொகுப்புகள், Premium {city} tour services, பிரீமியம் {city_ta} சுற்றுலா சேவைகள், Affordable {city} tours, மலிவான {city_ta} சுற்றுலா, Top-rated {city} travel agency, உயர்தர {city_ta} பயண முகவரி, Explore {city} with ShRish Travels, ஷ்ரீஷ் டிராவல்ஸுடன் {city_ta} அனுபவிக்கவும், Book your {city} trip today, உங்கள் {city_ta} பயணத்தை இப்போது முன்பதிவு செய்யுங்கள், Reliable {city} sightseeing tours, நம்பகமான {city_ta} சுற்றுலா பயணங்கள், Exclusive {city} tour deals, பிரத்தியேக {city_ta} சுற்றுலா சலுகைகள், Customized {city} travel plans, தனிப்பயன் {city_ta} பயண திட்டங்கள், Experience the best of {city}, {city_ta} சிறந்த அனுபவம், Family trips in {city}, {city_ta} குடும்ப பயணங்கள், Honeymoon packages {city}, {city_ta} தாம்பத்ய சுற்றுலா தொகுப்புகள், Weekend getaways from {city}, {city_ta} விடுமுறை பயணங்கள், ShRish Travels in {city}, {city_ta} ShRish Travels, Trusted travel company {city}, நம்பகமான {city_ta} டிராவல்ஸ், Tourist taxi in {city}, சுற்றுலா டாக்ஸி {city_ta}, Cab booking {city}, காப் முன்பதிவு {city_ta}, Local tour operator {city}, உள்ளூர் சுற்றுலா முகவர் {city_ta}" />
   <meta name="author" content="Pragadeesh Srinivasan" />
   <!-- AOS Animation Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -102,9 +102,9 @@ template = '''
   <!-- Favicons -->
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/assets/favicon.png" type="image/png">
-  <link rel="icon" href="/assets/SH1.jpg" type="image/jpeg">
+  <link rel="icon" href="assets/sh1.png" type="image/jpeg">
   <!-- Title of the page shown on Facebook -->
-  <meta property="og:title" content="Shrish Travels - Trusted Travel Partner from Chennai" />
+  <meta property="og:title" content="ShRish Travels - Trusted Travel Partner from Chennai" />
 
   <!-- Description shown under the title -->
   <meta property="og:description"
@@ -120,10 +120,10 @@ template = '''
   <meta property="og:type" content="website" />
 
   <!-- Website name (shows as source on Facebook posts) -->
-  <meta property="og:site_name" content="Shrish Travels" />
+  <meta property="og:site_name" content="ShRish Travels" />
 
   <!-- Author info (not mandatory but helps with attribution) -->
-  <meta property="article:author" content="https://www.facebook.com/people/shrish-Travels/100066139992789/" />
+  <meta property="article:author" content="https://www.facebook.com/people/ShRish-Travels/100066139992789/" />
 
   <!-- Optional: Facebook page ID for deeper integration -->
   <meta property="fb:pages" content="100066139992789" />
@@ -161,17 +161,17 @@ template = '''
 {{
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Shrish Travels",
+  "name": "ShRish Travels",
   "url": "https://www.shrishtravels.com",
-  "logo": "https://www.shrishtravels.com/assets/SH1.png",
+  "logo": "https://www.shrishtravels.com/assets/images/sh1.jpg",
   "sameAs": [
-    "https://wa.me/918883451668?text=Hello%20shrish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!",
+    "https://wa.me/918883451668?text=Hello%20ShRish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!",
     "https://www.instagram.com/shrish_travels",
     "https://www.youtube.com/channel/UC5xOOggNg80T7uoijMfz3jA",
-    "https://linktr.ee/shrish_Travels",
+    "https://linktr.ee/ShRisH_Travels",
     "https://pragadeeshfolio.netlify.app"
   ],
-  "description": "Shrish Travels offers 24/7 reliable car rental and tour services across Chennai and all over Tamil Nadu.",
+  "description": "ShRish Travels offers 24/7 reliable car rental and tour services across Chennai and all over Tamil Nadu.",
   "address": {{
     "@type": "PostalAddress",
     "addressLocality": "Chennai",
@@ -208,7 +208,7 @@ template = '''
       "name": "What vehicles can I choose for a Chennai to {city} trip?",
       "acceptedAnswer": {{
         "@type": "Answer",
-        "text": "Shrish Travels offers AC hatchbacks, sedans, SUVs, and Tempo Travellers for travel from Chennai to {city}. All vehicles are sanitized and well-maintained."
+        "text": "ShRish Travels offers AC hatchbacks, sedans, SUVs, and Tempo Travellers for travel from Chennai to {city}. All vehicles are sanitized and well-maintained."
       }}
     }},
     {{
@@ -224,7 +224,7 @@ template = '''
       "name": "Can I book a round-trip cab to {city}?",
       "acceptedAnswer": {{
         "@type": "Answer",
-        "text": "Yes, Shrish Travels offers both one-way and round-trip cabs from Chennai to {city}. Ideal for weekend or multi-day trips."
+        "text": "Yes, ShRish Travels offers both one-way and round-trip cabs from Chennai to {city}. Ideal for weekend or multi-day trips."
       }}
     }},
     {{
@@ -263,34 +263,34 @@ template = '''
 }}
 </script>
   <!-- Open Graph Meta Tags (optional but good for sharing) -->
-  <meta property="og:title" content="Chennai to {city} Cab Booking – Shrish Travels Velachery" />
+  <meta property="og:title" content="Chennai to {city} Cab Booking – ShRish Travels Velachery" />
   <meta property="og:description"
     content="Reliable, affordable AC taxi service from Chennai to {city}. Round-trip available. 24x7 booking via call or WhatsApp." />
-  <meta property="og:image" content="/assets/SH1.jpg" />
+  <meta property="og:image" content="assets/sh1.png" />
   <meta property="og:url" content="https://shrishtravels.netlify.app/routes/chennai-to-{city}-cab" />
   <meta property="og:type" content="website" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16969327986">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {{ dataLayer.push(arguments); }}
-    gtag('js', new Date());
 
-    gtag('config', 'AW-16969327986');
-  </script>
 
+     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2E3WPT0X7J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2E3WPT0X7J');
+    </script>
 </head>
 
 <body>
   <header>
-    <a href="/home.html"><img src="/assets/SH1.png" alt="Shrish Travels Logo" class="logo" data-aos="slide-right"></a>
+    <a href="/home.html"><img src="/assets/sh1.png" alt="ShRish Travels Logo" class="logo" data-aos="slide-right"></a>
     <div class="header-title">
       <div class="flip-header">
         <div class="flip-inner">
           <div class="flip-front">
-            <h2 data-aos="slide-down">Shrish Travels</h2>
+            <h2 data-aos="slide-down">ShRish Travels</h2>
           </div>
           <div class="flip-back">
             <p class="slogan" data-aos="slide-up"><strong><em>Velachery, Chennai</em></strong></p>
@@ -327,11 +327,11 @@ template = '''
   </header>
   <main class="page-content">
     <h1 class="hero-title" data-aos="slide-up" style="text-align: center;">
-      Chennai to {city} Cab – Premium Outstation Taxi by Shrish Travels
+      Chennai to {city} Cab – Premium Outstation Taxi by ShRish Travels
     </h1>
 
     <p data-aos="fade-in" data-aos-delay="50" style="text-align: center; max-width: 800px; margin: 0 auto;">
-      Embark on a seamless journey from <strong>Chennai to {city}</strong> with Shrish Travels, your trusted partner for
+      Embark on a seamless journey from <strong>Chennai to {city}</strong> with ShRish Travels, your trusted partner for
       comfortable and reliable outstation travel. Whether it’s a weekend getaway, a spiritual pilgrimage, a business
       trip, or a family adventure, our premium cab services ensure a safe, stylish, and stress-free ride tailored to
       your needs.
@@ -349,13 +349,13 @@ template = '''
     <section data-aos="fade-up" class="destination-info">
       <h2>Explore the Charm of {city}</h2>
       <p>{city} offers a delightful blend of culture, history, and scenic beauty. From iconic landmarks and serene
-        landscapes to vibrant markets and spiritual retreats, there’s something for every traveler. With Shrish Travels,
+        landscapes to vibrant markets and spiritual retreats, there’s something for every traveler. With ShRish Travels,
         your journey to {city} is as enjoyable as the destination itself, with comfortable rides and personalized
         services.</p>
     </section>
 
     <section class="why-trust-us" data-aos="fade-up">
-      <h2>Why Choose Shrish Travels?</h2>
+      <h2>Why Choose ShRish Travels?</h2>
       <div class="container">
         <ul style="list-style: none; padding: 0;">
           <li data-aos="fade-up" style="margin-bottom: 1rem;">
@@ -375,7 +375,7 @@ template = '''
             <i class="fas fa-shield-alt" style="color: #007BFF; margin-right: 10px;"></i> Professional, verified drivers
             with <a href="tel:+918883451668" target="_blank" title="Call"
               style="text-decoration: none; color: #007BFF;">24x7 call support</a> and <a
-              href="https://wa.me/918883451668?text=Hello%20shrish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!"
+              href="https://wa.me/918883451668?text=Hello%20ShRish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!"
               target="_blank" title="WhatsApp Chat" style="text-decoration: none; color: #007BFF;">WhatsApp
               assistance</a>.
           </li>
@@ -389,7 +389,7 @@ template = '''
 
     <section data-aos="fade-up" class="comfort-section">
       <h2>Travel with Comfort and Confidence</h2>
-      <p>At Shrish Travels, your safety and comfort are our priorities. Our vehicles are regularly sanitized, equipped
+      <p>At ShRish Travels, your safety and comfort are our priorities. Our vehicles are regularly sanitized, equipped
         with modern amenities, and driven by experienced professionals. Enjoy real-time trip tracking, complimentary
         water bottles, and round-the-clock customer support for a worry-free journey to {city}.</p>
     </section>
@@ -406,7 +406,7 @@ template = '''
 
     <section data-aos="fade-up" class="call-to-action" style="text-align: center; margin: 2rem 0;">
       <p style="font-size: 1.2rem;">
-        Ready to explore {city} with ease? Let Shrish Travels make your trip unforgettable.
+        Ready to explore {city} with ease? Let ShRish Travels make your trip unforgettable.
         <strong><a href="/booking.html" style="color: #007BFF; text-decoration: none; font-weight: bold;">Book your
             Chennai to {city} cab today!</a></strong>
       </p>
@@ -417,7 +417,7 @@ template = '''
         style="margin: 0 15px; font-size: 1.5rem; color: #007BFF;">
         <i class="fas fa-phone-alt"></i>
       </a>
-      <a href="https://wa.me/918883451668?text=Hello%20shrish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!"
+      <a href="https://wa.me/918883451668?text=Hello%20ShRish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!"
         target="_blank" class="icon-btn" title="WhatsApp Chat"
         style="margin: 0 15px; font-size: 1.5rem; color: #007BFF;">
         <i class="fab fa-whatsapp"></i>
@@ -433,7 +433,7 @@ template = '''
     <div class="faq-container">
       <details open data-aos="fade-left">
         <summary>What vehicles can I choose for a Chennai to {city} trip?</summary>
-        <p>Shrish Travels offers a variety of AC vehicles, including hatchbacks (e.g., SWIFT), sedans (e.g., Dzire),
+        <p>ShRish Travels offers a variety of AC vehicles, including hatchbacks (e.g., SWIFT), sedans (e.g., Dzire),
           SUVs (e.g., Innova), and Tempo Travellers for group travel. All vehicles are well-maintained and sanitized for
           your comfort. <a href="/booking.html">Select your vehicle and book now!</a></p>
       </details>
@@ -444,9 +444,9 @@ template = '''
       </details>
       <details>
         <summary>Can I book a round-trip cab to {city}?</summary>
-        <p>Yes, Shrish Travels offers both one-way and round-trip cab services from Chennai to {city}. Round trips are
+        <p>Yes, ShRish Travels offers both one-way and round-trip cab services from Chennai to {city}. Round trips are
           perfect for weekend getaways or extended visits. Contact us via <a href="tel:+918883451668">call</a> or <a
-            href="https://wa.me/918883451668?text=Hello%20shrish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!">WhatsApp</a>
+            href="https://wa.me/918883451668?text=Hello%20ShRish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!">WhatsApp</a>
           to plan your trip.</p>
       </details>
       <details>
@@ -459,20 +459,20 @@ template = '''
         <summary>Can I stop for sightseeing on the way to {city}?</summary>
         <p>Yes, you can request stops for sightseeing, meals, or other needs during your Chennai to {city} trip. Just
           let us know when booking or inform your driver. <a
-            href="https://wa.me/918883451668?text=Hello%20shrish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!">Message
+            href="https://wa.me/918883451668?text=Hello%20ShRish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!">Message
             us on WhatsApp</a> to customize your itinerary.</p>
       </details>
       <details>
         <summary>How do I book a cab from Chennai to {city}?</summary>
-        <p>Booking is simple with Shrish Travels! Click <a href="/booking.html">here to book online</a>, call us at <a
+        <p>Booking is simple with ShRish Travels! Click <a href="/booking.html">here to book online</a>, call us at <a
             href="tel:+918883451668">+91 88834 51668</a>, or message us on <a
-            href="https://wa.me/918883451668?text=Hello%20shrish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!">WhatsApp</a>.
+            href="https://wa.me/918883451668?text=Hello%20ShRish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!">WhatsApp</a>.
           Our 24/7 team is here to assist. Book now for a seamless journey!</p>
       </details>
       <details>
         <summary>What support is available during my trip to {city}?</summary>
-        <p>Shrish Travels provides 24/7 customer support via <a href="tel:+918883451668">call</a> or <a
-            href="https://wa.me/918883451668?text=Hello%20shrish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!">WhatsApp</a>.
+        <p>ShRish Travels provides 24/7 customer support via <a href="tel:+918883451668">call</a> or <a
+            href="https://wa.me/918883451668?text=Hello%20ShRish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!">WhatsApp</a>.
           Whether you need to modify your booking or have questions during your trip, we’re here to help. <a
             href="/booking.html">Book today!</a></p>
       </details>
@@ -492,7 +492,7 @@ template = '''
     <div class="footer-container">
       <div class="footer-grid">
         <div class="footer-brand" data-aos="fade-up" data-aos-delay="100">
-          <a href="/home.html"><img src="/assets/SH1.png" alt="Shrish Travels Logo" class="logo"
+          <a href="/home.html"><img src="/assets/sh1.png" alt="ShRish Travels Logo" class="logo"
               data-aos="slide-right"></a>
           <p>
             Providing reliable and comfortable cab services in Chennai and beyond since 2021. Your journey, our
@@ -515,13 +515,13 @@ template = '''
                 <i class="fab fa-youtube"></i>
               </a>
               <div class="youtube-preview">
-                <iframe width="360" height="215" src="" title="Shrish Travels Playlist" frameborder="0"
+                <iframe width="360" height="215" src="" title="ShRish Travels Playlist" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen></iframe>
               </div>
             </div>
             <div class="whatsapp-hover-container">
-              <a href="https://wa.me/918883451668?text=Hello%20shrish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!"
+              <a href="https://wa.me/918883451668?text=Hello%20ShRish%20Travels%20%F0%9F%91%8B%2C%0AI'm%20interested%20in%20your%20travel%20services%20and%20would%20love%20to%20know%20more%20about%20your%20routes%2C%20pricing%2C%20and%20availability.%20Kindly%20share%20the%20details.%0AThank%20you!"
                 target="_blank" aria-label="WhatsApp">
                 <i class="fab fa-whatsapp fa-2x"></i>
               </a>
@@ -592,7 +592,7 @@ template = '''
       </div>
     </div>
     <div class="footer-bottom">
-      <p style="text-align: center;">© <span id="copyright-year"></span> Shrish Travels. All rights reserved.</p>
+      <p style="text-align: center;">© <span id="copyright-year"></span> ShRish Travels. All rights reserved.</p>
     </div>
   </footer>
   <script src="/script.js"></script>
