@@ -1,8 +1,3 @@
-// =================================================================
-// Premium JS for Shrish Travels Tariff Page
-// Version 3.0 - Unified Modal, Refined UX, Robust Logic
-// =================================================================
-
 // --- 1. Data Store & Global State ---
 const vehicleData = {
     'local-sedan': { type: 'local', name: '4+1 Sedan', subtitle: 'Etios, Dzire, etc.', baseFare: 1300, kmRate: 14, hrRate: 260, baseKm: 50, baseHr: 5 },
@@ -14,37 +9,45 @@ const vehicleData = {
     'outstation-tempo': { type: 'outstation', name: '12+1 Tempo', subtitle: 'Min. 300 KMs/Day', kmRate: 24, bata: 1000, minKm: 300 }
 };
 
+// Holds the currently selected vehicle object
 let currentVehicle = null;
+// Holds the latest calculated estimate object
 let currentEstimate = null;
+
+// DOM elements (cached for performance)
+let modalTitle, estimatorModal, modalBody, modalFooter;
 
 // --- 2. Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Cache DOM elements inside the listener to ensure they exist
-    const estimatorModal = document.getElementById('estimatorModal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalBody = document.getElementById('modalBody');
-    const modalFooter = document.getElementById('modalFooter');
+    // Cache DOM elements that are frequently accessed
+    modalTitle = document.getElementById('modalTitle');
+    estimatorModal = document.getElementById('estimatorModal');
+    modalBody = document.getElementById('modalBody');
+    modalFooter = document.getElementById('modalFooter');
 
-    // Initialize all functionalities
+    // Initialize all functionalities once the DOM is loaded
     initializeTabs();
     initializeAnimations();
-    initializeMobileMenu();
+    initializeCircularMenu();
     initializeBookingButtons();
-    initializeEstimatorButtons(); // This function call was missing
+    initializeEstimatorButtons();
     initializeHeroInteractions();
 });
 
 
-// --- 4. Core UI Functions ---
+// --- 3. Core UI Functions ---
 
 function initializeTabs() {
     document.querySelectorAll('.tab-button').forEach(button => {
         button.addEventListener('click', () => {
             const targetTab = button.dataset.tab;
+            // Deactivate all tabs and content
             document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            // Activate the clicked tab and its content
             button.classList.add('active');
             document.getElementById(`${targetTab}-tab`).classList.add('active');
+            // Animate the cards in the new active tab
             animateCards();
         });
     });
@@ -79,31 +82,26 @@ function animateCards() {
     });
 }
 
-function initializeMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const nav = document.querySelector('.nav');
-    const overlay = document.querySelector('.sidebar-overlay');
-    const body = document.body;
+function initializeCircularMenu() {
+    const menu = document.querySelector('.circular-menu');
+    if (!menu) return;
 
-    if (!mobileMenuBtn || !nav || !overlay) return;
+    const button = menu.querySelector('.menu-button');
+    const menuItems = menu.querySelectorAll('.menu-item');
 
-    const toggleMenu = () => {
-        const isActive = nav.classList.contains('active');
+    function toggleMenu() {
+        menu.classList.toggle('open');
+    }
 
-        // Toggle classes on all relevant elements
-        nav.classList.toggle('active');
-        overlay.classList.toggle('active');
-        mobileMenuBtn.classList.toggle('open');
-        body.classList.toggle('no-scroll', !isActive);
-        
-        // Toggle icon
-        const icon = mobileMenuBtn.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
-    };
+    button.addEventListener('click', toggleMenu);
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
-    overlay.addEventListener('click', toggleMenu); // Close menu when overlay is clicked
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (menu.classList.contains('open')) {
+                toggleMenu();
+            }
+        });
+    });
 }
 
 function initializeBookingButtons() {
@@ -119,8 +117,9 @@ function initializeBookingButtons() {
 
 function initializeEstimatorButtons() {
     document.querySelectorAll('.btn-estimate').forEach(button => {
-        button.addEventListener('click', () => {
-            const card = button.closest('.package-card');
+        // Use a function declaration for the event listener to avoid issues with `this`
+        button.addEventListener('click', function() {
+            const card = this.closest('.package-card');
             if (card) {
                 const vehicleId = card.dataset.vehicle;
                 if (vehicleId) {
@@ -131,13 +130,12 @@ function initializeEstimatorButtons() {
     });
 }
 
-// --- 4a. NEW Interactive Hero Section & Reviews Modal ---
+// --- 4. Interactive Hero Section & Reviews Modal ---
 
-// Function to shuffle an array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]]; // ES6 swap
+        [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
 }
@@ -148,10 +146,9 @@ function initializeHeroInteractions() {
     const closeReviewsModalBtn = document.getElementById('closeReviewsModal');
     const reviewsBody = document.getElementById('reviewsBody');
 
-    // **IMPORTANT:** Replace these with your actual Google Review URLs if you have them.
-    // This is mock data for demonstration.
+    // IMPORTANT: Replace these placeholder links with your actual Google Review URLs.
     const googleReviewLinks = [
-        "https://maps.app.goo.gl/3AoeJ1nMZWehng7z5", 
+        "https://maps.app.goo.gl/3AoeJ1nMZWehng7z5",
         "https://maps.app.goo.gl/ophME4tvVb7o2GVx5",
         "https://maps.app.goo.gl/TKUAvb1ExBf69HPq6",
         "https://maps.app.goo.gl/GcN1PGyXeVwvkP1W8",
@@ -167,8 +164,7 @@ function initializeHeroInteractions() {
         "https://maps.app.goo.gl/ywkajBkqX2NXaEhs5",
         "https://maps.app.goo.gl/wwA4Z9Gb3yoyJLX67",
         "https://maps.app.goo.gl/wDBzbjXy4LC4nh2V6"
-    ]
-        ;
+    ];
 
     const reviewData = [
         { name: 'Shaamraj Carneson', rating: 5, text: "Came from malaysia for a vacation with family. The driver we got Mr. Jagan was very humble guy. He was so punctual and also he guided us in many way. The travelling wasn't feel bored since we have a good conversation along the journey. A special thanks to him and really recommend this travels for bookings. The vehicle they have are well maintained. If we have a chance to visit chennai again, for sure will be booking here.", linkIndex: 0 },
@@ -195,10 +191,9 @@ function initializeHeroInteractions() {
     }
 
     function openReviewsModal() {
-        // Shuffle reviews before displaying
-        const shuffledReviews = shuffleArray([...reviewData]); // Create a shallow copy to shuffle
+        const shuffledReviews = shuffleArray([...reviewData]);
 
-        reviewsBody.innerHTML = ''; // Clear previous reviews
+        reviewsBody.innerHTML = '';
         shuffledReviews.forEach(review => {
             const reviewElement = document.createElement('div');
             reviewElement.className = 'review-card';
@@ -217,18 +212,16 @@ function initializeHeroInteractions() {
             reviewsBody.appendChild(reviewElement);
         });
         reviewsModal.classList.add('active');
+        document.body.classList.add('no-scroll');
     }
 
     function closeReviewsModal() {
         reviewsModal.classList.remove('active');
+        document.body.classList.remove('no-scroll');
     }
 
-    if (viewReviewsBtn) {
-        viewReviewsBtn.addEventListener('click', openReviewsModal);
-    }
-    if (closeReviewsModalBtn) {
-        closeReviewsModalBtn.addEventListener('click', closeReviewsModal);
-    }
+    if (viewReviewsBtn) viewReviewsBtn.addEventListener('click', openReviewsModal);
+    if (closeReviewsModalBtn) closeReviewsModalBtn.addEventListener('click', closeReviewsModal);
 
     reviewsModal.addEventListener('click', (e) => {
         if (e.target === reviewsModal) {
@@ -236,6 +229,7 @@ function initializeHeroInteractions() {
         }
     });
 }
+
 // --- 5. Unified Modal Logic ---
 
 function openModal(vehicleId) {
@@ -245,10 +239,13 @@ function openModal(vehicleId) {
     modalTitle.textContent = `Estimate for ${currentVehicle.name}`;
     renderEstimatorView();
     estimatorModal.classList.add('active');
+    document.body.classList.add('no-scroll');
 }
 
 function closeModal() {
     estimatorModal.classList.remove('active');
+    document.body.classList.remove('no-scroll');
+    // Reset state to avoid issues
     currentVehicle = null;
     currentEstimate = null;
 }
@@ -264,22 +261,22 @@ function renderEstimatorView() {
         form.innerHTML = `
             <div class="form-group">
                 <label class="form-label">Extra Kilometers</label>
-                <input type="number" class="form-input" id="extraKm" min="0" max="500" placeholder="Beyond ${currentVehicle.baseKm} KMs" oninput="validateInput(this, 0, 500); calculateEstimate();">
+                <input type="text" inputmode="numeric" pattern="[0-9]*" class="form-input" id="extraKm" min="0" max="500" placeholder="Beyond ${currentVehicle.baseKm} KMs" oninput="validateInput(this, 0, 500); calculateEstimate();">
             </div>
             <div class="form-group">
                 <label class="form-label">Extra Hours</label>
-                <input type="number" class="form-input" id="extraHr" min="0" max="12" placeholder="Beyond ${currentVehicle.baseHr} Hrs" oninput="validateInput(this, 0, 12); calculateEstimate();">
+                <input type="text" inputmode="numeric" pattern="[0-9]*" class="form-input" id="extraHr" min="0" max="12" placeholder="Beyond ${currentVehicle.baseHr} Hrs" oninput="validateInput(this, 0, 12); calculateEstimate();">
             </div>
         `;
     } else {
         form.innerHTML = `
             <div class="form-group">
                 <label class="form-label">Number of Days</label>
-                <input type="number" class="form-input" id="totalDays" min="1" max="30" placeholder="e.g., 2" oninput="validateInput(this, 1, 30); calculateEstimate();">
+                <input type="text" inputmode="numeric" pattern="[0-9]*" class="form-input" id="totalDays" min="1" max="30" placeholder="e.g., 2" oninput="validateInput(this, 1, 30); calculateEstimate();">
             </div>
             <div class="form-group">
                 <label class="form-label">Total Kilometers (Approx.)</label>
-                <input type="number" class="form-input" id="totalKm" min="0" max="5000" placeholder="e.g., 600" oninput="validateInput(this, 0, 5000); calculateEstimate();">
+                <input type="text" inputmode="numeric" pattern="[0-9]*" class="form-input" id="totalKm" min="0" max="5000" placeholder="e.g., 600" oninput="validateInput(this, 0, 5000); calculateEstimate();">
             </div>
         `;
     }
@@ -290,20 +287,25 @@ function renderEstimatorView() {
     resultDiv.innerHTML = `
         <div class="result-label">Estimated Total</div>
         <div id="estimatedTotal" class="result-value">₹0</div>
-        <div id="estimateBreakdown" class="result-breakdown"></div>
+        <div id="estimateBreakdown" class="result-breakdown">Enter details to see cost.</div>
     `;
     modalBody.appendChild(resultDiv);
 
     modalFooter.innerHTML = `
-        <button class="btn-secondary" onclick="closeModal()">Close</button>
-        <button id="generateQuoteBtn" class="btn-primary" onclick="renderQuotationView()" disabled>
+    <div class="estimator-actions">
+        <button class="btn btn-secondary" onclick="closeModal()">
+            <i class="fas fa-times"></i> Close
+        </button>
+        <button id="generateQuoteBtn" class="btn btn-primary" onclick="renderQuotationView()" disabled>
             <i class="fas fa-file-invoice"></i> Generate Quotation
         </button>
+    </div>
     `;
-
-    // Initial calculation
-    setTimeout(calculateEstimate, 50);
+    
+    // Initial calculation to set the state correctly
+    calculateEstimate();
 }
+
 
 function renderQuotationView() {
     if (!currentEstimate) return;
@@ -320,15 +322,19 @@ function renderQuotationView() {
     modalBody.appendChild(quotationCard);
 
     modalFooter.innerHTML = `
-        <button class="btn-secondary" onclick="renderEstimatorView()">
-            <i class="fas fa-chevron-left"></i> Back to Estimate
+    <div class="quotation-actions">
+        <button class="btn btn-secondary" onclick="renderEstimatorView()">
+            <i class="fas fa-chevron-left"></i> Back
         </button>
-        <button class="btn-primary" onclick="shareQuotation()">
-            <i class="fab fa-whatsapp"></i> Share
-        </button>
-        <button class="btn-primary" onclick="downloadQuotation()">
-            <i class="fas fa-download"></i> Download
-        </button>
+        <div class="right-buttons">
+            <button class="btn btn-primary" onclick="shareQuotation()">
+                <i class="fab fa-whatsapp"></i> Share
+            </button>
+            <button class="btn btn-primary" onclick="downloadQuotation()">
+                <i class="fas fa-download"></i> Download
+            </button>
+        </div>
+    </div>
     `;
 }
 
@@ -340,6 +346,7 @@ function calculateEstimate() {
 
     let total = 0;
     let breakdown = '';
+    let isCalculated = false;
     const generateQuoteBtn = document.getElementById('generateQuoteBtn');
 
     if (currentVehicle.type === 'local') {
@@ -359,37 +366,40 @@ function calculateEstimate() {
             baseCost: baseCost, extraKm: extraKm, extraKmCost: extraKmCost,
             extraHr: extraHr, extraHrCost: extraHrCost, total: total
         };
-        generateQuoteBtn.disabled = false;
+        isCalculated = true;
 
     } else {
         const totalDays = parseInt(document.getElementById('totalDays').value) || 0;
         const totalKm = parseInt(document.getElementById('totalKm').value) || 0;
+        
+        if (totalDays > 0) {
+            const minKmRequired = totalDays * currentVehicle.minKm;
+            const chargedKm = Math.max(totalKm, minKmRequired);
+            const kmCost = chargedKm * currentVehicle.kmRate;
+            const bataCost = totalDays * currentVehicle.bata;
+            total = kmCost + bataCost;
 
-        if (totalDays === 0) {
-            document.getElementById('estimatedTotal').textContent = '₹0';
-            document.getElementById('estimateBreakdown').innerHTML = 'Please enter number of days.';
-            generateQuoteBtn.disabled = true;
-            return;
+            breakdown = `KMs (₹${kmCost.toLocaleString()}) + Driver BATA (₹${bataCost.toLocaleString()})`;
+
+            currentEstimate = {
+                vehicleType: currentVehicle.name, packageType: 'Outstation Package',
+                totalDays: totalDays, totalKm: totalKm, chargedKm: chargedKm,
+                kmCost: kmCost, bataCost: bataCost, total: total
+            };
+            isCalculated = true;
+        } else {
+            breakdown = 'Please enter number of days.';
+            currentEstimate = null; // Clear estimate if input is invalid
         }
-
-        const minKmRequired = totalDays * currentVehicle.minKm;
-        const chargedKm = Math.max(totalKm, minKmRequired);
-        const kmCost = chargedKm * currentVehicle.kmRate;
-        const bataCost = totalDays * currentVehicle.bata;
-        total = kmCost + bataCost;
-
-        breakdown = `KMs (₹${kmCost.toLocaleString()}) + Driver BATA (₹${bataCost.toLocaleString()})`;
-
-        currentEstimate = {
-            vehicleType: currentVehicle.name, packageType: 'Outstation Package',
-            totalDays: totalDays, totalKm: totalKm, chargedKm: chargedKm,
-            kmCost: kmCost, bataCost: bataCost, total: total
-        };
-        generateQuoteBtn.disabled = false;
     }
 
-    animateValue(document.getElementById('estimatedTotal'), 0, total, 400);
+    animateValue(document.getElementById('estimatedTotal'), currentEstimate?.total || 0, total, 400);
     document.getElementById('estimateBreakdown').innerHTML = breakdown;
+
+    // Safely enable/disable the button
+    if (generateQuoteBtn) {
+        generateQuoteBtn.disabled = !isCalculated;
+    }
 }
 
 
@@ -485,25 +495,42 @@ function generatePrintableQuotationHTML(estimate, isForModal) {
 // --- 8. Helper Utilities ---
 
 function animateValue(element, start, end, duration) {
+    // If element doesn't exist, do nothing
+    if (!element) return;
+    
+    let currentStart = parseInt(element.textContent.replace(/[₹,]/g, '')) || 0;
+    
     const startTime = performance.now();
     const easeOutCubic = progress => 1 - Math.pow(1 - progress, 3);
+    
     function update(currentTime) {
         const elapsed = currentTime - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        const currentValue = Math.floor(start + (end - start) * easeOutCubic(progress));
+        const currentValue = Math.floor(currentStart + (end - currentStart) * easeOutCubic(progress));
         element.textContent = `₹${currentValue.toLocaleString()}`;
-        if (progress < 1) requestAnimationFrame(update);
+        if (progress < 1) {
+            requestAnimationFrame(update);
+        }
     }
     requestAnimationFrame(update);
 }
 
 function validateInput(input, min, max) {
-    let value = parseInt(input.value);
-    if (isNaN(value)) value = min;
-    else if (value < min) value = min;
-    else if (value > max) value = max;
-    input.value = value;
-    return value;
+    // Remove non-numeric characters for better UX
+    let value = input.value.replace(/[^0-9]/g, '');
+    let numericValue = parseInt(value, 10);
+
+    // Handle cases where parsing results in NaN (e.g., empty string)
+    if (isNaN(numericValue)) {
+        input.value = ''; // Keep it blank rather than forcing a zero
+        return;
+    }
+
+    if (numericValue > max) {
+        numericValue = max;
+    }
+    
+    input.value = numericValue;
 }
 
 function addLoadingState(button) {
@@ -516,4 +543,5 @@ function addLoadingState(button) {
     }, 1500);
 }
 
+// Global error handler for debugging
 window.addEventListener('error', e => console.error('Application error:', e.error));
