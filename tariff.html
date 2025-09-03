@@ -12,6 +12,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Montserrat:wght@400;700;900&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -22,14 +25,14 @@
   <header class="header">
     <div class="container">
       <div class="header-content">
-        <div class="logo-section">
+        <div class="logo-section" onclick="window.location.href='../index.html'">
           <img src="assets/sh1.jpg" alt="Shrish Travels" class="logo">
           <div class="brand-text">
             <h1>Shrish Travels</h1>
-            <p><em>Your Journey, Our Responsibility</em></p>
+            <p><em style="color: white">Your Journey, Our Responsibility</em></p>
           </div>
         </div>
-        
+
         <nav class="nav">
           <a href="home.html" class="nav-link">Home</a>
           <a href="services.html" class="nav-link">Services</a>
@@ -37,53 +40,59 @@
           <a href="contact.html" class="nav-link">Contact</a>
           <a href="booking.html" class="cta-button">Book Now</a>
         </nav>
-        
+
       </div>
     </div>
   </header>
 
   <section class="hero-new">
     <div class="hero-new-content">
-        <h1 class="hero-new-title">Your Journey, Our Responsibility.</h1>
-        <p class="hero-new-subtitle">Transparent Pricing. Unmatched Service. Seamless Travel Experiences in Chennai & Beyond.</p>
-        <div class="hero-new-actions">
-            <a href="services.html" class="btn btn-primary btn-large">
-                <i class="fas fa-route"></i> Explore Services
-            </a>
-            <button class="btn btn-secondary btn-large" id="viewReviewsBtn" style="color:White;">
-                <img src="https://crystalpng.com/wp-content/uploads/2025/05/google-logo.png" alt="Google logo" class="btn-icon-img-full">
-                View Our 5★ Reviews
-            </button>
+      <h1 class="hero-new-title">Your Journey, Our Responsibility.</h1>
+      <p class="hero-new-subtitle">Transparent Pricing. Unmatched Service. Seamless Travel Experiences in Chennai &
+        Beyond.</p>
+      <div class="hero-new-actions">
+        <a href="services.html" class="btn btn-primary btn-large">
+          <i class="fas fa-route"></i> Explore Services
+        </a>
+        <a href="tel:+918883451668" class="btn btn-enquiry btn-large">
+          <i class="fas fa-phone-alt"></i> Call for Enquiry
+        </a>
+        <button class="btn btn-secondary btn-large" id="viewReviewsBtn">
+          <img src="https://crystalpng.com/wp-content/uploads/2025/05/google-logo.png" alt="Google logo"
+            class="btn-icon-img-full">
+          View Our 5★ Reviews
+        </button>
+      </div>
+      <div class="hero-new-stats">
+        <div class="stat-item">
+          <span class="stat-number">500+</span><span class="stat-label">Happy Customers</span>
         </div>
-        <div class="hero-new-stats">
-            <div class="stat-item">
-                <span class="stat-number">500+</span><span class="stat-label">Happy Customers</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">24/7</span><span class="stat-label">Service Available</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">5★</span><span class="stat-label">Customer Rating</span>
-            </div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span><span class="stat-label">Service Available</span>
         </div>
+        <div class="stat-item">
+          <span class="stat-number">5★</span><span class="stat-label">Customer Rating</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <div id="reviewsModal" class="modal-overlay">
-      <div class="modal-container reviews-modal">
-        <div class="modal-header">
-            <h3 class="modal-title">
-                <img src="https://crystalpng.com/wp-content/uploads/2025/05/google-logo.png" alt="Google logo" class="google-logo-img-full"> Customer Reviews
-            </h3>
-            <button class="modal-close" id="closeReviewsModal"><i class="fas fa-times"></i></button>
-        </div>
-        <div id="reviewsBody" class="modal-body"></div>
-        <div class="modal-footer">
-            <a href="https://g.page/r/CaYoGVSEfXMNEAE/review" target="_blank" class="btn btn-primary">
-                <i class="fab fa-google"></i> See All Reviews on Google
-            </a>
-        </div>
+    <div class="modal-container reviews-modal">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <img src="https://crystalpng.com/wp-content/uploads/2025/05/google-logo.png" alt="Google logo"
+            class="google-logo-img-full"> Customer Reviews
+        </h3>
+        <button class="modal-close" id="closeReviewsModal"><i class="fas fa-times"></i></button>
       </div>
+      <div id="reviewsBody" class="modal-body"></div>
+      <div class="modal-footer">
+        <a href="https://g.page/r/CaYoGVSEfXMNEAE/review" target="_blank" class="btn btn-primary">
+          <i class="fab fa-google"></i> See All Reviews on Google
+        </a>
+      </div>
+    </div>
   </div>
   <main class="main">
     <div class="container">
@@ -107,7 +116,7 @@
               </div>
               <div class="card-title-section">
                 <h3>4+1 Sedan</h3>
-                <p>Etios, Dzire, etc.</p>
+                <p>Comfortable & Compact</p>
               </div>
             </div>
             <div class="card-price">
@@ -129,7 +138,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn-estimate" onclick="openModal('local-sedan')">
+              <button class="btn-estimate">
                 <i class="fas fa-calculator"></i>
                 Estimate
               </button>
@@ -173,7 +182,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn-estimate" onclick="openModal('local-innova')">
+              <button class="btn-estimate">
                 <i class="fas fa-calculator"></i>
                 Estimate
               </button>
@@ -213,7 +222,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn-estimate" onclick="openModal('local-crysta')">
+              <button class="btn-estimate">
                 <i class="fas fa-calculator"></i>
                 Estimate
               </button>
@@ -223,6 +232,127 @@
               </button>
             </div>
           </div>
+
+          <div class="package-card" data-vehicle="local-tempo">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-bus"></i>
+              </div>
+              <div class="card-title-section">
+                <h3>12+1 Tempo</h3>
+                <p>For Larger Groups</p>
+              </div>
+            </div>
+            <div class="card-price">
+              <span class="price">₹3,000</span>
+              <span class="price-unit">5 Hrs & 50 KMs</span>
+            </div>
+            <div class="card-features">
+              <div class="feature">
+                <i class="fas fa-clock"></i>
+                <span>Extra Hour: ₹550</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-route"></i>
+                <span>Extra KM: ₹24</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-users"></i>
+                <span>12 Passengers</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-estimate">
+                <i class="fas fa-calculator"></i>
+                Estimate
+              </button>
+              <button class="btn-book">
+                <i class="fas fa-calendar-check"></i>
+                Book Now
+              </button>
+            </div>
+          </div>
+
+          <div class="package-card" data-vehicle="local-tempo-18">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-bus"></i>
+              </div>
+              <div class="card-title-section">
+                <h3>18+1 Tempo</h3>
+                <p>For Larger Groups</p>
+              </div>
+            </div>
+            <div class="card-price">
+              <span class="price">₹3,500</span>
+              <span class="price-unit">5 Hrs & 50 KMs</span>
+            </div>
+            <div class="card-features">
+              <div class="feature">
+                <i class="fas fa-clock"></i>
+                <span>Extra Hour: ₹700</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-route"></i>
+                <span>Extra KM: ₹30</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-users"></i>
+                <span>18 Passengers</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-estimate">
+                <i class="fas fa-calculator"></i>
+                Estimate
+              </button>
+              <button class="btn-book">
+                <i class="fas fa-calendar-check"></i>
+                Book Now
+              </button>
+            </div>
+          </div>
+
+          <div class="package-card" data-vehicle="local-sml-32">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-bus"></i>
+              </div>
+              <div class="card-title-section">
+                <h3>32+1 Mini</h3>
+                <p>For Larger Groups</p>
+              </div>
+            </div>
+            <div class="card-price">
+              <span class="price">₹6,000</span>
+              <span class="price-unit">5 Hrs & 50 KMs</span>
+            </div>
+            <div class="card-features">
+              <div class="feature">
+                <i class="fas fa-clock"></i>
+                <span>Extra Hour: ₹1,200</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-route"></i>
+                <span>Extra KM: ₹52</span>
+              </div>
+              <div class="feature">
+                <i class="fas fa-users"></i>
+                <span>32 Passengers</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button class="btn-estimate">
+                <i class="fas fa-calculator"></i>
+                Estimate
+              </button>
+              <button class="btn-book">
+                <i class="fas fa-calendar-check"></i>
+                Book Now
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -245,7 +375,7 @@
             <div class="card-features">
               <div class="feature">
                 <i class="fas fa-bed"></i>
-                <span>Driver Bata: ₹700/day</span>
+                <span>Driver Bata: ₹700/day (12hr Duty)</span>
               </div>
               <div class="feature">
                 <i class="fas fa-route"></i>
@@ -257,7 +387,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn-estimate" onclick="openModal('outstation-sedan')">
+              <button class="btn-estimate">
                 <i class="fas fa-calculator"></i>
                 Estimate
               </button>
@@ -285,7 +415,7 @@
             <div class="card-features">
               <div class="feature">
                 <i class="fas fa-bed"></i>
-                <span>Driver Bata: ₹800/day</span>
+                <span>Driver Bata: ₹800/day (12hr Duty)</span>
               </div>
               <div class="feature">
                 <i class="fas fa-route"></i>
@@ -297,7 +427,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn-estimate" onclick="openModal('outstation-innova')">
+              <button class="btn-estimate">
                 <i class="fas fa-calculator"></i>
                 Estimate
               </button>
@@ -329,7 +459,7 @@
             <div class="card-features">
               <div class="feature">
                 <i class="fas fa-bed"></i>
-                <span>Driver Bata: ₹800/day</span>
+                <span>Driver Bata: ₹800/day (12hr Duty)</span>
               </div>
               <div class="feature">
                 <i class="fas fa-route"></i>
@@ -341,7 +471,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn-estimate" onclick="openModal('outstation-crysta')">
+              <button class="btn-estimate">
                 <i class="fas fa-calculator"></i>
                 Estimate
               </button>
@@ -369,7 +499,7 @@
             <div class="card-features">
               <div class="feature">
                 <i class="fas fa-bed"></i>
-                <span>Driver Bata: ₹1000/day</span>
+                <span>Driver Bata: ₹1000/day (12hr Duty)</span>
               </div>
               <div class="feature">
                 <i class="fas fa-route"></i>
@@ -381,7 +511,7 @@
               </div>
             </div>
             <div class="card-actions">
-              <button class="btn-estimate" onclick="openModal('outstation-tempo')">
+              <button class="btn-estimate">
                 <i class="fas fa-calculator"></i>
                 Estimate
               </button>
@@ -545,40 +675,40 @@
 
   <nav class="circular-menu">
     <div class="menu-button">
-        <span class="sr-only">Open Navigation Menu</span>
-        <i class="fas fa-plus"></i>
-        <i class="fas fa-times"></i>
+      <span class="sr-only">Open Navigation Menu</span>
+      <i class="fas fa-plus"></i>
+      <i class="fas fa-times"></i>
     </div>
     <a href="home.html" class="menu-item">
-        <i class="fas fa-home"></i>
-        <span class="sr-only">Home</span>
+      <i class="fas fa-home"></i>
+      <span class="sr-only">Home</span>
     </a>
     <a href="services.html" class="menu-item">
-        <i class="fas fa-route"></i>
-        <span class="sr-only">Services</span>
+      <i class="fas fa-route"></i>
+      <span class="sr-only">Services</span>
     </a>
     <a href="tariff.html" class="menu-item active">
-        <i class="fas fa-tags"></i>
-        <span class="sr-only">Tariff</span>
+      <i class="fas fa-tags"></i>
+      <span class="sr-only">Tariff</span>
     </a>
     <a href="contact.html" class="menu-item">
-        <i class="fas fa-envelope"></i>
-        <span class="sr-only">Contact</span>
+      <i class="fas fa-envelope"></i>
+      <span class="sr-only">Contact</span>
     </a>
     <a href="booking.html" class="menu-item">
-        <i class="fas fa-calendar-check"></i>
-        <span class="sr-only">Book Now</span>
+      <i class="fas fa-calendar-check"></i>
+      <span class="sr-only">Book Now</span>
     </a>
-</nav>
+  </nav>
 
   <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-      <defs>
-          <filter id="goo">
-              <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-              <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-          </filter>
-      </defs>
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
   </svg>
 
   <script src="js/tariff.js"></script>
