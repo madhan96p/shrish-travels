@@ -281,6 +281,7 @@ template = '''
 
         gtag('config', 'G-2E3WPT0X7J');
     </script>
+<meta name="robots" content="noindex">
 </head>
 
 <body>
